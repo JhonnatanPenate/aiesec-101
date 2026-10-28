@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/aprende.css" />
   </head>
   <body data-page="aprende">
     <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -44,40 +45,115 @@
         <div class="wrap">
           <header class="section__head">
             <h2>Qué significa AIESEC</h2>
+            <p>
+              Nació como siglas en francés. Toca cada letra para ver qué
+              significa.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div
+            class="acronym"
+            id="acronym"
+            role="group"
+            aria-label="Letras de AIESEC"
+          ></div>
+          <div class="acronym__out" id="acronymOut" aria-live="polite"></div>
+          <p class="muted" id="acronymNota"></p>
+          <div class="facts" id="facts"></div>
+          <div class="story">
+            <div>
+              <p class="kicker">Cómo empezó</p>
+              <p id="historia"></p>
+            </div>
+            <div class="vision">
+              <p class="kicker">Visión</p>
+              <p class="vision__en" id="vision"></p>
+              <p class="muted" id="visionEs"></p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section" id="the-aiesec-way">
         <div class="wrap">
           <header class="section__head">
             <h2>The AIESEC Way</h2>
+            <p>
+              Es la forma en que AIESEC desarrolla líderes: 6 valores que guían
+              cómo actuamos y 4 rasgos de liderazgo que buscamos desarrollar.
+              Toca cada card para ver un ejemplo.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <h3 class="block-title">6 valores</h3>
+          <div class="grid grid--3" id="valores"></div>
+          <h3 class="block-title">4 rasgos de liderazgo</h3>
+          <div class="grid grid--4" id="rasgos"></div>
         </div>
       </section>
       <section class="section section--sand" id="programas">
         <div class="wrap">
           <header class="section__head">
             <h2>Programas</h2>
+            <p>
+              AIESEC tiene 3 programas de intercambio. Cada uno funciona en dos
+              direcciones: recibir jóvenes en El Salvador (incoming) o enviar
+              salvadoreños afuera (outgoing).
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div
+            class="switch"
+            role="radiogroup"
+            aria-label="Dirección del intercambio"
+          >
+            <button
+              type="button"
+              role="radio"
+              aria-checked="true"
+              data-dir="in"
+            >
+              <b>Incoming</b><span>Recibimos · ICX</span>
+            </button>
+            <button
+              type="button"
+              role="radio"
+              aria-checked="false"
+              data-dir="out"
+            >
+              <b>Outgoing</b><span>Enviamos · OGX</span>
+            </button>
+          </div>
+          <div class="grid grid--3" id="programas-grid"></div>
         </div>
       </section>
       <section class="section" id="plataformas">
         <div class="wrap">
           <header class="section__head">
             <h2>Plataformas</h2>
+            <p>
+              AIESEC usa dos plataformas conectadas: una pública para los
+              jóvenes y una interna para los miembros.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div class="platforms" id="plataformas-grid"></div>
         </div>
       </section>
       <section class="section section--sand" id="salvaacademy">
         <div class="wrap">
           <header class="section__head">
             <h2>SalvaAcademy</h2>
+            <p id="saTexto"></p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div class="facts" id="saFacts"></div>
+          <ul class="checks" id="saDetalle"></ul>
+          <div class="calc">
+            <div>
+              <h3>Calcula tu nota</h3>
+              <p class="muted">
+                Cada área tiene 10 preguntas. Mueve cada barra según tus
+                respuestas correctas. Es una estimación.
+              </p>
+            </div>
+            <div class="calc__rows" id="calcRows"></div>
+            <div class="calc__out" id="calcOut" aria-live="polite"></div>
+          </div>
         </div>
       </section>
     </main>
@@ -87,5 +163,7 @@
     <script src="data/site.js"></script>
     <script src="assets/js/site.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script src="data/aprende.js"></script>
+    <script src="assets/js/aprende.js"></script>
   </body>
 </html>
