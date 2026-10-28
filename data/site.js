@@ -58,7 +58,7 @@ window.SITE = {
         'Organigrama nacional',
         'Organigrama local',
         'Cómo funciona un comité',
-        'Mapa',
+        'Dónde estamos',
       ],
     },
     {

@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/estructura.css" />
   </head>
   <body data-page="estructura">
     <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -37,44 +38,82 @@
         </div>
       </section>
 
-      <section class="section section--sand" id="de-lo-global-a-lo-local">
+      <section class="section section--white" id="de-lo-global-a-lo-local">
         <div class="wrap">
           <header class="section__head">
             <h2>De lo global a lo local</h2>
+            <p>
+              AIESEC funciona en tres niveles. Toca cada uno para ver qué hace.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div class="levels" id="levels"></div>
         </div>
       </section>
-      <section class="section" id="organigrama-nacional">
+      <section class="section section--dark" id="organigrama-nacional">
         <div class="wrap">
           <header class="section__head">
             <h2>Organigrama nacional</h2>
+            <p>
+              El MC es la oficina nacional de AIESEC en El Salvador. Acompaña a
+              los comités locales del país.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div class="mc-chart">
+            <div class="mc-chart__head">
+              <p class="kicker">MC · AIESEC en El Salvador</p>
+              <p id="mcNota"></p>
+            </div>
+            <div class="mc-people" id="mcPeople"></div>
+            <div class="mc-line" aria-hidden="true"></div>
+            <div class="mc-lcs" id="mcLcs"></div>
+          </div>
         </div>
       </section>
-      <section class="section section--sand" id="organigrama-local">
+      <section class="section section--orange" id="organigrama-local">
         <div class="wrap">
           <header class="section__head">
             <h2>Organigrama local</h2>
+            <p>
+              Así se organiza un comité local como el nuestro. La LCP y los VPs
+              forman el EB. Toca cualquier rol para ver qué hace.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div class="org">
+            <button class="org__lcp" type="button" id="orgLcp"></button>
+            <div class="org__stem" aria-hidden="true"></div>
+            <div class="org__cols" id="orgCols"></div>
+          </div>
         </div>
       </section>
-      <section class="section" id="como-funciona-un-comite">
+      <section class="section section--terra" id="como-funciona-un-comite">
         <div class="wrap">
           <header class="section__head">
             <h2>Cómo funciona un comité</h2>
+            <p>
+              Un comité local puede trabajar desde varias universidades. Así
+              funciona.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div class="types" id="types"></div>
+          <ol class="path" id="path"></ol>
+          <div class="example-band">
+            <b>Ejemplo</b>
+            <p id="comiteEjemplo"></p>
+          </div>
         </div>
       </section>
-      <section class="section section--sand" id="mapa">
+      <section class="section section--white" id="mapa">
         <div class="wrap">
           <header class="section__head">
-            <h2>Mapa</h2>
+            <h2>Dónde estamos</h2>
+            <p>
+              Dónde está AIESEC en ESEN hoy. Toca una universidad en el mapa.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div class="map">
+            <div class="map__svg" id="mapSvg"></div>
+            <div class="map__panel" id="mapPanel" aria-live="polite"></div>
+          </div>
         </div>
       </section>
     </main>
@@ -84,5 +123,8 @@
     <script src="data/site.js"></script>
     <script src="assets/js/site.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script src="data/estructura.js"></script>
+    <script src="data/mapa-sv.js"></script>
+    <script src="assets/js/estructura.js"></script>
   </body>
 </html>

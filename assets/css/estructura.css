@@ -1,0 +1,505 @@
+/* Página Estructura */
+
+/* ---------- niveles ---------- */
+.levels {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr 40px 1fr;
+  align-items: stretch;
+}
+.level {
+  font: inherit;
+  text-align: left;
+  border: 0;
+  border-radius: 22px;
+  padding: 26px;
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  cursor: pointer;
+  transition: transform var(--fast) var(--ease);
+}
+.level:hover {
+  transform: translateY(-4px);
+}
+.level--0 {
+  background: var(--charcoal);
+  color: var(--white);
+}
+.level--1 {
+  background: var(--terra);
+  color: var(--white);
+}
+.level--2 {
+  background: var(--orange);
+  color: var(--ink);
+}
+.level__tag {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.level b {
+  font-size: clamp(2.6rem, 6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+.level__name {
+  font-weight: 600;
+}
+.level .more {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.level__arrow {
+  align-self: center;
+  justify-self: center;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 14px solid var(--ink);
+}
+@media (max-width: 760px) {
+  .levels {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .level__arrow {
+    margin: 8px 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 14px solid var(--ink);
+    border-bottom: 0;
+  }
+}
+
+/* ---------- organigrama nacional ---------- */
+.mc-chart {
+  display: grid;
+  gap: 18px;
+}
+.mc-chart__head p:not(.kicker) {
+  color: rgba(255, 255, 255, 0.8);
+}
+.mc-chart__head .kicker {
+  color: var(--orange);
+}
+.mc-people {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 760px) {
+  .mc-people {
+    grid-template-columns: 1fr;
+  }
+}
+.mc-person {
+  background: #3a3a3a;
+  border-radius: 20px;
+  padding: 22px;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+.mc-person--lead {
+  background: var(--terra);
+}
+.mc-person__role {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--orange);
+}
+.mc-person--lead .mc-person__role {
+  color: var(--white);
+  opacity: 0.85;
+}
+.mc-person b {
+  font-size: 1.35rem;
+}
+.mc-person__areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.mc-person__areas i {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+}
+.mc-line {
+  height: 3px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+.mc-lcs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 560px) {
+  .mc-lcs {
+    grid-template-columns: 1fr;
+  }
+}
+.mc-lc {
+  border: 2px solid var(--orange);
+  border-radius: 18px;
+  padding: 18px 22px;
+  display: grid;
+}
+.mc-lc span {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.mc-lc b {
+  font-size: 1.2rem;
+}
+
+/* ---------- organigrama local ---------- */
+.org {
+  display: grid;
+  justify-items: center;
+}
+.org__lcp {
+  font: inherit;
+  border: 0;
+  cursor: pointer;
+  background: var(--charcoal);
+  color: var(--white);
+  border-radius: 20px;
+  padding: 18px 40px;
+  display: grid;
+  justify-items: center;
+  transition: transform var(--fast) var(--ease);
+}
+.org__lcp:hover {
+  transform: translateY(-3px);
+}
+.org__lcp span,
+.org__node span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  opacity: 0.7;
+}
+.org__lcp b {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.org__lcp small {
+  font-size: 14px;
+  opacity: 0.8;
+}
+.org__stem {
+  width: 3px;
+  height: 26px;
+  background: var(--charcoal);
+}
+.org__cols {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  padding-top: 26px;
+  border-top: 3px solid var(--charcoal);
+  position: relative;
+}
+.org__col {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  position: relative;
+}
+.org__col::before {
+  content: '';
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  width: 3px;
+  height: 26px;
+  background: var(--charcoal);
+  transform: translateX(-50%);
+}
+.org__node {
+  font: inherit;
+  border: 0;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 14px 10px;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  background: var(--white);
+  color: var(--ink);
+  transition:
+    transform var(--fast) var(--ease),
+    box-shadow var(--fast) var(--ease);
+}
+.org__node:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.12);
+}
+.org__node--0 {
+  background: var(--terra);
+  color: var(--white);
+}
+.org__node--0 b {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.org__node small {
+  font-size: 14px;
+  font-weight: 600;
+}
+.org__node--1 {
+  background: var(--white);
+}
+.org__node--2 {
+  background: rgba(255, 255, 255, 0.6);
+}
+.org__subs {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+.org__sub {
+  font: 700 14px var(--font);
+  border: 2px solid var(--charcoal);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 4px 14px;
+  cursor: pointer;
+}
+.org__sub:hover {
+  background: var(--charcoal);
+  color: var(--white);
+}
+@media (max-width: 860px) {
+  .org__cols {
+    grid-template-columns: 1fr;
+    border-top: 0;
+    padding-top: 0;
+    gap: 14px;
+  }
+  .org__col::before {
+    display: none;
+  }
+  .org__col {
+    grid-template-columns: 1.1fr 1fr 1fr;
+    align-items: stretch;
+  }
+  .org__subs {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 460px) {
+  .org__col {
+    grid-template-columns: 1fr 1fr;
+  }
+  .org__node--0 {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- cómo funciona un comité ---------- */
+.types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 700px) {
+  .types {
+    grid-template-columns: 1fr;
+  }
+}
+.type {
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 20px;
+  padding: 24px;
+  display: grid;
+  gap: 8px;
+}
+.type:nth-child(2) {
+  background: var(--charcoal);
+  color: var(--white);
+}
+.type h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.type p {
+  font-size: 17px;
+  opacity: 0.85;
+}
+.path {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  counter-reset: p;
+}
+@media (max-width: 760px) {
+  .path {
+    grid-template-columns: 1fr;
+  }
+}
+.path li {
+  counter-increment: p;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 22px;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+.path li::before {
+  content: counter(p);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--white);
+  color: var(--terra);
+  font-weight: 800;
+}
+.path b {
+  font-size: 1.15rem;
+}
+.path span {
+  font-size: 16px;
+  opacity: 0.88;
+}
+.example-band {
+  background: var(--orange);
+  color: var(--ink);
+  border-radius: 20px;
+  padding: 22px 26px;
+  display: grid;
+  gap: 4px;
+}
+.example-band b {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.example-band p {
+  font-size: 1.1rem;
+}
+
+/* ---------- mapa ---------- */
+.map {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .map {
+    grid-template-columns: 1fr;
+  }
+}
+.map__svg {
+  background: var(--bg);
+  border-radius: 22px;
+  padding: 16px;
+  min-width: 0;
+}
+.map__svg svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.map__land {
+  fill: var(--white);
+  stroke: var(--ink);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+.map__sea {
+  font: italic 500 18px var(--font);
+  fill: var(--muted);
+}
+.pin {
+  cursor: pointer;
+  outline: none;
+}
+.pin__halo {
+  fill: var(--orange);
+  opacity: 0;
+  transition: opacity var(--fast) var(--ease);
+}
+.pin__dot {
+  fill: var(--terra);
+  stroke: var(--white);
+  stroke-width: 3;
+}
+.pin text {
+  font: 700 18px var(--font);
+  fill: var(--ink);
+  paint-order: stroke;
+  stroke: var(--white);
+  stroke-width: 5px;
+}
+.pin:hover .pin__halo,
+.pin:focus-visible .pin__halo {
+  opacity: 0.35;
+}
+.pin.on .pin__halo {
+  opacity: 0.5;
+}
+.pin.on .pin__dot {
+  fill: var(--charcoal);
+}
+.map__panel {
+  background: var(--charcoal);
+  color: var(--white);
+  border-radius: 22px;
+  padding: 28px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  min-height: 240px;
+}
+.map__panel .kicker {
+  color: var(--orange);
+}
+.map__panel h3 {
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+.map__long {
+  color: #d6d1c8;
+  font-size: 16px;
+}
+.map__status {
+  justify-self: start;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: var(--terra);
+}

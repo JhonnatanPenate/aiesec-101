@@ -46,19 +46,33 @@
   margin-left: auto;
 }
 .nav a {
+  position: relative;
   color: var(--ink);
   text-decoration: none;
   font-weight: 600;
   font-size: 15px;
   padding: 8px 12px;
-  border-radius: 999px;
 }
-.nav a:hover {
-  background: var(--sand);
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--terra);
+  transform: scaleX(0);
+  transition: transform var(--fast) var(--ease);
+}
+.nav a:hover::after {
+  transform: scaleX(0.4);
 }
 .nav a[aria-current='page'] {
   color: var(--terra);
-  background: var(--soft);
+}
+.nav a[aria-current='page']::after {
+  transform: scaleX(1);
 }
 .site-header .btn--quiz {
   flex: none;
