@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-label="Edrik, la mandrágora de Alchemist">
+  <!-- Edrik, mascota de Alchemist ESEN, versión ilustrada tipo sticker -->
+  <defs>
+    <pattern id="tejido" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="2.2" fill="#6a3d22" opacity="0.55"/>
+    </pattern>
+    <g id="cuerpo">
+      <!-- brazos -->
+      <path d="M62 150 C38 162 30 190 40 212" fill="none" stroke-width="20" stroke-linecap="round"/>
+      <path d="M178 150 C202 162 210 190 200 212" fill="none" stroke-width="20" stroke-linecap="round"/>
+      <!-- cuerpo -->
+      <path d="M120 58 C176 58 190 112 186 160 C182 212 156 238 120 238 C84 238 58 212 54 160 C50 112 64 58 120 58 Z"/>
+    </g>
+  </defs>
+
+  <!-- contorno blanco de sticker -->
+  <g stroke="#ffffff" fill="#ffffff" stroke-width="16" stroke-linejoin="round">
+    <use href="#cuerpo"/>
+    <path d="M62 150 C38 162 30 190 40 212 M178 150 C202 162 210 190 200 212" fill="none" stroke-width="36" stroke-linecap="round"/>
+    <path d="M120 64 C96 30 70 28 60 40 C82 44 98 54 110 66 Z M120 64 C144 30 170 28 180 40 C158 44 142 54 130 66 Z M120 66 C120 40 120 26 120 18" />
+    <path d="M50 128 C50 70 80 36 120 36 C160 36 190 70 190 128" fill="none" stroke-width="30"/>
+    <rect x="30" y="112" width="34" height="58" rx="14"/>
+    <rect x="176" y="112" width="34" height="58" rx="14"/>
+  </g>
+
+  <!-- cuerpo café -->
+  <g fill="#8a5432" stroke="#8a5432">
+    <use href="#cuerpo"/>
+  </g>
+  <path d="M120 58 C176 58 190 112 186 160 C182 212 156 238 120 238 C84 238 58 212 54 160 C50 112 64 58 120 58 Z" fill="url(#tejido)"/>
+
+  <!-- hojas -->
+  <path d="M120 64 C96 30 70 28 60 40 C82 44 98 54 110 66 Z" fill="#9cc93a" stroke="#6f9a1f" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M120 64 C144 30 170 28 180 40 C158 44 142 54 130 66 Z" fill="#9cc93a" stroke="#6f9a1f" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M120 66 C118 44 122 30 120 18" fill="none" stroke="#6f9a1f" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- audífonos -->
+  <path d="M50 128 C50 70 80 36 120 36 C160 36 190 70 190 128" fill="none" stroke="#2c2c2c" stroke-width="12" stroke-linecap="round"/>
+  <rect x="30" y="112" width="34" height="58" rx="14" fill="#2c2c2c"/>
+  <rect x="176" y="112" width="34" height="58" rx="14" fill="#2c2c2c"/>
+  <rect x="40" y="122" width="10" height="38" rx="5" fill="#4c4d4c"/>
+  <rect x="190" y="122" width="10" height="38" rx="5" fill="#4c4d4c"/>
+
+  <!-- ojos -->
+  <g>
+    <ellipse cx="98" cy="128" rx="15" ry="13" fill="#2c2c2c" stroke="#ffffff" stroke-width="5"/>
+    <ellipse cx="142" cy="128" rx="15" ry="13" fill="#2c2c2c" stroke="#ffffff" stroke-width="5"/>
+    <circle cx="103" cy="123" r="3.5" fill="#ffffff"/>
+    <circle cx="147" cy="123" r="3.5" fill="#ffffff"/>
+  </g>
+  <!-- cachetes y sonrisa -->
+  <ellipse cx="84" cy="152" rx="9" ry="5" fill="#c3522c" opacity="0.45"/>
+  <ellipse cx="156" cy="152" rx="9" ry="5" fill="#c3522c" opacity="0.45"/>
+  <path d="M110 154 C116 160 124 160 130 154" fill="none" stroke="#2c2c2c" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- lanyard -->
+  <path d="M78 176 L120 206 L162 176" fill="none" stroke="#f6f4f0" stroke-width="10" stroke-linejoin="round"/>
+  <rect x="108" y="200" width="24" height="20" rx="4" fill="#e3b84a" stroke="#2c2c2c" stroke-width="2"/>
+</svg>

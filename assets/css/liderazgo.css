@@ -174,7 +174,9 @@
   color: var(--muted);
 }
 .tip {
-  background: var(--soft);
+  background: var(--charcoal);
+  color: var(--white);
+  border-left: 5px solid var(--gold);
   border-radius: 14px;
   padding: 16px 18px;
 }
@@ -183,7 +185,7 @@
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--terra-dark);
+  color: var(--gold);
 }
 .steps__ctrl {
   display: flex;

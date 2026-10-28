@@ -419,8 +419,9 @@
   opacity: 0.88;
 }
 .example-band {
-  background: var(--orange);
-  color: var(--ink);
+  background: var(--charcoal);
+  color: var(--white);
+  border-left: 5px solid var(--gold);
   border-radius: 20px;
   padding: 22px 26px;
   display: grid;
@@ -430,6 +431,7 @@
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: var(--gold);
 }
 .example-band p {
   font-size: 1.1rem;
