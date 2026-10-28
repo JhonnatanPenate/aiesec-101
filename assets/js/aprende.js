@@ -205,36 +205,66 @@
       </button>`;
     })
     .join('');
-  // al tocar un ODS se muestra en grande y los demás se ocultan; "Ver los 17" los regresa
+  // Al tocar un ODS crece a 2x2 (3x2 si tiene mucho texto) en su lugar:
+  // los vecinos que tapa se ocultan y los demás no se mueven. Tocarlo otra vez lo cierra.
   const grid = $('odsGrid');
-  function cerrarOds() {
-    grid.classList.remove('has-open');
-    grid.querySelectorAll('.is-open').forEach((x) => {
-      x.classList.remove('is-open');
-      x.setAttribute('aria-expanded', 'false');
+  const tiles = [...grid.querySelectorAll('.ods__tile')];
+  let abierto = null;
+  const columnas = () =>
+    getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean)
+      .length;
+  function layout() {
+    const cols = columnas();
+    const filas = Math.ceil(tiles.length / cols);
+    let area = null;
+    if (abierto !== null) {
+      const t = tiles[abierto];
+      const largo =
+        t.querySelector('.ods__more').textContent.trim().length > 80;
+      const w = cols <= 3 ? cols : largo ? 3 : 2;
+      const c = abierto % cols;
+      const r = Math.floor(abierto / cols);
+      const c0 = Math.min(c, cols - w);
+      const r0 = r + 1 >= filas ? Math.max(0, r - 1) : r;
+      area = { c0, r0, w, h: 2 };
+    }
+    tiles.forEach((t, i) => {
+      const c = i % cols;
+      const r = Math.floor(i / cols);
+      if (area && i === abierto) {
+        t.style.gridColumn = `${area.c0 + 1} / span ${area.w}`;
+        t.style.gridRow = `${area.r0 + 1} / span ${area.h}`;
+        t.hidden = false;
+        return;
+      }
+      const tapado =
+        area &&
+        c >= area.c0 &&
+        c < area.c0 + area.w &&
+        r >= area.r0 &&
+        r < area.r0 + area.h;
+      t.hidden = !!tapado;
+      t.style.gridColumn = `${c + 1}`;
+      t.style.gridRow = `${r + 1}`;
     });
-    const back = grid.querySelector('.ods__back');
-    if (back) back.remove();
   }
   grid.addEventListener('click', (e) => {
-    if (e.target.closest('.ods__back')) {
-      const n = grid.querySelector('.is-open');
-      cerrarOds();
-      if (n) n.focus();
-      return;
-    }
     const b = e.target.closest('[data-n]');
     if (!b) return;
-    if (b.classList.contains('is-open')) return cerrarOds();
-    cerrarOds();
-    grid.classList.add('has-open');
-    b.classList.add('is-open');
-    b.setAttribute('aria-expanded', 'true');
-    b.insertAdjacentHTML(
-      'afterend',
-      '<button class="ods__back btn btn--dark" type="button">Ver los 17 ODS</button>',
-    );
+    const i = tiles.indexOf(b);
+    tiles.forEach((t) => {
+      t.classList.remove('is-open');
+      t.setAttribute('aria-expanded', 'false');
+    });
+    abierto = abierto === i ? null : i;
+    if (abierto !== null) {
+      b.classList.add('is-open');
+      b.setAttribute('aria-expanded', 'true');
+    }
+    layout();
   });
+  window.addEventListener('resize', layout);
+  layout();
   $('odsEx').innerHTML = O.ejemplos
     .map(
       (x) =>
