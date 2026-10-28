@@ -289,3 +289,16 @@
 .next-band__t b {
   color: var(--gold);
 }
+
+.site-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.site-footer__brand img {
+  height: 30px;
+  width: auto;
+}
+.site-footer__in {
+  align-items: center;
+}

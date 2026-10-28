@@ -29,7 +29,7 @@ window.DICCIONARIO = [
       [
         'EwA',
         'Engaging with AIESEC',
-        'Espacios para que jóvenes conozcan y vivan AIESEC sin ser miembros ni hacer intercambio: foros, charlas, talleres y eventos.',
+        'Actividades abiertas a cualquier joven, sin ser miembro ni hacer intercambio. Casi siempre están ligadas a los ODS en nuestra comunidad: limpiezas de playa, reforestaciones, liberación de tortugas y voluntariados en hospitales, entre otras. Son la primera puerta para conocer AIESEC.',
       ],
     ],
   },

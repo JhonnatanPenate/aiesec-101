@@ -326,3 +326,64 @@
 .switch button[aria-checked='true'] span {
   color: #d6d1c8;
 }
+
+/* ---------- equipo en bento dentro del modal ---------- */
+.team-bento {
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+.team-bento__t {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--terra);
+}
+.team-bento__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
+  gap: 8px;
+}
+.team-bento__row--lcvp {
+  grid-template-columns: minmax(0, 260px);
+  justify-content: center;
+}
+.team-bento__card {
+  border-radius: 16px;
+  padding: 12px;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 4px;
+  background: var(--orange-3);
+  min-width: 0;
+}
+.team-bento__card strong {
+  font-size: 15px;
+  line-height: 1.25;
+}
+.team-bento__card small {
+  font-size: 13px;
+  color: var(--muted);
+}
+.team-bento__row--lcvp .team-bento__card {
+  background: var(--terra);
+  color: var(--white);
+  padding: 16px;
+}
+.team-bento__row--lcvp .team-bento__card small {
+  color: rgba(255, 255, 255, 0.85);
+}
+.team-bento__row--lcvp .avatar {
+  background: var(--white);
+}
+.team-bento__row--manager .team-bento__card {
+  background: var(--orange);
+}
+.team-bento__row--manager .team-bento__card small {
+  color: var(--ink);
+}
+.team-bento__row--team .team-bento__card {
+  background: var(--bg);
+}

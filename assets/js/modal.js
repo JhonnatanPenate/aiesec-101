@@ -2,7 +2,7 @@
 // Uso: Modal.open({ kicker, title, sub, body, example })
 //   - body: texto o arreglo de párrafos
 //   - example: texto opcional que aparece en un recuadro "Ejemplo"
-//   - people: lista opcional [[nombre, rol]] con peopleTitle
+//   - people: lista opcional [[nombre, rol]] con peopleTitle; bento: true para verlos por nivel
 (function () {
   'use strict';
   const esc = (t) =>
@@ -60,7 +60,28 @@
         <div class="modal__body">${paras.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
         ${data.example ? `<div class="modal__example"><b>Ejemplo</b>${esc(data.example)}</div>` : ''}
         ${
-          data.people && data.people.length
+          data.bento && data.people && data.people.length
+            ? `<div class="team-bento">
+                <b class="team-bento__t">${esc(data.peopleTitle || 'Equipo')} · ${data.people.length}</b>
+                ${['LCVP', 'Manager', 'Team Member']
+                  .map((nivel) => {
+                    const gente = data.people.filter((p) =>
+                      p[1].startsWith(nivel),
+                    );
+                    if (!gente.length) return '';
+                    return `<div class="team-bento__row team-bento__row--${nivel.split(' ')[0].toLowerCase()}">${gente
+                      .map(
+                        (p) =>
+                          `<div class="team-bento__card"><span class="avatar">${esc(initials(p[0]))}</span><strong>${esc(p[0])}</strong><small>${esc(p[1])}</small></div>`,
+                      )
+                      .join('')}</div>`;
+                  })
+                  .join('')}
+              </div>`
+            : ''
+        }
+        ${
+          !data.bento && data.people && data.people.length
             ? `<div class="modal__people">
                 <b>${esc(data.peopleTitle || 'Quiénes')} · ${data.people.length}</b>
                 <ul>${data.people

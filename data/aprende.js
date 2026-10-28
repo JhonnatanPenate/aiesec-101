@@ -27,6 +27,7 @@ window.APRENDE = {
   valores: [
     {
       en: 'Activating Leadership',
+      icono: 'bandera',
       es: 'Activar el liderazgo',
       texto:
         'Lideras con el ejemplo e inspiras a otros a actuar. El liderazgo no depende de tener un cargo.',
@@ -35,6 +36,7 @@ window.APRENDE = {
     },
     {
       en: 'Demonstrating Integrity',
+      icono: 'diamante',
       es: 'Demostrar integridad',
       texto:
         'Eres coherente entre lo que dices y lo que haces, y actúas con transparencia.',
@@ -43,6 +45,7 @@ window.APRENDE = {
     },
     {
       en: 'Enjoying Participation',
+      icono: 'mano',
       es: 'Disfrutar participar',
       texto:
         'Creas un ambiente dinámico donde participar se disfruta. Te involucras y haces que otros quieran sumarse.',
@@ -51,6 +54,7 @@ window.APRENDE = {
     },
     {
       en: 'Living Diversity',
+      icono: 'apreton',
       es: 'Vivir la diversidad',
       texto:
         'Valoras las diferencias y aprendes de personas con otras culturas, ideas y formas de ver el mundo.',
@@ -59,6 +63,7 @@ window.APRENDE = {
     },
     {
       en: 'Striving for Excellence',
+      icono: 'trofeo',
       es: 'Buscar la excelencia',
       texto:
         'Buscas hacer las cosas con la mejor calidad posible, innovando y mejorando cada vez.',
@@ -67,6 +72,7 @@ window.APRENDE = {
     },
     {
       en: 'Acting Sustainably',
+      icono: 'sostenible',
       es: 'Actuar de forma sostenible',
       texto:
         'Piensas en el largo plazo: en el impacto de tus decisiones en la organización, la sociedad y el planeta.',
@@ -78,6 +84,7 @@ window.APRENDE = {
   rasgos: [
     {
       en: 'Self-aware',
+      icono: 'espejo',
       es: 'Autoconsciente',
       texto:
         'Conoces tus valores, tus fortalezas y lo que quieres mejorar, y actúas de acuerdo con eso.',
@@ -86,6 +93,7 @@ window.APRENDE = {
     },
     {
       en: 'Solution-oriented',
+      icono: 'cohete',
       es: 'Orientado a soluciones',
       texto:
         'Ves los retos como oportunidades y te enfocas en lo que sí se puede hacer.',
@@ -94,6 +102,7 @@ window.APRENDE = {
     },
     {
       en: 'Empowering others',
+      icono: 'rayo',
       es: 'Empoderar a otros',
       texto:
         'Haces crecer a las personas a tu alrededor: delegas, enseñas y reconoces su trabajo.',
@@ -102,6 +111,7 @@ window.APRENDE = {
     },
     {
       en: 'World citizen',
+      icono: 'pasaporte',
       es: 'Ciudadano global',
       texto:
         'Te interesa lo que pasa en el mundo y quieres aportar a resolverlo.',
@@ -168,6 +178,67 @@ window.APRENDE = {
         'ICX publica en EXPA una Opp de voluntariado en El Salvador y revisa a las personas que aplicaron desde aiesec.org.',
     },
   ],
+
+  // Leadership Development Experience: cómo se desarrolla un líder en AIESEC
+  lde: {
+    intro:
+      'Liderar en AIESEC es vivir dos recorridos al mismo tiempo: lo que haces afuera (tu rol y tu equipo) y lo que pasa adentro de ti (tus metas y valores). Donde se juntan, está el impacto.',
+    outer: {
+      titulo: 'Outer Journey',
+      es: 'Lo que vives afuera',
+      pasos: [
+        [
+          'Challenging role & environment',
+          'Un rol y un entorno que te retan',
+          'Tomas un rol que te saca de tu zona de confort, con metas reales.',
+        ],
+        [
+          'Individual responsibilities & goals',
+          'Responsabilidades y metas propias',
+          'Sabes qué te toca a ti y cómo se mide: tu JD, tus KPIs y tus MoS.',
+        ],
+        [
+          'Interaction with multiple stakeholders',
+          'Trabajar con muchas personas',
+          'Te relacionas con tu equipo, otras áreas, aliados, universidades y EPs.',
+        ],
+        [
+          'Support system',
+          'Una red que te acompaña',
+          'Tu líder, tu equipo y MXP te acompañan con O2O, feedback y formación.',
+        ],
+      ],
+    },
+    inner: {
+      titulo: 'Inner Journey',
+      es: 'Lo que pasa adentro',
+      pasos: [
+        [
+          'Set personal goals',
+          'Defines tus metas personales',
+          'Decides qué quieres aprender y en qué quieres crecer: tu PDP.',
+        ],
+        [
+          'Reflect on your experience',
+          'Reflexionas sobre lo que vives',
+          'Te detienes a pensar qué salió bien, qué no y qué aprendiste.',
+        ],
+        [
+          'Understand your personal values',
+          'Entiendes tus valores',
+          'Descubres qué te mueve y qué es importante para ti.',
+        ],
+        [
+          'Re-invent yourself',
+          'Te reinventas',
+          'Cambias, pruebas cosas nuevas y sales distinto de cada experiencia.',
+        ],
+      ],
+    },
+    impacto:
+      'Cuando el recorrido de afuera y el de adentro se encuentran, creces como líder y generas un impacto real en tu equipo, tu comunidad y el mundo.',
+    mxp: 'En MXP acompañamos los dos recorridos: el JD y el O2O para el de afuera, el PDP y la reflexión para el de adentro.',
+  },
 
   salvaAcademy: {
     texto:

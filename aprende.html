@@ -82,6 +82,35 @@
               <p id="historia"></p>
             </div>
           </div>
+          <div class="ailogo">
+            <div class="ailogo__img">
+              <img
+                src="assets/img/aiesec-logo.png"
+                alt="Logo de AIESEC"
+                width="1000"
+                height="196"
+              />
+            </div>
+            <div class="ailogo__txt">
+              <p class="kicker">El logo de AIESEC</p>
+              <h3>Personas que avanzan</h3>
+              <p>
+                Las siluetas caminando representan a los jóvenes que se mueven,
+                crecen y avanzan hacia un mundo mejor. Juntos, con un mismo
+                rumbo.
+              </p>
+              <ul class="rules">
+                <li>
+                  Úsalo solo en sus versiones oficiales: azul, blanco o negro.
+                </li>
+                <li>No lo deformes, no lo recolores ni le agregues efectos.</li>
+                <li>
+                  Déjale espacio libre alrededor y no lo mezcles con el logo de
+                  Alchemist.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section section--dark" id="the-aiesec-way">
@@ -91,13 +120,27 @@
             <p>
               Es la forma en que AIESEC desarrolla líderes: 6 valores que guían
               cómo actuamos y 4 rasgos de liderazgo que buscamos desarrollar.
-              Toca cada card para ver un ejemplo.
+              Toca cada hexágono para ver qué significa.
             </p>
           </header>
           <h3 class="block-title">6 valores</h3>
-          <div class="grid grid--3" id="valores"></div>
+          <div class="hexwrap">
+            <div class="honey" id="valores"></div>
+            <div class="hexdetail" id="valoresDetail" aria-live="polite"></div>
+          </div>
           <h3 class="block-title">4 rasgos de liderazgo</h3>
-          <div class="grid grid--4" id="rasgos"></div>
+          <div class="hexwrap">
+            <div class="honey honey--row" id="rasgos"></div>
+            <div class="hexdetail" id="rasgosDetail" aria-live="polite"></div>
+          </div>
+          <h3 class="block-title">Cómo se desarrolla un líder</h3>
+          <p class="lde__intro" id="ldeIntro"></p>
+          <div class="lde" id="lde"></div>
+          <div
+            class="hexdetail hexdetail--lde"
+            id="ldeDetail"
+            aria-live="polite"
+          ></div>
         </div>
       </section>
       <section class="section section--terra" id="programas">
@@ -192,6 +235,7 @@
     <script src="data/quizzes.js"></script>
     <script src="assets/js/quiz.js"></script>
     <script src="assets/js/insignias.js"></script>
+    <script src="assets/js/iconos.js"></script>
     <script src="data/aprende.js"></script>
     <script src="assets/js/aprende.js"></script>
   </body>

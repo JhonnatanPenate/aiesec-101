@@ -584,3 +584,346 @@ input[type='range'] {
 .ods__tile[hidden] {
   display: none;
 }
+
+/* ---------- logo de AIESEC ---------- */
+.ailogo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+@media (max-width: 820px) {
+  .ailogo {
+    grid-template-columns: 1fr;
+  }
+}
+.ailogo__img {
+  background: #037ef3;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  min-width: 0;
+}
+.ailogo__img img {
+  width: 100%;
+  height: auto;
+}
+.ailogo__txt {
+  background: var(--bg);
+  border-radius: 22px;
+  padding: 26px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+.ailogo__txt h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.ailogo__txt > p:not(.kicker) {
+  color: var(--muted);
+}
+.rules {
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  font-size: 15px;
+}
+.rules li {
+  position: relative;
+  padding-left: 22px;
+}
+.rules li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.5em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--terra);
+}
+
+/* ---------- hexágonos (valores y rasgos) ---------- */
+.hexwrap {
+  display: grid;
+  gap: 16px;
+}
+.honey {
+  --hw: clamp(104px, 15vw, 150px);
+  display: grid;
+  justify-items: center;
+}
+.honey__row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.honey__row + .honey__row {
+  margin-top: calc(var(--hw) * -0.22);
+}
+.honey--row .honey__row {
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+.hex {
+  font: inherit;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  width: var(--hw);
+  aspect-ratio: 0.866;
+  color: var(--charcoal);
+  transition: transform var(--fast) var(--ease);
+}
+.hex__in {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background: var(--bg);
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 4px;
+  padding: 18% 12%;
+  text-align: center;
+  transition: background var(--fast) var(--ease);
+}
+.hex__icon {
+  width: 42%;
+  display: block;
+}
+.hex__icon svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hex b {
+  font-size: clamp(10px, 1.25vw, 13px);
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+.hex:hover {
+  transform: translateY(-3px) scale(1.04);
+}
+.hex[aria-pressed='true'] .hex__in {
+  background: var(--terra);
+}
+.hex[aria-pressed='true'] {
+  color: var(--white);
+  transform: scale(1.08);
+}
+.hex--center {
+  cursor: default;
+}
+.hex--center .hex__in {
+  background: var(--charcoal);
+  color: var(--gold);
+  border: 0;
+}
+.hex--center:hover {
+  transform: none;
+}
+.hexdetail {
+  display: none;
+}
+.hexdetail.open {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: start;
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 22px;
+  padding: clamp(20px, 3vw, 28px);
+  animation: fade-in 240ms var(--ease);
+}
+.hexdetail--lde.open {
+  grid-template-columns: 1fr;
+}
+.hexdetail__icon {
+  width: 72px;
+  color: var(--charcoal);
+}
+.hexdetail__icon svg {
+  width: 100%;
+  height: auto;
+}
+.hexdetail__txt {
+  display: grid;
+  gap: 6px;
+}
+.hexdetail__txt h4 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--terra);
+}
+.hexdetail__es {
+  font-weight: 600;
+}
+.hexdetail__txt > p:not(.kicker):not(.hexdetail__es) {
+  color: var(--muted);
+}
+.hexdetail__ex {
+  margin-top: 6px;
+  background: var(--charcoal);
+  color: var(--white);
+  border-left: 5px solid var(--gold);
+  border-radius: 14px;
+  padding: 14px 18px;
+}
+.hexdetail__ex b {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+@media (max-width: 520px) {
+  .honey {
+    --hw: 96px;
+  }
+  .hex b {
+    font-size: 9.5px;
+  }
+  .hexdetail.open {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Leadership Development Experience ---------- */
+.lde__intro {
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 62ch;
+}
+.lde {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  align-items: center;
+}
+@media (max-width: 820px) {
+  .lde {
+    grid-template-columns: 1fr;
+  }
+}
+.lde__loop {
+  border-radius: 28px;
+  padding: 22px;
+  display: grid;
+  gap: 14px;
+}
+.lde__loop--outer {
+  background: var(--orange);
+  color: var(--ink);
+}
+.lde__loop--inner {
+  background: var(--terra);
+  color: var(--white);
+}
+.lde__t {
+  display: grid;
+}
+.lde__t b {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.lde__t span {
+  font-size: 15px;
+  opacity: 0.85;
+}
+.lde__steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.lde__step {
+  font: inherit;
+  text-align: left;
+  border: 0;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 14px;
+  display: grid;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  transition: transform var(--fast) var(--ease);
+}
+.lde__step b {
+  font-size: 15px;
+  line-height: 1.25;
+}
+.lde__step span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.lde__step:hover {
+  transform: translateY(-2px);
+}
+.lde__step[aria-pressed='true'] {
+  background: var(--charcoal);
+  color: var(--white);
+}
+.lde__step[aria-pressed='true'] span {
+  color: var(--gold);
+}
+.lde__impact {
+  font: inherit;
+  border: 4px solid var(--gold);
+  cursor: pointer;
+  width: 130px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  justify-self: center;
+  background: var(--charcoal);
+  color: var(--white);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  transition: transform var(--fast) var(--ease);
+}
+.lde__impact b {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.lde__impact span {
+  font-size: 13px;
+}
+.lde__impact:hover,
+.lde__impact[aria-pressed='true'] {
+  transform: scale(1.06);
+  background: var(--gold);
+  color: var(--charcoal);
+}
+.lde__impact[aria-pressed='true'] b,
+.lde__impact:hover b {
+  color: var(--charcoal);
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hexdetail.open {
+    animation: none;
+  }
+}
+.hex[aria-pressed='true'] .hex__icon {
+  background: var(--bg);
+  border-radius: 50%;
+  padding: 7%;
+  width: 50%;
+}
+.hex[aria-pressed='true'] .hex__icon {
+  color: var(--charcoal);
+}

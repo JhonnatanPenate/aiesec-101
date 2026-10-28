@@ -82,7 +82,7 @@
     footer.outerHTML = `
       <footer class="site-footer">
         <div class="wrap site-footer__in">
-          <span><b>${S.comite}</b> · ${S.lema}</span>
+          <span class="site-footer__brand"><img src="assets/img/alchemist-wordmark-blanco.png" alt="Alchemist ESEN" width="150" height="40" /><span>${S.lema}</span></span>
           <span>${S.creditos}</span>
         </div>
       </footer>`;

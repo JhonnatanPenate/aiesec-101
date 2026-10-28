@@ -77,6 +77,10 @@ window.CULTURA = {
       'Zonalito, Kipactani, AMCO y los LC Days.',
     ],
     ['Voluntariados', 'Generamos impacto juntos.'],
+    [
+      'EwA · Engaging with AIESEC',
+      'Actividades abiertas a la comunidad ligadas a los ODS: limpiezas de playa, reforestaciones, liberación de tortugas y voluntariados en hospitales.',
+    ],
   ],
 
   tradiciones: [

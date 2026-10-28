@@ -114,6 +114,7 @@
           ? team.map((p) => [p[0], p[2] ? `${p[1]} · ${p[2]}` : p[1]])
           : people(a.id, n),
       peopleTitle: n === 'LCVP' ? `Equipo de ${a.nombre}` : 'Quiénes',
+      bento: n === 'LCVP',
     });
   });
 

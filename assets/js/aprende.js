@@ -46,34 +46,113 @@
   $('mision').textContent = D.nombre.mision;
 
   /* ---------- AIESEC Way ---------- */
-  function cards(id, list, kicker) {
+  // hexágonos: ícono + nombre; al tocar se activa y abre el detalle debajo
+  const I = window.ICONOS || {};
+  function hexes(id, list, kicker, centro) {
     const el = $(id);
-    el.innerHTML = list
-      .map(
-        (v, i) => `
-        <button class="card card--action value" type="button" data-i="${i}">
-          <span class="value__n">${String(i + 1).padStart(2, '0')}</span>
-          <h3>${v.en}</h3>
-          <p>${v.es}</p>
-          <span class="more">Ver ejemplo</span>
+    const det = $(id + 'Detail');
+    const items = list.map(
+      (v, i) => `
+        <button class="hex" type="button" data-i="${i}" aria-pressed="false">
+          <span class="hex__in">
+            <span class="hex__icon" aria-hidden="true">${I[v.icono] || ''}</span>
+            <b>${v.en}</b>
+          </span>
         </button>`,
-      )
-      .join('');
+    );
+    if (centro) {
+      // panal: 2 arriba, 3 en medio (centro = caminante), 2 abajo
+      const mid = `<span class="hex hex--center" aria-hidden="true"><span class="hex__in"><span class="hex__icon">${I.caminante}</span><b>AIESEC Way</b></span></span>`;
+      el.innerHTML = `
+        <div class="honey__row">${items[0]}${items[1]}</div>
+        <div class="honey__row">${items[5]}${mid}${items[2]}</div>
+        <div class="honey__row">${items[4]}${items[3]}</div>`;
+    } else {
+      el.innerHTML = `<div class="honey__row">${items.join('')}</div>`;
+    }
+    const pintar = (i) => {
+      el.querySelectorAll('.hex[data-i]').forEach((h) =>
+        h.setAttribute('aria-pressed', String(+h.dataset.i === i)),
+      );
+      if (i === null) {
+        det.classList.remove('open');
+        det.innerHTML = '';
+        return;
+      }
+      const v = list[i];
+      det.innerHTML = `
+        <div class="hexdetail__icon" aria-hidden="true">${I[v.icono] || ''}</div>
+        <div class="hexdetail__txt">
+          <p class="kicker">${kicker}</p>
+          <h4>${v.en}</h4>
+          <p class="hexdetail__es">${v.es}</p>
+          <p>${v.texto}</p>
+          <div class="hexdetail__ex"><b>Ejemplo</b>${v.ejemplo}</div>
+        </div>`;
+      det.classList.add('open');
+    };
+    let actual = null;
     el.addEventListener('click', (e) => {
-      const b = e.target.closest('[data-i]');
+      const b = e.target.closest('.hex[data-i]');
       if (!b) return;
-      const v = list[+b.dataset.i];
-      window.Modal.open({
-        kicker,
-        title: v.en,
-        sub: v.es,
-        body: v.texto,
-        example: v.ejemplo,
-      });
+      const i = +b.dataset.i;
+      actual = actual === i ? null : i;
+      pintar(actual);
     });
   }
-  cards('valores', D.valores, 'Valor de AIESEC');
-  cards('rasgos', D.rasgos, 'Rasgo de liderazgo');
+  hexes('valores', D.valores, 'Valor de AIESEC', true);
+  hexes('rasgos', D.rasgos, 'Rasgo de liderazgo', false);
+
+  /* ---------- Leadership Development Experience ---------- */
+  const L = D.lde;
+  if (L && $('lde')) {
+    $('ldeIntro').textContent = L.intro;
+    const journey = (j, k) => `
+      <div class="lde__loop lde__loop--${k}">
+        <p class="lde__t"><b>${j.titulo}</b><span>${j.es}</span></p>
+        <div class="lde__steps">
+          ${j.pasos
+            .map(
+              (p, i) =>
+                `<button class="lde__step" type="button" data-k="${k}" data-i="${i}" aria-pressed="false"><b>${p[1]}</b><span>${p[0]}</span></button>`,
+            )
+            .join('')}
+        </div>
+      </div>`;
+    $('lde').innerHTML = `
+      ${journey(L.outer, 'outer')}
+      <button class="lde__impact" type="button" data-k="impact" aria-pressed="false"><b>Impact</b><span>Impacto</span></button>
+      ${journey(L.inner, 'inner')}`;
+    const det = $('ldeDetail');
+    let sel = null;
+    $('lde').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-k]');
+      if (!b) return;
+      const key = b.dataset.k + (b.dataset.i || '');
+      sel = sel === key ? null : key;
+      $('lde')
+        .querySelectorAll('[data-k]')
+        .forEach((x) =>
+          x.setAttribute(
+            'aria-pressed',
+            String(x.dataset.k + (x.dataset.i || '') === sel),
+          ),
+        );
+      if (!sel) {
+        det.classList.remove('open');
+        det.innerHTML = '';
+        return;
+      }
+      if (b.dataset.k === 'impact') {
+        det.innerHTML = `<div class="hexdetail__txt"><p class="kicker">Donde se juntan</p><h4>Impact</h4><p>${L.impacto}</p><div class="hexdetail__ex"><b>MXP</b>${L.mxp}</div></div>`;
+      } else {
+        const j = b.dataset.k === 'outer' ? L.outer : L.inner;
+        const p = j.pasos[+b.dataset.i];
+        det.innerHTML = `<div class="hexdetail__txt"><p class="kicker">${j.titulo} · ${j.es}</p><h4>${p[1]}</h4><p class="hexdetail__es">${p[0]}</p><p>${p[2]}</p></div>`;
+      }
+      det.classList.add('open');
+    });
+  }
 
   /* ---------- programas ---------- */
   let dir = 'in';
