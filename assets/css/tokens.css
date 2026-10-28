@@ -1,24 +1,40 @@
 /* Tokens de diseño: colores, tipografía, espacios y movimiento.
    Cambia aquí y se actualiza todo el sitio. */
 :root {
-  /* color */
-  --bg: #f6f4f0;
-  --sand: #ece7de;
+  /* color · paleta oficial Alchemist ESEN */
+  --charcoal: #2c2c2c; /* Carbón profundo */
+  --terra: #c3522c; /* Terracota intenso */
+  --orange: #d98850; /* Cobre mate */
+  --bg: #f6f4f0; /* Blanco pergamino */
   --white: #ffffff;
-  --ink: #2b2b2b;
-  --muted: #5d5751;
-  --line: #ddd5c8;
-  --terra: #c4522b;
-  --terra-dark: #a8431f;
-  --orange: #d98a4e;
-  --soft: #f6e3d7;
+
+  /* tonos de la paleta */
+  --charcoal-1: #4c4d4c;
+  --charcoal-2: #7e7c7d;
+  --charcoal-3: #a9a7a8;
+  --terra-1: #c26f4c;
+  --terra-2: #daac92;
+  --terra-3: #ead0c1;
+  --orange-1: #d69b72;
+  --orange-2: #e0b492;
+  --orange-3: #eed8c6;
+  --bg-1: #f5f2ea;
+  --bg-2: #f9f7f1;
+
+  /* acento dorado (roca de oro): solo para destacar sobre fondos oscuros */
   --gold: #e3b84a;
-  --charcoal: #2c2c2c;
+
+  /* alias usados por los componentes */
+  --ink: var(--charcoal);
+  --muted: var(--charcoal-1);
+  --line: #e2dbd0;
+  --terra-dark: #a8431f;
+  --soft: var(--terra-3);
+  --sand: var(--orange-3);
+
+  /* estados (quiz, calculadora) */
   --ok: #2f7d4f;
   --ok-soft: #e1f0e6;
-  --green: #3c9a63;
-  --green-dark: #2a7349;
-  --mint: #e4f3e9;
   --bad: #b3261e;
   --bad-soft: #fbe3e0;
 

@@ -60,7 +60,11 @@ window.DICCIONARIO = [
         'Local Committee Vice President',
         'Vicepresidencia de un área en el comité local.',
       ],
-      ['TL', 'Team Leader', 'Lidera un equipo dentro de un área.'],
+      [
+        'MNGR',
+        'Manager',
+        'Lidera un equipo dentro de un área. También se le dice TL (Team Leader).',
+      ],
       ['TM', 'Team Member', 'Miembro de un equipo.'],
       [
         'OCP',
@@ -86,7 +90,7 @@ window.DICCIONARIO = [
     terminos: [
       [
         'MXP',
-        'Member Experience',
+        'Membership eXperience Program',
         'Cuida la experiencia, el desarrollo y el bienestar de los miembros.',
       ],
       ['F&L', 'Finance & Legality', 'Finanzas y legalidad del comité.'],

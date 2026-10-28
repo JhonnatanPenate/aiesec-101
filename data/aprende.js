@@ -20,6 +20,8 @@ window.APRENDE = {
       'AIESEC nació después de la Segunda Guerra Mundial. Estudiantes de distintos países se unieron con una idea: si los jóvenes conviven y trabajan con personas de otras culturas, el mundo tiene más posibilidades de vivir en paz.',
     vision: 'Peace and fulfilment of humankind’s potential',
     visionEs: 'Paz y plenitud del potencial de la humanidad.',
+    mision:
+      'Desarrollar el liderazgo joven con experiencias prácticas en entornos desafiantes.',
   },
 
   valores: [

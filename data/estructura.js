@@ -50,7 +50,7 @@ window.ESTRUCTURA = {
     },
     niveles: {
       LCVP: 'Lidera un área del comité y forma parte del EB. Responde por los resultados y por el equipo de su área.',
-      'TL & Manager':
+      Manager:
         'Lidera un equipo dentro del área: organiza el trabajo, acompaña a sus miembros y da seguimiento a las metas.',
       'Team Member':
         'Hace el trabajo del área junto a su equipo y aprende haciendo.',
@@ -59,7 +59,7 @@ window.ESTRUCTURA = {
       {
         id: 'mxp',
         nombre: 'MXP',
-        largo: 'Member Experience',
+        largo: 'Membership eXperience Program',
         foco: 'la experiencia, el desarrollo y el bienestar de los miembros',
         ejemplo: 'Organizar la bienvenida de los newbies y acompañar sus PDPs.',
       },

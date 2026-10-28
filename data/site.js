@@ -31,8 +31,15 @@ window.SITE = {
       id: 'cultura',
       href: 'cultura.html',
       titulo: 'Cultura',
-      resumen: 'Tradiciones, frases y la identidad de Alchemist.',
-      secciones: ['Tradiciones', 'Frases y chants', 'Alchemist'],
+      resumen: 'Nuestra historia, Edrik, valores y tradiciones.',
+      secciones: [
+        'Nuestra historia',
+        'Alchemist y Edrik',
+        'Nuestros valores',
+        'Cómo vivimos AIESEC',
+        'Tradiciones',
+        'Cómo convivimos',
+      ],
     },
     {
       id: 'areas',

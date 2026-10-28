@@ -421,3 +421,11 @@ input[type='range'] {
 .section--orange input[type='range'] {
   accent-color: var(--terra);
 }
+
+.vision__k2 {
+  margin-top: 10px;
+}
+.vision__mision {
+  font-weight: 600;
+  line-height: 1.4;
+}

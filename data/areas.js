@@ -65,7 +65,7 @@ window.AREAS = {
     {
       id: 'mxp',
       nombre: 'MXP',
-      largo: 'Member Experience',
+      largo: 'Membership eXperience Program',
       resumen:
         'Cuida la experiencia, el desarrollo y el bienestar de cada miembro.',
       conceptos: [

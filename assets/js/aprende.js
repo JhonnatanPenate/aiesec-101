@@ -43,6 +43,7 @@
   $('historia').textContent = D.nombre.historia;
   $('vision').textContent = D.nombre.vision;
   $('visionEs').textContent = D.nombre.visionEs;
+  $('mision').textContent = D.nombre.mision;
 
   /* ---------- AIESEC Way ---------- */
   function cards(id, list, kicker) {

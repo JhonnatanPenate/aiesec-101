@@ -177,9 +177,6 @@
 .section--white {
   background: var(--white);
 }
-.section--green {
-  background: var(--mint);
-}
 .section--dark {
   background: var(--charcoal);
   color: var(--white);
@@ -204,6 +201,11 @@
 .section--dark .block-title,
 .section--terra .block-title {
   color: var(--white);
+}
+/* dorado para destacar en fondos oscuros */
+.section--dark .section__head h2 em,
+.section--dark .kicker {
+  color: var(--gold);
 }
 /* las cards conservan su color de texto dentro de fondos oscuros */
 .section--dark .card,

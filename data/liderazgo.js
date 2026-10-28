@@ -11,8 +11,8 @@ window.LIDERAZGO = {
       ejemplo: 'Apoyas en la logística de una actividad de bienvenida.',
     },
     {
-      rol: 'Team Leader & Manager',
-      corto: 'TL',
+      rol: 'Manager',
+      corto: 'MNGR',
       texto:
         'Lideras un equipo dentro de un área: organizas el trabajo y acompañas a tus miembros.',
       desarrollas: 'Liderar personas, dar feedback y dar seguimiento a metas.',

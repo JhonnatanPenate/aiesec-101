@@ -114,7 +114,7 @@
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: var(--orange);
+  color: var(--gold);
 }
 .mc-person--lead .mc-person__role {
   color: var(--white);
@@ -619,7 +619,7 @@
   background: var(--terra);
 }
 .map__panel .kicker {
-  color: var(--orange);
+  color: var(--gold);
 }
 .map__panel--expansion .kicker {
   color: var(--white);

@@ -9,7 +9,7 @@
     <title>Cultura · AIESEC 101</title>
     <meta
       name="description"
-      content="Las tradiciones, frases y la identidad que hacen único a nuestro comité."
+      content="Nuestra historia, Edrik, nuestros valores y las tradiciones que hacen único a Alchemist."
     />
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="assets/img/logo.png" />
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/cultura.css" />
   </head>
   <body data-page="cultura">
     <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -34,34 +35,92 @@
           <p class="kicker">AIESEC en ESEN</p>
           <h1>Cultura</h1>
           <p>
-            Las tradiciones, frases y la identidad que hacen único a nuestro
-            comité.
+            Nuestra historia, Edrik, nuestros valores y las tradiciones que
+            hacen único a Alchemist.
           </p>
         </div>
       </section>
 
-      <section class="section section--sand" id="tradiciones">
+      <section class="section section--white" id="nuestra-historia">
+        <div class="wrap">
+          <header class="section__head">
+            <h2>Nuestra historia</h2>
+            <p>
+              De Europa en 1948 a ESEN en 1998: así llegamos a ser Alchemist.
+            </p>
+          </header>
+          <ol class="hist" id="hist"></ol>
+          <h3 class="block-title">Las EBs que nos han dado vida</h3>
+          <div class="ebs" id="ebs"></div>
+        </div>
+      </section>
+
+      <section class="section section--terra" id="alchemist-y-edrik">
+        <div class="wrap">
+          <header class="section__head">
+            <h2>Alchemist y Edrik</h2>
+            <p id="alcTexto"></p>
+          </header>
+          <div class="edrik">
+            <figure class="edrik__photo">
+              <img
+                src="assets/img/edrik.jpg"
+                alt="Edrik, la mascota de Alchemist ESEN"
+                width="395"
+                height="335"
+              />
+              <figcaption id="edrikSaludo"></figcaption>
+            </figure>
+            <div class="edrik__info">
+              <p class="kicker">Nuestra mascota</p>
+              <h3 id="edrikNombre"></h3>
+              <p id="edrikTexto"></p>
+              <div class="meanings" id="meanings"></div>
+            </div>
+          </div>
+          <div class="mottos" id="mottos"></div>
+        </div>
+      </section>
+
+      <section class="section section--dark" id="nuestros-valores">
+        <div class="wrap">
+          <header class="section__head">
+            <h2>Nuestros valores</h2>
+            <p>
+              Los valores de AIESEC, como los vivimos en el día a día de
+              Alchemist.
+            </p>
+          </header>
+          <div class="cvalues" id="cvalues"></div>
+        </div>
+      </section>
+
+      <section class="section section--orange" id="como-vivimos-aiesec">
+        <div class="wrap">
+          <header class="section__head">
+            <h2>Cómo vivimos AIESEC</h2>
+            <p>Los espacios donde pasa la magia.</p>
+          </header>
+          <div class="spaces" id="spaces"></div>
+        </div>
+      </section>
+
+      <section class="section section--white" id="tradiciones">
         <div class="wrap">
           <header class="section__head">
             <h2>Tradiciones</h2>
+            <p>Lo que solo entiendes cuando lo vives. Toca cada una.</p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div class="trads" id="trads"></div>
         </div>
       </section>
-      <section class="section" id="frases-y-chants">
+
+      <section class="section section--dark" id="como-convivimos">
         <div class="wrap">
           <header class="section__head">
-            <h2>Frases y chants</h2>
+            <h2>Cómo convivimos</h2>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
-        </div>
-      </section>
-      <section class="section section--sand" id="alchemist">
-        <div class="wrap">
-          <header class="section__head">
-            <h2>Alchemist</h2>
-          </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <blockquote class="quote" id="inclusion"></blockquote>
         </div>
       </section>
     </main>
@@ -71,5 +130,7 @@
     <script src="data/site.js"></script>
     <script src="assets/js/site.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script src="data/cultura.js"></script>
+    <script src="assets/js/cultura.js"></script>
   </body>
 </html>

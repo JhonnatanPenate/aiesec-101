@@ -130,7 +130,7 @@
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--gold);
 }
 
 /* ---------- conceptos por área ---------- */
@@ -176,7 +176,7 @@
   font-size: clamp(3rem, 8vw, 4.5rem);
   font-weight: 800;
   line-height: 1;
-  color: var(--orange);
+  color: var(--gold);
 }
 .area-panel__head h3 {
   font-size: 1.5rem;
