@@ -2,7 +2,7 @@
 // Uso: Modal.open({ kicker, title, sub, body, example })
 //   - body: texto o arreglo de párrafos
 //   - example: texto opcional que aparece en un recuadro "Ejemplo"
-//   - people: lista opcional [[nombre, rol]] con peopleTitle; bento: true para verlos por nivel
+//   - people: lista opcional [[nombre, rol, nivel?]] con peopleTitle; bento: true para verlos por nivel
 (function () {
   'use strict';
   const esc = (t) =>
@@ -66,7 +66,7 @@
                 ${['LCP', 'LCVP', 'Manager', 'Team Member']
                   .map((nivel) => {
                     const gente = data.people.filter(
-                      (p) => p[1] === nivel || p[1].startsWith(nivel + ' '),
+                      (p) => (p[2] || p[1]) === nivel,
                     );
                     if (!gente.length) return '';
                     return `<div class="team-bento__row team-bento__row--${nivel === 'LCP' ? 'lcvp' : nivel.split(' ')[0].toLowerCase()}">${gente

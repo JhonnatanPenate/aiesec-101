@@ -2,6 +2,7 @@
 // Actualiza este archivo cada ciclo. Solo nombre y rol: nada de teléfonos, correos ni IDs.
 // Niveles válidos: 'LCVP', 'Manager', 'Team Member'
 // Tercer campo opcional: el equipo dentro del área (ej. 'B2C', 'PR')
+// Cuarto campo opcional: cómo se muestra el rol si no es el del nivel (ej. 'TL Brand'; TL es el mismo nivel que Manager)
 window.EQUIPO = {
   ciclo: '26.2',
   lcp: 'Kathleen Argueta',
@@ -41,7 +42,7 @@ window.EQUIPO = {
       ['Ángel Coreas', 'LCVP'],
       ['Andrea Hernández', 'Manager', 'B2C'],
       ['Tiffany Meléndez', 'Manager', 'B2B'],
-      ['Fernando Martínez', 'Manager', 'Brand'],
+      ['Fernando Martínez', 'Manager', 'Brand', 'TL Brand'],
       ['Didiliam Pereira', 'Manager', 'PR'],
       ['Krissia Cabrera', 'Team Member'],
       ['Génesis Aparicio', 'Team Member'],
