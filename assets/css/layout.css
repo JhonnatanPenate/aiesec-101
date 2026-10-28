@@ -160,6 +160,35 @@
 .section--sand {
   background: var(--sand);
 }
+.section--white {
+  background: var(--white);
+}
+.section--green {
+  background: var(--mint);
+}
+.section--dark {
+  background: var(--charcoal);
+  color: var(--white);
+}
+.section--terra {
+  background: var(--terra);
+  color: var(--white);
+}
+.section--dark .section__head p,
+.section--terra .section__head p,
+.section--dark .block-title,
+.section--terra .block-title {
+  color: rgba(255, 255, 255, 0.86);
+}
+.section--dark .block-title,
+.section--terra .block-title {
+  color: var(--white);
+}
+/* las cards conservan su color de texto dentro de fondos oscuros */
+.section--dark .card,
+.section--terra .card {
+  color: var(--ink);
+}
 .section .wrap {
   display: grid;
   gap: 24px;

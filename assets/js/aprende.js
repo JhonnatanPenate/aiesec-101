@@ -36,7 +36,10 @@
   $('acronymNota').textContent = D.nombre.nota;
   const facts = (list) =>
     list.map((f) => `<div><b>${f[0]}</b><span>${f[1]}</span></div>`).join('');
-  $('facts').innerHTML = facts(D.nombre.datos);
+  document.querySelectorAll('[data-fact]').forEach((el) => {
+    const f = D.nombre.datos[+el.dataset.fact];
+    el.innerHTML = `<b>${f[0]}</b><span>${f[1]}</span>`;
+  });
   $('historia').textContent = D.nombre.historia;
   $('vision').textContent = D.nombre.vision;
   $('visionEs').textContent = D.nombre.visionEs;
@@ -117,7 +120,7 @@
   pg.innerHTML = D.plataformas
     .map(
       (p, i) => `
-      <button class="card card--action platform" type="button" data-i="${i}">
+      <button class="card card--action platform${i === 1 ? ' platform--dark' : ''}" type="button" data-i="${i}">
         <p class="kicker">${p.para}</p>
         <h3>${p.nombre}</h3>
         <p>${p.texto}</p>
