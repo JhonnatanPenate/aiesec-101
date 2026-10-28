@@ -3,6 +3,14 @@
   'use strict';
   const D = window.CULTURA;
   const $ = (s) => document.getElementById(s);
+  // ícono de la señal: puño con pulgar y meñique estirados
+  const SIGN = `<svg class="sign" viewBox="0 0 64 64" aria-hidden="true">
+      <line x1="22" y1="32" x2="10" y2="15" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+      <line x1="43" y1="31" x2="53" y2="15" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+      <rect x="17" y="26" width="30" height="24" rx="8" fill="currentColor"/>
+      <path d="M26 26v8M32 26v8M38 26v8" stroke="var(--charcoal)" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M22 40c4 3 14 3 20 0" stroke="var(--charcoal)" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>`;
 
   /* ---------- historia ---------- */
   $('hist').innerHTML = D.historia
@@ -73,7 +81,7 @@
           t.semaforo
             ? '<span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>'
             : t.senal
-              ? '<span class="sign" aria-hidden="true">🤙</span>'
+              ? SIGN
               : ''
         }
         <small>${t.corto}</small>

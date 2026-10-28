@@ -120,10 +120,20 @@
   height: 40px;
   border-radius: 50%;
   border: 0;
-  background: var(--sand);
-  font: 700 20px var(--font);
-  color: var(--ink);
+  background: var(--charcoal);
+  font: 700 22px var(--font);
+  line-height: 1;
+  color: var(--white);
   cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition:
+    background var(--fast) var(--ease),
+    transform var(--fast) var(--ease);
+}
+.modal__close:hover {
+  background: var(--terra);
+  transform: rotate(90deg);
 }
 .modal__kicker {
   font-size: 14px;
@@ -145,16 +155,18 @@
   color: var(--muted);
 }
 .modal__example {
-  background: var(--soft);
+  background: var(--charcoal);
+  color: var(--white);
+  border-left: 5px solid var(--gold);
   border-radius: var(--radius-sm);
   padding: 16px 18px;
 }
 .modal__example b {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--terra-dark);
+  letter-spacing: 0.08em;
+  color: var(--gold);
   margin-bottom: 4px;
 }
 .modal.closing .modal__box {

@@ -100,16 +100,19 @@ window.CULTURA = {
     {
       nombre: 'Hey AIESEC, what’s up',
       corto: 'El cántico',
-      texto:
-        'Un cántico de dos frases para llamar a todos y saber quiénes están. Una persona lanza la primera frase y el grupo responde con la segunda.',
+      texto: [
+        'Son dos frases para llamar la atención y saber quiénes están. Una persona grita “Hey AIESEC!” y todo el grupo responde “What’s up!”.',
+      ],
       ejemplo:
-        'Al empezar una actividad o cuando el grupo se dispersa, alguien lo canta y todos responden.',
+        'Al empezar una actividad o cuando el grupo está disperso, alguien grita “Hey AIESEC!” y todos responden “What’s up!”.',
     },
     {
       nombre: 'La señal',
-      corto: 'Silencio sin gritar',
-      texto:
-        'Cierras la mano en puño, estiras el pulgar y el meñique, y te pones el pulgar en la frente. Cuando alguien la hace, todos la repiten y hacen silencio. Quien siga hablando se lleva un zape suavecito, en buena onda.',
+      corto: 'Atención y silencio',
+      texto: [
+        'Cierras la mano en puño, estiras el pulgar y el meñique, y te pones el pulgar en la frente. Significa atención y silencio.',
+        'Cuando alguien la hace, todos la repiten. Según la confianza, el grupo se queda viendo con la señal a quien sigue hablando hasta que lo nota.',
+      ],
       ejemplo:
         'En plena reunión hay mucho ruido: alguien hace la señal y en segundos todo el grupo está en silencio.',
       senal: true,

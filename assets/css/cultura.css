@@ -362,8 +362,9 @@
   color: var(--terra);
 }
 .sign {
-  font-size: 1.8rem;
-  line-height: 1;
+  width: 46px;
+  height: 46px;
+  color: var(--gold);
 }
 .lights {
   display: flex;
