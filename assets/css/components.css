@@ -440,6 +440,21 @@
   font-size: 14px;
 }
 @media (max-width: 480px) {
+  .play-cta {
+    padding: 14px 16px;
+    border-radius: 18px;
+    gap: 12px;
+  }
+  .play-cta__bar {
+    width: 46px;
+    height: 46px;
+  }
+  .play-cta b {
+    font-size: 1.1rem;
+  }
+  .play-cta small {
+    font-size: 13px;
+  }
   .play-cta .btn {
     display: none;
   }

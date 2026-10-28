@@ -42,7 +42,7 @@
           </a>
           <nav class="nav" aria-label="Secciones">${links}</nav>
           <a class="btn btn--quiz" href="diccionario.html#quiz">Ponte a prueba</a>
-          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileNav">Menú</button>
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menú">Menú</button>
         </div>
         <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
       </header>
@@ -52,7 +52,7 @@
             <img src="assets/img/logo.png" alt="" width="30" height="36" />
             <span><b>${S.nombre}</b><small>${S.comite}</small></span>
           </a>
-          <button class="menu-btn" type="button" data-close>Cerrar</button>
+          <button class="menu-btn" type="button" data-close aria-label="Cerrar menú">Cerrar</button>
         </div>
         <ul>${S.paginas.map((p) => `<li><a href="${p.href}"${p.id === page ? ' aria-current="page"' : ''}>${p.titulo}</a></li>`).join('')}</ul>
         <a class="btn" href="diccionario.html#quiz">Ponte a prueba</a>

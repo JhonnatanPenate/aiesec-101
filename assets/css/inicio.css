@@ -16,6 +16,46 @@
     grid-template-columns: 1fr;
     padding-block: 44px 52px;
   }
+  .ring {
+    width: 170px;
+    justify-self: start;
+  }
+}
+@media (max-width: 560px) {
+  .course-hero__in {
+    padding-block: 28px 36px;
+    gap: 24px;
+  }
+  .course-hero h1 {
+    font-size: clamp(2.4rem, 11vw, 3.2rem);
+  }
+  .course-hero__frase {
+    font-size: 1.25rem;
+  }
+  .course-hero__intro {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  .course-hero__cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 4px;
+  }
+  .course-hero__cta .btn--big {
+    width: 100%;
+    justify-content: center;
+    min-height: 52px;
+  }
+  .course-hero__meta {
+    text-align: center;
+    font-size: 14px;
+  }
+  .ring {
+    width: 150px;
+    justify-self: center;
+    margin-inline: auto;
+  }
 }
 .course-hero__txt {
   display: grid;
@@ -101,13 +141,6 @@
   max-width: 12ch;
   margin-inline: auto;
 }
-@media (max-width: 820px) {
-  .ring {
-    width: 170px;
-    justify-self: start;
-  }
-}
-
 /* lista de módulos */
 .mods {
   list-style: none;
@@ -195,15 +228,28 @@
 @media (max-width: 560px) {
   .mod {
     grid-template-columns: auto 1fr;
-    gap: 6px 16px;
-    padding: 18px;
+    gap: 4px 14px;
+    padding: 16px 18px;
+    border-radius: 16px;
+  }
+  .mod__n {
+    font-size: 1.7rem;
+  }
+  .mod__body b {
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+  .mod__body span {
+    font-size: 14px;
+    line-height: 1.35;
   }
   .mod__side {
     grid-column: 2;
-    justify-items: start;
-    grid-auto-flow: column;
-    justify-content: start;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    margin-top: 4px;
   }
 }
 .reset {
@@ -211,7 +257,10 @@
   font: 600 14px var(--font);
   background: none;
   border: 0;
-  padding: 4px 0;
+  padding: 8px 0;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   color: var(--muted);
   text-decoration: underline;
   text-underline-offset: 4px;
