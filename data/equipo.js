@@ -10,7 +10,7 @@ window.EQUIPO = {
     mxp: [
       ['Jhonnatan Peñate', 'LCVP'],
       ['Brayan Chavarría', 'Manager'],
-      ['Cristian Velásquez', 'Manager'],
+      ['Cristian Velásquez', 'Manager', '', 'TL'],
       ['Katherine Rivera', 'Team Member'],
       ['Alisson Guerrero', 'Team Member'],
       ['Melissa Cortez', 'Team Member'],
