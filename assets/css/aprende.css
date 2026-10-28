@@ -475,8 +475,9 @@ input[type='range'] {
   text-align: left;
   border: 0;
   cursor: pointer;
-  aspect-ratio: 1;
   max-width: 100%;
+  min-height: 0;
+  overflow: hidden;
   border-radius: 14px;
   padding: 12px;
   background: var(--c);
@@ -537,13 +538,11 @@ input[type='range'] {
 .ods__more {
   display: none;
 }
-/* ODS abierto: ocupa 2x2 (o 3x2) en su lugar */
+/* ODS abierto: ocupa 2x2 (o 2x3) dentro del recuadro, sin salirse */
 .ods__tile.is-open {
-  aspect-ratio: auto;
   padding: clamp(14px, 2vw, 22px);
   gap: 8px;
-  overflow: hidden;
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.18);
+  overflow: auto;
   animation: ods-in 240ms var(--ease);
 }
 .ods__tile.is-open:hover {

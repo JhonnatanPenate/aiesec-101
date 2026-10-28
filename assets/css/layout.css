@@ -290,15 +290,43 @@
   color: var(--gold);
 }
 
-.site-footer__brand {
-  display: flex;
+/* footer: logo a la izquierda, lema al centro, créditos a la derecha */
+.site-footer .site-footer__in {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 14px;
 }
-.site-footer__brand img {
-  height: 30px;
+.site-footer__logo {
+  height: 40px;
   width: auto;
+  justify-self: start;
 }
-.site-footer__in {
-  align-items: center;
+.site-footer__lema {
+  color: var(--gold);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.site-footer__cred {
+  justify-self: end;
+  text-align: right;
+  white-space: nowrap;
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  font-weight: 600;
+  color: var(--gold);
+}
+@media (max-width: 760px) {
+  .site-footer .site-footer__in {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .site-footer__logo,
+  .site-footer__cred {
+    justify-self: center;
+    text-align: center;
+    white-space: normal;
+  }
 }

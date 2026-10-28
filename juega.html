@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Juega con los ODS · AIESEC 101</title>
+    <meta
+      name="description"
+      content="Ordena los Objetivos de Desarrollo Sostenible en un rompecabezas deslizante y desbloquea el ODS 17."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/juega.css" />
+  </head>
+  <body data-page="juega">
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <div data-site-header></div>
+
+    <main id="contenido">
+      <section class="page-head">
+        <div class="wrap">
+          <p class="kicker">Juego · ODS</p>
+          <h1>Juega con los ODS</h1>
+          <p>
+            Ordena los primeros 15 objetivos deslizando las piezas. Después
+            coloca el 16 y desbloquea el 17.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--white">
+        <div class="wrap juego">
+          <div class="juego__main">
+            <div class="juego__stats">
+              <div><small>Tiempo</small><b id="jTiempo">00:00</b></div>
+              <div><small>Movimientos</small><b id="jMovs">0</b></div>
+              <button class="btn btn--ghost" type="button" id="jReiniciar">
+                Reiniciar
+              </button>
+            </div>
+            <div
+              class="board"
+              id="jBoard"
+              role="group"
+              aria-label="Tablero de 4 por 4. Usa las flechas para mover las piezas."
+              tabindex="0"
+            ></div>
+            <p class="juego__msg" id="jMsg" aria-live="polite"></p>
+          </div>
+
+          <aside class="juego__side">
+            <div class="jcard">
+              <h2>Cómo jugar</h2>
+              <ol class="jsteps">
+                <li>
+                  <b>Mueve las piezas</b> Toca una pieza junto al espacio vacío
+                  para deslizarla (o usa las flechas del teclado).
+                </li>
+                <li>
+                  <b>Ordena del 1 al 15</b> De izquierda a derecha y de arriba
+                  hacia abajo. El espacio queda al final.
+                </li>
+                <li>
+                  <b>Coloca el 16 y desbloquea el 17</b> Así completas los 17
+                  ODS.
+                </li>
+              </ol>
+              <details class="jorden">
+                <summary>Ver cómo debe quedar</summary>
+                <div class="jorden__grid" id="jOrden"></div>
+              </details>
+            </div>
+
+            <div class="jcard jcard--16" id="j16" data-locked="true">
+              <p class="kicker">Ficha final</p>
+              <h2>ODS 16</h2>
+              <p id="j16txt">Se desbloquea cuando ordenes los primeros 15.</p>
+              <button
+                class="piece piece--16"
+                type="button"
+                id="j16piece"
+                disabled
+              ></button>
+            </div>
+
+            <div class="jcard jcard--17" id="j17" data-locked="true">
+              <p class="kicker">Recompensa</p>
+              <h2>El ODS 17 te espera</h2>
+              <p>
+                Ningún objetivo se logra solo. El 17 son las alianzas:
+                gobiernos, empresas, universidades y jóvenes trabajando juntos.
+                Igual que en AIESEC.
+              </p>
+              <button class="btn" type="button" id="j17btn" disabled>
+                Completar los 17 ODS
+              </button>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+    <script src="data/site.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="data/aprende.js"></script>
+    <script src="assets/js/ods-juego.js"></script>
+    <script src="assets/js/juega.js"></script>
+  </body>
+</html>

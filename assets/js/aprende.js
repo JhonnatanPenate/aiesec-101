@@ -284,8 +284,9 @@
       </button>`;
     })
     .join('');
-  // Al tocar un ODS crece a 2x2 (3x2 si tiene mucho texto) en su lugar:
-  // los vecinos que tapa se ocultan y los demás no se mueven. Tocarlo otra vez lo cierra.
+  // Al tocar un ODS crece a 2x2 en su lugar (2x3, hacia abajo, si tiene mucho texto).
+  // Nunca se sale del recuadro: las filas tienen alto fijo y los vecinos tapados se ocultan.
+  // Tocarlo otra vez lo cierra.
   const grid = $('odsGrid');
   const tiles = [...grid.querySelectorAll('.ods__tile')];
   let abierto = null;
@@ -295,17 +296,21 @@
   function layout() {
     const cols = columnas();
     const filas = Math.ceil(tiles.length / cols);
+    const gap = parseFloat(getComputedStyle(grid).columnGap) || 0;
+    const lado = (grid.clientWidth - gap * (cols - 1)) / cols;
+    grid.style.gridTemplateRows = `repeat(${filas}, ${lado}px)`;
     let area = null;
     if (abierto !== null) {
       const t = tiles[abierto];
       const largo =
         t.querySelector('.ods__more').textContent.trim().length > 80;
-      const w = cols <= 3 ? cols : largo ? 3 : 2;
+      const w = cols <= 3 ? cols : 2;
+      const h = Math.min(filas, largo ? 3 : 2);
       const c = abierto % cols;
       const r = Math.floor(abierto / cols);
       const c0 = Math.min(c, cols - w);
-      const r0 = r + 1 >= filas ? Math.max(0, r - 1) : r;
-      area = { c0, r0, w, h: 2 };
+      const r0 = Math.max(0, Math.min(r, filas - h));
+      area = { c0, r0, w, h };
     }
     tiles.forEach((t, i) => {
       const c = i % cols;

@@ -69,10 +69,18 @@ directory. Cada push a `main` se despliega solo.
 
 ## Ideas para después
 
-- **Rompecabezas de los ODS:** un juego para ordenar los 17 ODS (cuál va primero, segundo…) arrastrando sus íconos.
 - **Hexágonos** para los valores y rasgos de liderazgo, y la Leadership Development Experience interactiva.
 - **Imagen de la insignia de Cultura:** guardarla como `assets/img/insignia-cultura.png` (cuadrada) y aparece sola dentro del sello.
 
 ## Créditos
 
 Creado por Jhonnatan Peñate, LCVP MXP 26.27 · AIESEC en ESEN.
+
+## Juega con los ODS (`juega.html`)
+
+Rompecabezas deslizante de 4×4 en tres etapas: ordenar los ODS 1 al 15, colocar el 16 en la última casilla y desbloquear el 17 fuera del tablero. No cuenta para el progreso del curso.
+
+- Lógica (sin DOM): `assets/js/ods-juego.js`. Vista: `assets/js/juega.js` y `assets/css/juega.css`.
+- El tablero se mezcla con movimientos legales desde la solución, así que siempre tiene solución.
+- Íconos oficiales: guárdalos como `assets/img/ods/ods-1.png` … `ods-17.png` (cuadrados). Mientras no estén, las fichas muestran el color oficial con el número.
+- Pruebas: `node tests/ods-juego.test.js`.

@@ -3,16 +3,20 @@
   'use strict';
   const D = window.CULTURA;
   const $ = (s) => document.getElementById(s);
-  // ícono de la señal: brazo hacia arriba, pulgar tocando la frente y meñique corto
-  const SIGN = `<svg class="sign" viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="20" cy="28" r="14" fill="none" stroke="currentColor" stroke-width="3.5"/>
-      <g fill="currentColor" stroke="var(--charcoal)" stroke-width="1.5" stroke-linejoin="round">
-        <path d="M42 64 L40 40 L52 40 L54 64 Z"/>
-        <path d="M37 22 C37 18 40 16 44 16 L52 16 C56 16 58 19 58 23 L58 34 C58 39 55 42 50 42 L44 42 C40 42 37 39 37 35 Z"/>
-        <path d="M38 24 L31 24 C28 24 28 29 31 29 L38 29 Z"/>
-        <path d="M54 17 L56 9 C56.6 7 59.4 7.6 59 9.6 L57.4 18 Z"/>
+  // ícono de la señal: persona de perfil con el brazo arriba, pulgar en la frente y meñique corto
+  const SIGN = `<svg class="sign" viewBox="0 0 72 64" aria-hidden="true">
+      <g fill="currentColor">
+        <path d="M22 5 C13 5 8 12 8 20 C8 26 10 30 13 33 L13 41 L25 41 L25 37 C28 37 31 36 31 33 L31 30 L34 28.5 L31.5 24 C32 21 32 19 31.5 17 C30 9 27 5 22 5 Z"/>
+        <rect x="13" y="38" width="12" height="9"/>
+        <path d="M2 64 C2 52 8 45 19 45 C30 45 37 50 39 56 L41 64 Z"/>
       </g>
-      <path d="M41 26 h13 M41 31 h13 M41 36 h13" stroke="var(--charcoal)" stroke-width="1.5" stroke-linecap="round"/>
+      <g fill="currentColor" stroke="var(--charcoal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M33 60 L52 40 L46 22 L40 24 L44 39 L28 54 Z"/>
+        <path d="M38 13 C38 10 40 9 43 9 L49 9 C52 9 54 11 54 14 L54 22 C54 25 52 27 49 27 L43 27 C40 27 38 25 38 22 Z"/>
+        <path d="M39 15 L33 15 C31 15 31 19 33 19 L39 19 Z"/>
+        <path d="M50 10 L52 4.5 C52.6 3 55 3.6 54.6 5.2 L53.4 10.5 Z"/>
+      </g>
+      <path d="M41 16 h11 M41 20.5 h11" stroke="var(--charcoal)" stroke-width="1.4" stroke-linecap="round"/>
     </svg>`;
 
   /* ---------- historia ---------- */

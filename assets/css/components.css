@@ -387,3 +387,67 @@
 .team-bento__row--team .team-bento__card {
   background: var(--bg);
 }
+
+/* ---------- acceso al juego de los ODS ---------- */
+.play-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--charcoal);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 16px 18px;
+  overflow: hidden;
+  transition:
+    transform var(--fast) var(--ease),
+    box-shadow var(--fast) var(--ease);
+}
+.play-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 0 var(--orange);
+}
+.play-cta__bar {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #e5243b 0 6%,
+    #dda63a 0 12%,
+    #4c9f38 0 18%,
+    #c5192d 0 24%,
+    #ff3a21 0 29%,
+    #26bde2 0 35%,
+    #fcc30b 0 41%,
+    #a21942 0 47%,
+    #fd6925 0 53%,
+    #dd1367 0 59%,
+    #fd9d24 0 65%,
+    #bf8b2e 0 71%,
+    #3f7e44 0 76%,
+    #0a97d9 0 82%,
+    #56c02b 0 88%,
+    #00689d 0 94%,
+    #19486a 0
+  );
+  -webkit-mask: radial-gradient(circle, transparent 42%, #000 43%);
+  mask: radial-gradient(circle, transparent 42%, #000 43%);
+}
+.play-cta > span:nth-child(2) {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+}
+.play-cta b {
+  font-size: 1.2rem;
+}
+.play-cta small {
+  color: #d6d1c8;
+  font-size: 14px;
+}
+@media (max-width: 480px) {
+  .play-cta .btn {
+    display: none;
+  }
+}
