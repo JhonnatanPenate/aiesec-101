@@ -154,7 +154,7 @@
         });
       if (!ok) b.classList.add('bad');
       $('qFb').innerHTML = `
-        <p><b>${ok ? 'Correcto.' : 'Casi.'}</b> ${right.sigla}: ${right.en}. ${right.texto}</p>
+        <p class="${ok ? 'is-ok' : 'is-bad'}"><b>${ok ? 'Correcto.' : 'Casi.'}</b> ${right.sigla}: ${right.en}. ${right.texto}</p>
         <button class="btn" type="button" data-next>${n + 1 < ROUND ? 'Siguiente' : 'Ver resultado'}</button>`;
       $('qFb').querySelector('[data-next]').focus();
       progress();

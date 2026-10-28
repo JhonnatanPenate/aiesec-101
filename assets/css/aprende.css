@@ -457,6 +457,7 @@ input[type='range'] {
 .ods {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-auto-flow: dense;
   gap: 10px;
 }
 @media (max-width: 900px) {
@@ -531,4 +532,48 @@ input[type='range'] {
   color: #fff;
   font-weight: 800;
   font-size: 13px;
+}
+
+.ods__more {
+  display: none;
+}
+.ods__tile.is-open {
+  grid-column: span 2;
+  grid-row: span 2;
+  aspect-ratio: auto;
+  padding: 18px;
+  gap: 8px;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
+}
+.ods__tile.is-open b {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.ods__tile.is-open .ods__name {
+  font-size: clamp(14px, 1.8vw, 18px);
+}
+.ods__tile.is-open .ods__more {
+  display: grid;
+  gap: 8px;
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.4;
+  animation: fade-in 220ms var(--ease);
+}
+.ods__more em {
+  font-style: normal;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+@media (max-width: 520px) {
+  .ods__tile.is-open {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
 }

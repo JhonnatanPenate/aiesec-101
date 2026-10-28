@@ -49,40 +49,53 @@
         })[c],
     );
 
-  // Edrik como data URI para que también aparezca al descargar la imagen
-  let edrikURI = 'assets/img/edrik.svg';
-  fetch('assets/img/edrik.svg')
-    .then((r) => (r.ok ? r.text() : Promise.reject()))
-    .then((t) => {
-      edrikURI =
-        'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(t)));
-    })
-    .catch(() => {});
+  /* ---------- dibujos del centro de cada insignia ---------- */
+  const ARBOL = `<circle cx="300" cy="300" r="204" fill="${C.cobre}"/>
+           <g clip-path="url(#in)">
+             <rect x="96" y="96" width="408" height="408" fill="${C.terra}"/>
+             <rect x="96" y="96" width="408" height="408" fill="url(#hatch)"/>
+             <path d="M70 480 L245 300 L300 336 L355 300 L530 480 Z" fill="${C.carbon}" opacity="0.92"/>
+             <ellipse cx="300" cy="402" rx="120" ry="14" fill="#1e1e1e" opacity="0.5"/>
+           </g>
+           <g fill="none" stroke="#d9a93a" stroke-width="3" stroke-linecap="round"><path d="M300 262 Q268.0 229.2 244.0 222.5"/><path d="M300 262 Q273.7 220.2 239.4 204.5"/><path d="M300 262 Q275.5 217.5 259.0 199.1"/><path d="M300 262 Q286.5 208.7 265.0 181.4"/><path d="M300 262 Q288.5 210.8 285.0 185.6"/><path d="M300 262 Q304.0 204.5 300.0 173.0"/><path d="M300 262 Q303.5 210.8 315.0 185.6"/><path d="M300 262 Q321.5 208.7 335.0 181.4"/><path d="M300 262 Q316.5 217.5 341.0 199.1"/><path d="M300 262 Q334.3 220.2 360.6 204.5"/><path d="M300 262 Q324.0 229.2 356.0 222.5"/></g>
+           <ellipse cx="269.2" cy="240.3" rx="9" ry="3.8" transform="rotate(-140 269.2 240.3)" fill="#c9962a"/><ellipse cx="269.2" cy="240.3" rx="8" ry="3.4" transform="rotate(-190 269.2 240.3)" fill="#e3b84a"/><ellipse cx="255.2" cy="230.4" rx="11" ry="4.6" transform="rotate(-140 255.2 230.4)" fill="#c9962a"/><ellipse cx="255.2" cy="230.4" rx="10" ry="4.2" transform="rotate(-190 255.2 230.4)" fill="#e3b84a"/><ellipse cx="244.0" cy="222.5" rx="12" ry="5.0" transform="rotate(-165 244.0 222.5)" fill="#e3b84a"/><ellipse cx="266.7" cy="230.4" rx="9" ry="3.8" transform="rotate(-125 266.7 230.4)" fill="#f3d26b"/><ellipse cx="266.7" cy="230.4" rx="8" ry="3.4" transform="rotate(-175 266.7 230.4)" fill="#c9962a"/><ellipse cx="251.5" cy="216.0" rx="11" ry="4.6" transform="rotate(-125 251.5 216.0)" fill="#f3d26b"/><ellipse cx="251.5" cy="216.0" rx="10" ry="4.2" transform="rotate(-175 251.5 216.0)" fill="#c9962a"/><ellipse cx="239.4" cy="204.5" rx="12" ry="5.0" transform="rotate(-150 239.4 204.5)" fill="#c9962a"/><ellipse cx="277.4" cy="227.4" rx="9" ry="3.8" transform="rotate(-110 277.4 227.4)" fill="#e3b84a"/><ellipse cx="277.4" cy="227.4" rx="8" ry="3.4" transform="rotate(-160 277.4 227.4)" fill="#f3d26b"/><ellipse cx="267.2" cy="211.7" rx="11" ry="4.6" transform="rotate(-110 267.2 211.7)" fill="#e3b84a"/><ellipse cx="267.2" cy="211.7" rx="10" ry="4.2" transform="rotate(-160 267.2 211.7)" fill="#f3d26b"/><ellipse cx="259.0" cy="199.1" rx="12" ry="5.0" transform="rotate(-135 259.0 199.1)" fill="#f3d26b"/><ellipse cx="280.8" cy="217.7" rx="9" ry="3.8" transform="rotate(-95 280.8 217.7)" fill="#c9962a"/><ellipse cx="280.8" cy="217.7" rx="8" ry="3.4" transform="rotate(-145 280.8 217.7)" fill="#e3b84a"/><ellipse cx="272.0" cy="197.6" rx="11" ry="4.6" transform="rotate(-95 272.0 197.6)" fill="#c9962a"/><ellipse cx="272.0" cy="197.6" rx="10" ry="4.2" transform="rotate(-145 272.0 197.6)" fill="#e3b84a"/><ellipse cx="265.0" cy="181.4" rx="12" ry="5.0" transform="rotate(-120 265.0 181.4)" fill="#e3b84a"/><ellipse cx="291.7" cy="220.0" rx="9" ry="3.8" transform="rotate(-80 291.7 220.0)" fill="#f3d26b"/><ellipse cx="291.7" cy="220.0" rx="8" ry="3.4" transform="rotate(-130 291.7 220.0)" fill="#c9962a"/><ellipse cx="288.0" cy="200.9" rx="11" ry="4.6" transform="rotate(-80 288.0 200.9)" fill="#f3d26b"/><ellipse cx="288.0" cy="200.9" rx="10" ry="4.2" transform="rotate(-130 288.0 200.9)" fill="#c9962a"/><ellipse cx="285.0" cy="185.6" rx="12" ry="5.0" transform="rotate(-105 285.0 185.6)" fill="#c9962a"/><ellipse cx="300.0" cy="213.1" rx="9" ry="3.8" transform="rotate(-65 300.0 213.1)" fill="#e3b84a"/><ellipse cx="300.0" cy="213.1" rx="8" ry="3.4" transform="rotate(-115 300.0 213.1)" fill="#f3d26b"/><ellipse cx="300.0" cy="190.8" rx="11" ry="4.6" transform="rotate(-65 300.0 190.8)" fill="#e3b84a"/><ellipse cx="300.0" cy="190.8" rx="10" ry="4.2" transform="rotate(-115 300.0 190.8)" fill="#f3d26b"/><ellipse cx="300.0" cy="173.0" rx="12" ry="5.0" transform="rotate(-90 300.0 173.0)" fill="#f3d26b"/><ellipse cx="308.3" cy="220.0" rx="9" ry="3.8" transform="rotate(-50 308.3 220.0)" fill="#c9962a"/><ellipse cx="308.3" cy="220.0" rx="8" ry="3.4" transform="rotate(-100 308.3 220.0)" fill="#e3b84a"/><ellipse cx="312.0" cy="200.9" rx="11" ry="4.6" transform="rotate(-50 312.0 200.9)" fill="#c9962a"/><ellipse cx="312.0" cy="200.9" rx="10" ry="4.2" transform="rotate(-100 312.0 200.9)" fill="#e3b84a"/><ellipse cx="315.0" cy="185.6" rx="12" ry="5.0" transform="rotate(-75 315.0 185.6)" fill="#e3b84a"/><ellipse cx="319.2" cy="217.7" rx="9" ry="3.8" transform="rotate(-35 319.2 217.7)" fill="#f3d26b"/><ellipse cx="319.2" cy="217.7" rx="8" ry="3.4" transform="rotate(-85 319.2 217.7)" fill="#c9962a"/><ellipse cx="328.0" cy="197.6" rx="11" ry="4.6" transform="rotate(-35 328.0 197.6)" fill="#f3d26b"/><ellipse cx="328.0" cy="197.6" rx="10" ry="4.2" transform="rotate(-85 328.0 197.6)" fill="#c9962a"/><ellipse cx="335.0" cy="181.4" rx="12" ry="5.0" transform="rotate(-60 335.0 181.4)" fill="#c9962a"/><ellipse cx="322.6" cy="227.4" rx="9" ry="3.8" transform="rotate(-20 322.6 227.4)" fill="#e3b84a"/><ellipse cx="322.6" cy="227.4" rx="8" ry="3.4" transform="rotate(-70 322.6 227.4)" fill="#f3d26b"/><ellipse cx="332.8" cy="211.7" rx="11" ry="4.6" transform="rotate(-20 332.8 211.7)" fill="#e3b84a"/><ellipse cx="332.8" cy="211.7" rx="10" ry="4.2" transform="rotate(-70 332.8 211.7)" fill="#f3d26b"/><ellipse cx="341.0" cy="199.1" rx="12" ry="5.0" transform="rotate(-45 341.0 199.1)" fill="#f3d26b"/><ellipse cx="333.3" cy="230.4" rx="9" ry="3.8" transform="rotate(-5 333.3 230.4)" fill="#c9962a"/><ellipse cx="333.3" cy="230.4" rx="8" ry="3.4" transform="rotate(-55 333.3 230.4)" fill="#e3b84a"/><ellipse cx="348.5" cy="216.0" rx="11" ry="4.6" transform="rotate(-5 348.5 216.0)" fill="#c9962a"/><ellipse cx="348.5" cy="216.0" rx="10" ry="4.2" transform="rotate(-55 348.5 216.0)" fill="#e3b84a"/><ellipse cx="360.6" cy="204.5" rx="12" ry="5.0" transform="rotate(-30 360.6 204.5)" fill="#e3b84a"/><ellipse cx="330.8" cy="240.3" rx="9" ry="3.8" transform="rotate(10 330.8 240.3)" fill="#f3d26b"/><ellipse cx="330.8" cy="240.3" rx="8" ry="3.4" transform="rotate(-40 330.8 240.3)" fill="#c9962a"/><ellipse cx="344.8" cy="230.4" rx="11" ry="4.6" transform="rotate(10 344.8 230.4)" fill="#f3d26b"/><ellipse cx="344.8" cy="230.4" rx="10" ry="4.2" transform="rotate(-40 344.8 230.4)" fill="#c9962a"/><ellipse cx="356.0" cy="222.5" rx="12" ry="5.0" transform="rotate(-15 356.0 222.5)" fill="#c9962a"/>
+           <path d="M300 340 C297 310 303 290 300 262" stroke="#d9a93a" stroke-width="8" stroke-linecap="round" fill="none"/>
+           <path d="M250 398 L256 356 L286 334 L330 338 L352 368 L346 396 L300 406 Z" fill="${C.oro}" stroke="#7a560f" stroke-width="3" stroke-linejoin="round"/>
+           <path d="M256 356 L286 334 L330 338 L316 364 L272 372 Z" fill="#f0cd63"/>
+           <path d="M300 336 L294 364 L314 386 M272 372 L294 364 M330 338 L316 364 L340 384 M314 386 L304 404" fill="none" stroke="#f8e08a" stroke-width="2.5" stroke-linecap="round"/>
+           <path d="M232 400 L242 392 L254 396 L250 404 L238 405 Z" fill="${C.oro}" stroke="#7a560f" stroke-width="2"/>
+           <path d="M352 400 L364 392 L376 398 L370 405 L356 405 Z" fill="${C.oro}" stroke="#7a560f" stroke-width="2"/>
+           <path d="M214 220 Q216.16 229.84 226 232 Q216.16 234.16 214 244 Q211.84 234.16 202 232 Q211.84 229.84 214 220 Z" fill="#f6e3a3"/><path d="M388 210 Q390.16 219.84 400 222 Q390.16 224.16 388 234 Q385.84 224.16 376 222 Q385.84 219.84 388 210 Z" fill="#f6e3a3"/><path d="M366 309 Q367.62 316.38 375 318 Q367.62 319.62 366 327 Q364.38 319.62 357 318 Q364.38 316.38 366 309 Z" fill="#f6e3a3"/><path d="M234 293 Q235.26 298.74 241 300 Q235.26 301.26 234 307 Q232.74 301.26 227 300 Q232.74 298.74 234 293 Z" fill="#f6e3a3"/>`;
+  const MANDRAGORA = `<circle cx="300" cy="300" r="204" fill="${C.cobre}"/>
+           <g fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+             <path d="M140 210 C150 180 176 170 196 176 C190 200 166 214 140 210 Z M140 210 L196 176"/>
+             <path d="M458 360 C446 388 420 396 400 388 C408 364 432 352 458 360 Z M458 360 L400 388"/>
+             <path d="M150 360 C160 386 182 394 198 388"/>
+           </g>
+           <g transform="translate(30 42) scale(0.9)">
+           <g fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+             <path d="M300 204 C345 204 362 242 360 282 C358 322 335 344 300 344 C265 344 242 322 240 282 C238 242 255 204 300 204 Z"/>
+             <path d="M300 204 L300 176"/>
+             <path d="M300 176 C286 154 290 130 300 118 C310 130 314 154 300 176 Z"/>
+             <path d="M296 186 C272 180 258 160 260 144 C278 146 292 164 296 186 Z"/>
+             <path d="M304 186 C328 180 342 160 340 144 C322 146 308 164 304 186 Z"/>
+             <path d="M244 286 C222 286 206 272 198 254 M220 280 C212 294 198 300 186 298"/>
+             <path d="M356 286 C378 286 394 272 402 254 M380 280 C388 294 402 300 414 298"/>
+             <path d="M272 336 C264 360 248 376 228 382 M248 372 C240 380 238 392 242 400"/>
+             <path d="M292 344 C290 368 282 386 270 398"/>
+             <path d="M310 344 C312 368 320 386 332 398"/>
+             <path d="M330 336 C338 360 354 376 374 382 M354 372 C362 380 364 392 360 400"/>
+             <path d="M284 294 C292 304 308 304 316 294"/>
+           </g>
+           <circle cx="282" cy="268" r="8" fill="#ffffff"/>
+           <circle cx="318" cy="268" r="8" fill="#ffffff"/>
+           </g>`;
 
   /* ---------- dibujo de la insignia (SVG) ---------- */
   function svg(b, nombre, fecha) {
     const nom = (nombre || 'TU NOMBRE').toUpperCase().slice(0, 22);
     const fs = nom.length > 16 ? 19 : 24;
-    const centro =
-      b.id === 'cultura'
-        ? `<circle cx="300" cy="300" r="204" fill="${C.terra}"/>
-           <image href="${edrikURI}" x="172" y="108" width="256" height="292"/>`
-        : `<circle cx="300" cy="300" r="204" fill="${C.cobre}"/>
-           <g clip-path="url(#in)">
-             <rect x="96" y="96" width="408" height="408" fill="${C.terra}"/>
-             <rect x="96" y="96" width="408" height="408" fill="url(#hatch)"/>
-             <circle cx="300" cy="200" r="62" fill="${C.cobre}"/>
-             <g fill="#f6e3d7"><circle cx="170" cy="190" r="3"/><circle cx="205" cy="150" r="2"/><circle cx="420" cy="170" r="3"/><circle cx="395" cy="135" r="2"/><circle cx="440" cy="225" r="2"/></g>
-             <path d="M60 470 L205 270 L245 310 L300 250 L425 400 L540 470 Z" fill="${C.carbon}"/>
-             <path d="M300 250 L282 272 L292 270 L300 282 L308 270 L318 272 Z" fill="${C.cobre}"/>
-             <g transform="translate(0,-58)">
-               <path d="M250 430 L262 392 L300 372 L340 384 L356 420 L338 448 L282 452 Z" fill="${C.oro}" stroke="#8a6414" stroke-width="3" stroke-linejoin="round"/>
-               <path d="M300 372 L294 410 L316 430 M262 392 L294 410 M340 384 L316 430 L338 448" fill="none" stroke="#f6d77a" stroke-width="2.5"/>
-               <path d="M300 372 C300 350 300 336 300 322" stroke="${C.oro}" stroke-width="5" stroke-linecap="round" fill="none"/>
-               <path d="M300 340 C284 330 276 318 280 306 C292 312 300 324 300 340 Z" fill="${C.oro}"/>
-               <path d="M300 332 C316 322 326 310 322 298 C310 304 300 316 300 332 Z" fill="${C.oro}"/>
-             </g>
-           </g>`;
+    const centro = b.id === 'cultura' ? MANDRAGORA : ARBOL;
     const acento = b.id === 'cultura' ? C.oro : C.cobre;
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" font-family="Poppins, 'Segoe UI', Arial, sans-serif">
       <defs>

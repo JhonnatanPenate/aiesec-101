@@ -192,24 +192,34 @@
     .map((d) => `<div><b>${d[0]}</b><span>${d[1]}</span></div>`)
     .join('');
   $('odsGrid').innerHTML = O.lista
-    .map(
-      (o) => `
-      <button class="ods__tile" type="button" data-n="${o[0]}" style="--c:${o[2]}">
-        <b>${o[0]}</b><span>${o[1]}</span>
-      </button>`,
-    )
+    .map((o) => {
+      const ej = O.ejemplos.filter((x) => x[1] === o[0]).map((x) => x[0]);
+      return `
+      <button class="ods__tile" type="button" data-n="${o[0]}" aria-expanded="false" style="--c:${o[2]}">
+        <b>${o[0]}</b>
+        <span class="ods__name">${o[1]}</span>
+        <span class="ods__more">
+          <span>${o[3]}</span>
+          ${ej.length ? `<em>En AIESEC: ${ej.join(', ')}</em>` : ''}
+        </span>
+      </button>`;
+    })
     .join('');
+  // al tocar un ODS crece dentro del grid; tocarlo otra vez lo cierra
   $('odsGrid').addEventListener('click', (e) => {
     const b = e.target.closest('[data-n]');
     if (!b) return;
-    const o = O.lista[+b.dataset.n - 1];
-    const ej = O.ejemplos.filter((x) => x[1] === o[0]).map((x) => x[0]);
-    window.Modal.open({
-      kicker: `ODS ${o[0]} de 17`,
-      title: o[1],
-      body: o[3],
-      example: ej.length ? `En AIESEC: ${ej.join(', ')}.` : '',
-    });
+    const abrir = !b.classList.contains('is-open');
+    $('odsGrid')
+      .querySelectorAll('.is-open')
+      .forEach((x) => {
+        x.classList.remove('is-open');
+        x.setAttribute('aria-expanded', 'false');
+      });
+    if (abrir) {
+      b.classList.add('is-open');
+      b.setAttribute('aria-expanded', 'true');
+    }
   });
   $('odsEx').innerHTML = O.ejemplos
     .map(

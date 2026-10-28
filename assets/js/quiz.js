@@ -90,9 +90,12 @@
       if (o.dataset.ok === 'true') o.classList.add('ok');
     });
     if (!ok) b.classList.add('bad');
+    sec.classList.remove('flash-ok', 'flash-bad');
+    void sec.offsetWidth;
+    sec.classList.add(ok ? 'flash-ok' : 'flash-bad');
     const ultima = n + 1 === orden.length;
     box.querySelector('.mq__fb').innerHTML = `
-      <p><b>${ok ? 'Correcto.' : 'Casi.'}</b> ${p.por}</p>
+      <p class="${ok ? 'is-ok' : 'is-bad'}"><b>${ok ? 'Correcto.' : 'Casi.'}</b> ${p.por}</p>
       <button class="btn" type="button" data-next>${ultima ? 'Ver resultado' : 'Siguiente'}</button>`;
     box.querySelector('[data-next]').focus();
   }
