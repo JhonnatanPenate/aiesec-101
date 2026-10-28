@@ -67,6 +67,12 @@ npx serve .
 Importa el repo en Vercel. Framework: **Other**, sin build command ni output
 directory. Cada push a `main` se despliega solo.
 
+## Ideas para después
+
+- **Rompecabezas de los ODS:** un juego para ordenar los 17 ODS (cuál va primero, segundo…) arrastrando sus íconos.
+- **Hexágonos** para los valores y rasgos de liderazgo, y la Leadership Development Experience interactiva.
+- **Imagen de la insignia de Cultura:** guardarla como `assets/img/insignia-cultura.png` (cuadrada) y aparece sola dentro del sello.
+
 ## Créditos
 
 Creado por Jhonnatan Peñate, LCVP MXP 26.27 · AIESEC en ESEN.

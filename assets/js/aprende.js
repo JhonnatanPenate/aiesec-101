@@ -205,21 +205,35 @@
       </button>`;
     })
     .join('');
-  // al tocar un ODS crece dentro del grid; tocarlo otra vez lo cierra
-  $('odsGrid').addEventListener('click', (e) => {
+  // al tocar un ODS se muestra en grande y los demás se ocultan; "Ver los 17" los regresa
+  const grid = $('odsGrid');
+  function cerrarOds() {
+    grid.classList.remove('has-open');
+    grid.querySelectorAll('.is-open').forEach((x) => {
+      x.classList.remove('is-open');
+      x.setAttribute('aria-expanded', 'false');
+    });
+    const back = grid.querySelector('.ods__back');
+    if (back) back.remove();
+  }
+  grid.addEventListener('click', (e) => {
+    if (e.target.closest('.ods__back')) {
+      const n = grid.querySelector('.is-open');
+      cerrarOds();
+      if (n) n.focus();
+      return;
+    }
     const b = e.target.closest('[data-n]');
     if (!b) return;
-    const abrir = !b.classList.contains('is-open');
-    $('odsGrid')
-      .querySelectorAll('.is-open')
-      .forEach((x) => {
-        x.classList.remove('is-open');
-        x.setAttribute('aria-expanded', 'false');
-      });
-    if (abrir) {
-      b.classList.add('is-open');
-      b.setAttribute('aria-expanded', 'true');
-    }
+    if (b.classList.contains('is-open')) return cerrarOds();
+    cerrarOds();
+    grid.classList.add('has-open');
+    b.classList.add('is-open');
+    b.setAttribute('aria-expanded', 'true');
+    b.insertAdjacentHTML(
+      'afterend',
+      '<button class="ods__back btn btn--dark" type="button">Ver los 17 ODS</button>',
+    );
   });
   $('odsEx').innerHTML = O.ejemplos
     .map(
