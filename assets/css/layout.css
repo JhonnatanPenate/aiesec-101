@@ -260,3 +260,28 @@
 .site-footer a {
   color: var(--gold);
 }
+
+/* ---------- banda "siguiente módulo" ---------- */
+.next-band {
+  background: var(--charcoal);
+  color: var(--white);
+  border-top: 4px solid var(--terra);
+}
+.next-band__in {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  padding-block: 36px;
+}
+.next-band .kicker {
+  color: var(--gold);
+}
+.next-band__t {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.next-band__t b {
+  color: var(--gold);
+}

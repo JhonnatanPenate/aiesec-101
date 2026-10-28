@@ -23,31 +23,46 @@
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/inicio.css" />
   </head>
   <body data-page="inicio">
     <a class="skip" href="#contenido">Saltar al contenido</a>
     <div data-site-header></div>
 
     <main id="contenido">
-      <section class="page-head">
-        <div class="wrap">
-          <p class="kicker">AIESEC en ESEN</p>
-          <h1>Bienvenido a AIESEC 101</h1>
-          <p>
-            Todo lo que necesitas para entender AIESEC: qué es, cómo se
-            organiza, su cultura y cómo crecer como líder.
-          </p>
+      <section class="course-hero">
+        <div class="wrap course-hero__in">
+          <div class="course-hero__txt">
+            <p class="kicker">AIESEC en ESEN · Curso</p>
+            <h1>AIESEC <span>101</span></h1>
+            <p class="course-hero__frase" id="frase"></p>
+            <p class="course-hero__intro" id="intro"></p>
+            <div class="course-hero__cta">
+              <a class="btn btn--big" id="ctaMain" href="aprende.html"
+                >Empezar</a
+              >
+              <span class="course-hero__meta" id="meta"></span>
+            </div>
+          </div>
+          <div class="ring" id="ring" aria-live="polite"></div>
         </div>
       </section>
 
-      <section class="section section--white" id="accesos">
+      <section class="section section--white" id="modulos">
         <div class="wrap">
           <header class="section__head">
-            <h2>Accesos</h2>
+            <h2>Módulos</h2>
+            <p>
+              Te recomendamos seguir el orden, pero puedes entrar a cualquiera.
+            </p>
           </header>
-          <div class="grid" id="accesos-grid"></div>
+          <ol class="mods" id="mods"></ol>
+          <button class="reset" type="button" id="reset">
+            Reiniciar mi progreso
+          </button>
         </div>
       </section>
+
       <section class="section section--dark" id="hacia-donde-vamos">
         <div class="wrap">
           <header class="section__head">

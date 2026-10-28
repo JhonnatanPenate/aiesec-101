@@ -88,11 +88,66 @@
       </footer>`;
   }
 
-  /* ---------- progreso: páginas visitadas ---------- */
+  /* ---------- curso: módulos, visitas y completados ---------- */
+  const modulos = S.paginas.filter((p) => p.modulo);
   const visited = new Set(store.get('visited', []));
   if (page) visited.add(page);
   store.set('visited', [...visited]);
+  const completados = new Set(store.get('completados', []));
+  const estado = (id) =>
+    completados.has(id)
+      ? 'completado'
+      : visited.has(id)
+        ? 'en-curso'
+        : 'pendiente';
+  // primer módulo sin completar, en orden; si todos están listos, el último
+  const siguiente = () =>
+    modulos.find((m) => !completados.has(m.id)) || modulos[modulos.length - 1];
+
   const bar = document.getElementById('progressBar');
-  if (bar) bar.style.width = (visited.size / S.paginas.length) * 100 + '%';
-  window.A101.visited = visited;
+  if (bar) {
+    const hechos = modulos.filter((m) => completados.has(m.id)).length;
+    bar.style.width = (hechos / modulos.length) * 100 + '%';
+  }
+
+  Object.assign(window.A101, {
+    visited,
+    completados,
+    modulos,
+    estado,
+    siguiente,
+    completar(id) {
+      completados.add(id);
+      store.set('completados', [...completados]);
+    },
+    reiniciar() {
+      store.set('completados', []);
+      store.set('visited', []);
+    },
+  });
+
+  /* ---------- en cada módulo: banda para pasar al siguiente ---------- */
+  const actual = modulos.find((m) => m.id === page);
+  const main = document.querySelector('main');
+  if (actual && main) {
+    const next = modulos[modulos.indexOf(actual) + 1];
+    main.insertAdjacentHTML(
+      'beforeend',
+      `<section class="next-band">
+        <div class="wrap next-band__in">
+          <div>
+            <p class="kicker">Módulo ${actual.modulo} de ${modulos.length}</p>
+            <p class="next-band__t">${
+              next
+                ? `Sigue con <b>${next.titulo}</b>`
+                : 'Terminaste el último módulo'
+            }</p>
+          </div>
+          <a class="btn" href="${next ? next.href : 'index.html'}">${
+            next ? `Módulo ${next.modulo}: ${next.titulo}` : 'Volver al inicio'
+          }</a>
+        </div>
+      </section>`,
+    );
+  }
 })();

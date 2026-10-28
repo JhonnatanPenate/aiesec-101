@@ -1,0 +1,219 @@
+/* Página Inicio: portada del curso */
+
+.course-hero {
+  background: var(--charcoal);
+  color: var(--white);
+}
+.course-hero__in {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 32px;
+  align-items: center;
+  padding-block: 64px 72px;
+}
+@media (max-width: 820px) {
+  .course-hero__in {
+    grid-template-columns: 1fr;
+    padding-block: 44px 52px;
+  }
+}
+.course-hero__txt {
+  display: grid;
+  gap: 14px;
+}
+.course-hero .kicker {
+  color: var(--gold);
+}
+.course-hero h1 {
+  font-size: clamp(3rem, 9vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.course-hero h1 span {
+  color: var(--terra);
+}
+.course-hero__frase {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: var(--gold);
+}
+.course-hero__intro {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 52ch;
+}
+.course-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+  margin-top: 8px;
+}
+.btn--big {
+  font-size: 18px;
+  padding: 16px 28px;
+}
+.course-hero__meta {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* anillo de progreso */
+.ring {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 240px);
+  aspect-ratio: 1;
+}
+.ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.ring__bg {
+  fill: none;
+  stroke: #444;
+  stroke-width: 10;
+}
+.ring__fg {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 900ms var(--ease);
+}
+.ring__txt {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.ring__txt b {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.ring__txt span {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 12ch;
+  margin-inline: auto;
+}
+@media (max-width: 820px) {
+  .ring {
+    width: 170px;
+    justify-self: start;
+  }
+}
+
+/* lista de módulos */
+.mods {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.mod {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  border-radius: 20px;
+  border: 2px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+  transition:
+    transform var(--fast) var(--ease),
+    border-color var(--fast) var(--ease);
+}
+.mod:hover {
+  transform: translateY(-2px);
+  border-color: var(--terra);
+}
+.mod__n {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--terra-2);
+  font-variant-numeric: tabular-nums;
+}
+.mod__body {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.mod__body b {
+  font-size: 1.3rem;
+}
+.mod__body span {
+  color: var(--muted);
+  font-size: 16px;
+}
+.mod__side {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+}
+.mod__state {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.mod__min {
+  font-size: 14px;
+  color: var(--muted);
+}
+.mod--en-curso .mod__state {
+  background: var(--orange-3);
+  color: var(--terra-dark);
+}
+.mod--completado {
+  background: var(--bg);
+}
+.mod--completado .mod__n {
+  color: var(--terra);
+}
+.mod--completado .mod__state {
+  background: var(--terra);
+  color: var(--white);
+}
+.mod--next {
+  border-color: var(--terra);
+  box-shadow: 0 6px 0 var(--terra-3);
+}
+.mod--next .mod__n {
+  color: var(--terra);
+}
+@media (max-width: 560px) {
+  .mod {
+    grid-template-columns: auto 1fr;
+    gap: 6px 16px;
+    padding: 18px;
+  }
+  .mod__side {
+    grid-column: 2;
+    justify-items: start;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 10px;
+  }
+}
+.reset {
+  justify-self: start;
+  font: 600 14px var(--font);
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}

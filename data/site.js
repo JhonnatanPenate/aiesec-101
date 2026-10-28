@@ -1,18 +1,18 @@
-// Configuración general del sitio: navegación, créditos y secciones de cada página.
+// Configuración general del sitio: navegación, curso, créditos y secciones de cada página.
 // El contenido de cada sección vive en su propio archivo dentro de /data.
+// modulo: orden dentro del curso · minutos: tiempo estimado de lectura
 window.SITE = {
   nombre: 'AIESEC 101',
   comite: 'AIESEC en ESEN',
   lema: 'Turning rocks into gold',
   creditos: 'Creado por Jhonnatan Peñate, LCVP MXP 26.27',
-
   paginas: [
     {
       id: 'inicio',
       href: 'index.html',
       titulo: 'Inicio',
-      resumen: 'Bienvenida y accesos rápidos.',
-      secciones: ['Bienvenida', 'Accesos', 'Hacia dónde vamos'],
+      resumen: 'Tu ruta por el curso.',
+      secciones: ['Módulos', 'Hacia dónde vamos'],
     },
     {
       id: 'aprende',
@@ -26,6 +26,54 @@ window.SITE = {
         'Plataformas',
         'SalvaAcademy',
       ],
+      modulo: 1,
+      minutos: 7,
+    },
+    {
+      id: 'diccionario',
+      href: 'diccionario.html',
+      titulo: 'Diccionario',
+      resumen: 'Siglas y conceptos de AIESEC por categoría.',
+      secciones: ['Siglas', 'Ponte a prueba'],
+      modulo: 2,
+      minutos: 6,
+    },
+    {
+      id: 'estructura',
+      href: 'estructura.html',
+      titulo: 'Estructura',
+      resumen: 'Cómo se organiza AIESEC, organigramas y mapa.',
+      secciones: [
+        'De lo global a lo local',
+        'Organigrama nacional',
+        'Organigrama local',
+        'Cómo funciona un comité',
+        'Dónde estamos',
+      ],
+      modulo: 3,
+      minutos: 7,
+    },
+    {
+      id: 'areas',
+      href: 'areas.html',
+      titulo: 'Áreas',
+      resumen: 'Conceptos base de cada área y el recorrido de un intercambio.',
+      secciones: ['Recorrido de un intercambio', 'Conceptos por área'],
+      modulo: 4,
+      minutos: 6,
+    },
+    {
+      id: 'liderazgo',
+      href: 'liderazgo.html',
+      titulo: 'Liderazgo',
+      resumen: 'Roles de liderazgo, elecciones y conferencias.',
+      secciones: [
+        'Roles de liderazgo',
+        'Cómo funciona una elección',
+        'Conferencias y OC',
+      ],
+      modulo: 5,
+      minutos: 6,
     },
     {
       id: 'cultura',
@@ -40,44 +88,13 @@ window.SITE = {
         'Tradiciones',
         'Cómo convivimos',
       ],
-    },
-    {
-      id: 'areas',
-      href: 'areas.html',
-      titulo: 'Áreas',
-      resumen: 'Conceptos base de cada área y el recorrido de un intercambio.',
-      secciones: ['Recorrido de un intercambio', 'Conceptos por área'],
-    },
-    {
-      id: 'diccionario',
-      href: 'diccionario.html',
-      titulo: 'Diccionario',
-      resumen: 'Siglas y conceptos de AIESEC por categoría.',
-      secciones: ['Siglas', 'Ponte a prueba'],
-    },
-    {
-      id: 'estructura',
-      href: 'estructura.html',
-      titulo: 'Estructura',
-      resumen: 'Cómo se organiza AIESEC, organigramas y mapa.',
-      secciones: [
-        'De lo global a lo local',
-        'Organigrama nacional',
-        'Organigrama local',
-        'Cómo funciona un comité',
-        'Dónde estamos',
-      ],
-    },
-    {
-      id: 'liderazgo',
-      href: 'liderazgo.html',
-      titulo: 'Liderazgo',
-      resumen: 'Roles de liderazgo, elecciones y conferencias.',
-      secciones: [
-        'Roles de liderazgo',
-        'Cómo funciona una elección',
-        'Conferencias y OC',
-      ],
+      modulo: 6,
+      minutos: 7,
     },
   ],
+  curso: {
+    frase: 'Tu primer paso como Alquimista',
+    intro:
+      'Seis módulos cortos para entender AIESEC, cómo nos organizamos y lo que nos hace Alchemist. Ve a tu ritmo: tu avance se guarda en este navegador.',
+  },
 };
