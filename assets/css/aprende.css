@@ -324,7 +324,7 @@ input[type='range'] {
   font-variant-numeric: tabular-nums;
 }
 .calc__out.pass {
-  background: var(--green-dark);
+  background: var(--terra);
   color: var(--white);
 }
 .calc__out.fail {
@@ -444,17 +444,17 @@ input[type='range'] {
   color: var(--gold);
 }
 .section--orange .facts b {
-  color: var(--green-dark);
+  color: var(--terra);
 }
 .section--orange .facts div {
   border-color: transparent;
 }
 .section--orange .checks li::before {
-  background: var(--green-dark);
+  background: var(--terra);
 }
 .section--orange .calc {
-  border-color: var(--green-dark);
+  border-color: var(--terra);
 }
 .section--orange input[type='range'] {
-  accent-color: var(--green-dark);
+  accent-color: var(--terra);
 }
