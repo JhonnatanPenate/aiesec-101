@@ -40,6 +40,33 @@ Toda la membresía de AIESEC en ESEN: miembros de ESEN, UCA, UGB y UNIVO.
 
 HTML, CSS y JavaScript sin build. Desplegado en Vercel.
 
+## Estructura del repo
+
+```text
+index.html, aprende.html, cultura.html, areas.html,
+diccionario.html, estructura.html, liderazgo.html   Páginas
+data/site.js            Navegación, créditos y secciones de cada página
+data/*.js               Contenido de cada sección (se agrega por sección)
+assets/css/tokens.css   Colores, tipografía, espacios y animaciones
+assets/css/base.css     Reset y estilos base
+assets/css/layout.css   Header, menú móvil, secciones y footer
+assets/css/components.css  Botones, cards y modal
+assets/js/site.js       Header, footer, menú y progreso compartidos
+assets/js/modal.js      Modal con animación: Modal.open({ title, body, example })
+assets/img/             Logo e ilustraciones
+```
+
+## Ver en local
+
+```bash
+npx serve .
+```
+
+## Desplegar en Vercel
+
+Importa el repo en Vercel. Framework: **Other**, sin build command ni output
+directory. Cada push a `main` se despliega solo.
+
 ## Créditos
 
 Creado por Jhonnatan Peñate, LCVP MXP 26.27 · AIESEC en ESEN.

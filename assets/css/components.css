@@ -1,0 +1,203 @@
+/* Componentes reutilizables: botones, cards, grid y modal */
+
+/* ---------- botones ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--terra);
+  color: var(--white);
+  font: 700 16px var(--font);
+  text-decoration: none;
+  border: 2px solid var(--terra);
+  border-radius: var(--radius-sm);
+  padding: 12px 22px;
+  cursor: pointer;
+  transition:
+    background var(--fast) var(--ease),
+    transform var(--fast) var(--ease);
+}
+.btn:hover {
+  background: var(--terra-dark);
+  border-color: var(--terra-dark);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn--ghost {
+  background: var(--white);
+  color: var(--terra);
+}
+.btn--ghost:hover {
+  background: var(--soft);
+  color: var(--terra-dark);
+}
+.btn--dark {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+/* ---------- grid y cards ---------- */
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+}
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  min-width: 0;
+}
+.card h3 {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+}
+.card p {
+  color: var(--muted);
+  font-size: 16px;
+}
+/* card que abre un modal */
+.card--action {
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    transform var(--fast) var(--ease),
+    border-color var(--fast) var(--ease),
+    box-shadow var(--fast) var(--ease);
+}
+.card--action:hover {
+  transform: translateY(-3px);
+  border-color: var(--terra);
+  box-shadow: 0 6px 0 var(--soft);
+}
+.card--action .more {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--terra);
+}
+
+/* ---------- modal ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 20px var(--gutter-r) 20px var(--gutter);
+}
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(43, 43, 43, 0.55);
+  animation: fade var(--fast) var(--ease);
+}
+.modal__box {
+  position: relative;
+  width: min(100%, 560px);
+  max-height: calc(100% - 40px);
+  overflow: auto;
+  background: var(--white);
+  border-radius: 22px;
+  padding: 32px;
+  display: grid;
+  gap: 14px;
+  animation: pop 220ms var(--ease);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+.modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--sand);
+  font: 700 20px var(--font);
+  color: var(--ink);
+  cursor: pointer;
+}
+.modal__kicker {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.modal__title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--terra);
+  padding-right: 40px;
+}
+.modal__sub {
+  font-weight: 600;
+}
+.modal__body p {
+  color: var(--muted);
+}
+.modal__example {
+  background: var(--soft);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+}
+.modal__example b {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--terra-dark);
+  margin-bottom: 4px;
+}
+.modal.closing .modal__box {
+  animation: pop-out 160ms var(--ease) forwards;
+}
+.modal.closing .modal__backdrop {
+  animation: fade 160ms var(--ease) reverse forwards;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+}
+@keyframes pop-out {
+  to {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .modal__box,
+  .modal__backdrop,
+  .modal.closing .modal__box,
+  .modal.closing .modal__backdrop {
+    animation: none;
+  }
+}
+@media (max-width: 560px) {
+  .modal {
+    place-items: end center;
+    padding: 0;
+  }
+  .modal__box {
+    width: 100%;
+    max-height: 88%;
+    border-radius: 22px 22px 0 0;
+    padding: 28px var(--gutter-r) calc(28px + env(safe-area-inset-bottom, 0px))
+      var(--gutter);
+  }
+}
