@@ -99,15 +99,28 @@ window.CULTURA = {
     },
     {
       nombre: 'Hey AIESEC, what’s up',
-      corto: 'El chant',
-      texto: 'Pronto: cómo se canta y cuándo se usa.',
-      pendiente: true,
+      corto: 'El cántico',
+      texto:
+        'Un cántico de dos frases para llamar a todos y saber quiénes están. Una persona lanza la primera frase y el grupo responde con la segunda.',
+      ejemplo:
+        'Al empezar una actividad o cuando el grupo se dispersa, alguien lo canta y todos responden.',
+    },
+    {
+      nombre: 'La señal',
+      corto: 'Silencio sin gritar',
+      texto:
+        'Cierras la mano en puño, estiras el pulgar y el meñique, y te pones el pulgar en la frente. Cuando alguien la hace, todos la repiten y hacen silencio. Quien siga hablando se lleva un zape suavecito, en buena onda.',
+      ejemplo:
+        'En plena reunión hay mucho ruido: alguien hace la señal y en segundos todo el grupo está en silencio.',
+      senal: true,
     },
     {
       nombre: 'So proud of you',
-      corto: 'Reconocer a alguien',
-      texto: 'Pronto: cuándo se dice y por qué importa.',
-      pendiente: true,
+      corto: 'Celebrar un nuevo rol',
+      texto:
+        'Se dice cuando alguien asume una nueva área o un nuevo rol en AIESEC. Es la forma de reconocer su paso y decirle que el comité está orgulloso.',
+      ejemplo:
+        'Anuncian a la nueva LCVP y todo el comité le dice “So proud of you”.',
     },
   ],
 

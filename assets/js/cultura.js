@@ -68,11 +68,13 @@
   $('trads').innerHTML = D.tradiciones
     .map(
       (t, i) => `
-      <button class="trad${t.pendiente ? ' trad--soon' : ''}${t.semaforo ? ' trad--light' : ''}" type="button" data-i="${i}">
+      <button class="trad${t.pendiente ? ' trad--soon' : ''}${t.semaforo || t.senal ? ' trad--light' : ''}" type="button" data-i="${i}">
         ${
           t.semaforo
             ? '<span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>'
-            : ''
+            : t.senal
+              ? '<span class="sign" aria-hidden="true">🤙</span>'
+              : ''
         }
         <small>${t.corto}</small>
         <b>${t.nombre}</b>

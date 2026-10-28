@@ -302,7 +302,7 @@
 /* ---------- tradiciones ---------- */
 .trads {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
 }
 @media (max-width: 900px) {
@@ -360,6 +360,10 @@
 .trad--soon .more {
   text-decoration: none;
   color: var(--terra);
+}
+.sign {
+  font-size: 1.8rem;
+  line-height: 1;
 }
 .lights {
   display: flex;
