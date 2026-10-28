@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/areas.css" />
   </head>
   <body data-page="areas">
     <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -40,20 +41,61 @@
         </div>
       </section>
 
-      <section class="section section--sand" id="recorrido-de-un-intercambio">
+      <section class="section section--white" id="recorrido-de-un-intercambio">
         <div class="wrap">
           <header class="section__head">
             <h2>Recorrido de un intercambio</h2>
+            <p>
+              Cada intercambio pasa por las mismas etapas. MKT atrae a la
+              persona y OGX o ICX la acompañan hasta el final. Elige la
+              dirección y toca cada etapa.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div
+            class="switch"
+            role="radiogroup"
+            aria-label="Dirección del intercambio"
+          >
+            <button
+              type="button"
+              role="radio"
+              aria-checked="true"
+              data-dir="out"
+            >
+              <b>Outgoing</b><span>Un salvadoreño sale · OGX</span>
+            </button>
+            <button
+              type="button"
+              role="radio"
+              aria-checked="false"
+              data-dir="in"
+            >
+              <b>Incoming</b><span>Alguien viene · ICX</span>
+            </button>
+          </div>
+          <ol class="journey" id="journey"></ol>
+          <div
+            class="journey__panel"
+            id="journeyPanel"
+            aria-live="polite"
+          ></div>
         </div>
       </section>
-      <section class="section" id="conceptos-por-area">
+      <section class="section section--dark" id="conceptos-por-area">
         <div class="wrap">
           <header class="section__head">
             <h2>Conceptos por área</h2>
+            <p>
+              Lo básico que conviene saber de cada área, aunque no sea la tuya.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div class="area-tabs" role="tablist" id="areaTabs"></div>
+          <div
+            class="area-panel"
+            id="areaPanel"
+            role="tabpanel"
+            aria-live="polite"
+          ></div>
         </div>
       </section>
     </main>
@@ -63,5 +105,7 @@
     <script src="data/site.js"></script>
     <script src="assets/js/site.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script src="data/areas.js"></script>
+    <script src="assets/js/areas.js"></script>
   </body>
 </html>

@@ -275,3 +275,42 @@
   background: var(--soft);
   color: var(--terra-dark);
 }
+
+/* ---------- interruptor de dos opciones ---------- */
+.switch {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 6px;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  justify-self: start;
+  max-width: 100%;
+}
+.switch button {
+  display: grid;
+  text-align: left;
+  font: inherit;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background var(--fast) var(--ease);
+}
+.switch b {
+  font-size: 1.1rem;
+}
+.switch span {
+  font-size: 14px;
+  color: var(--muted);
+}
+.switch button[aria-checked='true'] {
+  background: var(--ink);
+  color: var(--white);
+}
+.switch button[aria-checked='true'] span {
+  color: #d6d1c8;
+}

@@ -1,0 +1,242 @@
+/* Página Áreas */
+
+/* ---------- recorrido ---------- */
+.journey {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  position: relative;
+}
+.journey::before {
+  content: '';
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  top: 50%;
+  border-top: 3px dashed var(--orange);
+  z-index: 0;
+}
+.journey li {
+  position: relative;
+  z-index: 1;
+  display: grid;
+}
+.stop {
+  font: inherit;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 18px;
+  padding: 16px 8px;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 2px;
+  background: var(--soft);
+  color: var(--ink);
+  transition:
+    transform var(--fast) var(--ease),
+    background var(--fast) var(--ease);
+}
+.stop:hover {
+  transform: translateY(-3px);
+}
+.stop b {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.stop span {
+  font-size: 13px;
+  font-weight: 500;
+}
+.stop i {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--white);
+}
+.stop--mkt {
+  background: var(--orange);
+}
+.stop.on {
+  background: var(--charcoal);
+  color: var(--white);
+}
+.stop.on i {
+  background: var(--terra);
+  color: var(--white);
+}
+@media (max-width: 860px) {
+  .journey {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .journey::before {
+    display: none;
+  }
+}
+@media (max-width: 460px) {
+  .journey {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.journey__panel {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 760px) {
+  .journey__panel {
+    grid-template-columns: 1fr;
+  }
+}
+.journey__panel > div:first-child {
+  background: var(--terra);
+  color: var(--white);
+  border-radius: 22px;
+  padding: 26px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+.journey__panel .kicker {
+  color: var(--white);
+  opacity: 0.85;
+}
+.journey__panel h3 {
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+.journey__panel p {
+  font-size: 1.1rem;
+}
+.journey__ex {
+  background: var(--charcoal);
+  color: var(--white);
+  border-radius: 22px;
+  padding: 26px;
+  font-size: 1.1rem;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+.journey__ex b {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+/* ---------- conceptos por área ---------- */
+.area-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.area-tab {
+  font: 700 16px var(--font);
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 2px solid #4a4a4a;
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+}
+.area-tab:hover {
+  border-color: var(--orange);
+}
+.area-tab[aria-selected='true'] {
+  background: var(--terra);
+  border-color: var(--terra);
+}
+.area-panel {
+  display: grid;
+  gap: 14px;
+  animation: fade-up 260ms var(--ease);
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.area-panel__head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.area-panel__head > b {
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--orange);
+}
+.area-panel__head h3 {
+  font-size: 1.5rem;
+}
+.area-panel__head p {
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 52ch;
+}
+.concepts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+@media (max-width: 860px) {
+  .concepts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .concepts {
+    grid-template-columns: 1fr;
+  }
+}
+.concept {
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 18px;
+  padding: 20px;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+.concept h4 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--terra);
+}
+.concept p {
+  font-size: 16px;
+  color: var(--muted);
+}
+.concept--wide {
+  grid-column: span 2;
+  background: var(--orange);
+}
+.concept--wide h4 {
+  color: var(--ink);
+  font-size: 1.35rem;
+}
+.concept--wide p {
+  color: var(--ink);
+  font-size: 17px;
+}
+@media (max-width: 520px) {
+  .concept--wide {
+    grid-column: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .area-panel {
+    animation: none;
+  }
+}

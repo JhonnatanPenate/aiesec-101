@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/liderazgo.css" />
   </head>
   <body data-page="liderazgo">
     <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -40,28 +41,48 @@
         </div>
       </section>
 
-      <section class="section section--sand" id="roles-de-liderazgo">
+      <section class="section section--white" id="roles-de-liderazgo">
         <div class="wrap">
           <header class="section__head">
             <h2>Roles de liderazgo</h2>
+            <p>
+              En AIESEC el liderazgo se practica. Cada rol te prepara para el
+              siguiente. Toca un rol para ver qué haces y qué desarrollas.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <ol class="ladder" id="ladder"></ol>
+          <div class="side-path" id="sidePath"></div>
         </div>
       </section>
-      <section class="section" id="como-funciona-una-eleccion">
+      <section class="section section--dark" id="como-funciona-una-eleccion">
         <div class="wrap">
           <header class="section__head">
             <h2>Cómo funciona una elección</h2>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <p class="lead-dark" id="elIntro"></p>
+          <div class="steps">
+            <ol class="steps__nav" id="elNav"></ol>
+            <div class="steps__panel" id="elPanel" aria-live="polite"></div>
+          </div>
         </div>
       </section>
-      <section class="section section--sand" id="conferencias-y-oc">
+      <section class="section section--orange" id="conferencias-y-oc">
         <div class="wrap">
           <header class="section__head">
             <h2>Conferencias y OC</h2>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <p class="lead-ink" id="confIntro"></p>
+          <div class="trio" id="confDatos"></div>
+          <div class="oc">
+            <div class="oc__info">
+              <p class="kicker">Organizing Committee</p>
+              <h3>Qué es un OC</h3>
+              <p id="ocTexto"></p>
+              <h4>Cómo aplicar</h4>
+              <ol class="mini-steps" id="ocAplicar"></ol>
+            </div>
+            <div class="oc__roles" id="ocRoles"></div>
+          </div>
         </div>
       </section>
     </main>
@@ -71,5 +92,7 @@
     <script src="data/site.js"></script>
     <script src="assets/js/site.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script src="data/liderazgo.js"></script>
+    <script src="assets/js/liderazgo.js"></script>
   </body>
 </html>
