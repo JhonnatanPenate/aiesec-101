@@ -156,6 +156,7 @@ window.ESTRUCTURA = {
       lugar: 'Zona central',
       coord: [-89.29, 13.66],
       estado: 'Sede del comité',
+      tipo: 'sede',
       texto:
         'Aquí nació AIESEC en ESEN, el comité que hoy reúne a miembros de cuatro universidades.',
       lado: 'izq',
@@ -167,6 +168,7 @@ window.ESTRUCTURA = {
       lugar: 'Zona central',
       coord: [-89.235, 13.68],
       estado: 'Expansión de AIESEC en ESEN',
+      tipo: 'expansion',
       texto: 'Sus miembros son parte de AIESEC en ESEN.',
       lado: 'der',
     },
@@ -177,6 +179,8 @@ window.ESTRUCTURA = {
       lugar: 'San Miguel',
       coord: [-88.2, 13.47],
       estado: 'Expansión · meta: comité propio en 2027',
+      tipo: 'expansion',
+      meta: true,
       texto:
         'Sus miembros son parte de AIESEC en ESEN mientras se forma su propio comité.',
       lado: 'izq',
@@ -188,6 +192,7 @@ window.ESTRUCTURA = {
       lugar: 'San Miguel',
       coord: [-88.16, 13.49],
       estado: 'Expansión de AIESEC en ESEN',
+      tipo: 'expansion',
       texto: 'Sus miembros son parte de AIESEC en ESEN.',
       lado: 'der',
     },

@@ -231,3 +231,47 @@
 .card .kicker {
   color: var(--terra);
 }
+.modal__people {
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+.modal__people > b {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--terra);
+}
+.modal__people ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.modal__people li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.modal__people li > span:last-child {
+  display: grid;
+  line-height: 1.3;
+}
+.modal__people small {
+  font-size: 14px;
+  color: var(--muted);
+}
+.avatar {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  background: var(--soft);
+  color: var(--terra-dark);
+}

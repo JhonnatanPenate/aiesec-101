@@ -32,7 +32,24 @@
 .dict {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  grid-auto-flow: dense;
   gap: 14px;
+}
+@media (min-width: 600px) {
+  .flip.is-wide {
+    grid-column: span 2;
+  }
+  .flip.is-wide .flip__back {
+    padding: 24px 28px;
+    gap: 8px;
+  }
+  .flip.is-wide .flip__back em {
+    font-size: 1.35rem;
+  }
+  .flip.is-wide .flip__back span {
+    font-size: 18px;
+    max-width: 52ch;
+  }
 }
 .flip {
   font: inherit;

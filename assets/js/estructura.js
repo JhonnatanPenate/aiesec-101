@@ -49,8 +49,24 @@
 
   /* ---------- organigrama local ---------- */
   const L = D.local;
+  const E = window.EQUIPO;
+  const people = (id, n) =>
+    (E.areas[id] || []).filter((p) => p[1] === n).map((p) => [p[0], '']);
+  const total =
+    1 +
+    Object.values(E.areas).reduce((t, a) => t + a.length, 0) +
+    Object.values(E.sub)
+      .flat()
+      .filter(
+        (p) =>
+          !Object.values(E.areas)
+            .flat()
+            .some((q) => q[0] === p[0]),
+      ).length;
+  $('orgTotal').innerHTML =
+    `<b>${total}</b> miembros en la membresía ${E.ciclo} · ${L.areas.length} áreas`;
   $('orgLcp').innerHTML =
-    `<span>EB</span><b>LCP</b><small>${L.lcp.nombre}</small>`;
+    `<span>EB · LCP</span><b>${E.lcp}</b><small>${L.lcp.nombre}</small>`;
   $('orgLcp').addEventListener('click', () =>
     open({
       kicker: 'Presidencia del comité',
@@ -58,20 +74,30 @@
       sub: L.lcp.nombre,
       body: L.lcp.texto,
       example: L.lcp.ejemplo,
+      people: [[E.lcp, 'LCP']],
+      peopleTitle: 'Quién',
     }),
   );
   const niveles = Object.keys(L.niveles);
   $('orgCols').innerHTML = L.areas
-    .map(
-      (a, ai) => `
+    .map((a, ai) => {
+      const team = E.areas[a.id] || [];
+      const vp = team.find((p) => p[1] === 'LCVP');
+      return `
       <div class="org__col">
+        <p class="org__count">${team.length} personas</p>
         ${niveles
-          .map(
-            (n, ni) => `
+          .map((n, ni) => {
+            const c = team.filter((p) => p[1] === n).length;
+            return `
           <button class="org__node org__node--${ni}" type="button" data-a="${ai}" data-n="${n}">
-            ${ni === 0 ? `<span>EB</span><b>${a.nombre}</b><small>${n}</small>` : `<small>${n}</small>`}
-          </button>`,
-          )
+            ${
+              ni === 0
+                ? `<span>EB · LCVP</span><b>${a.nombre}</b><small>${vp ? vp[0] : 'Por definir'}</small>`
+                : `<small>${n}</small><em>${c}</em>`
+            }
+          </button>`;
+          })
           .join('')}
         ${
           a.sub
@@ -83,8 +109,8 @@
                 .join('')}</div>`
             : ''
         }
-      </div>`,
-    )
+      </div>`;
+    })
     .join('');
   $('orgCols').addEventListener('click', (e) => {
     const b = e.target.closest('[data-a]');
@@ -98,10 +124,13 @@
         sub: s.largo,
         body: s.texto,
         example: s.ejemplo,
+        people: (E.sub[s.nombre] || []).map((p) => [p[0], p[1]]),
+        peopleTitle: 'Quiénes',
       });
       return;
     }
     const n = b.dataset.n;
+    const team = E.areas[a.id] || [];
     open({
       kicker: `${a.nombre} · ${a.largo}`,
       title: n === 'LCVP' ? `LCVP ${a.nombre}` : n,
@@ -111,6 +140,8 @@
         `En ${a.nombre} el trabajo gira en torno a ${a.foco}.`,
       ],
       example: a.ejemplo,
+      people: n === 'LCVP' ? team.map((p) => [p[0], p[1]]) : people(a.id, n),
+      peopleTitle: n === 'LCVP' ? `Equipo de ${a.nombre}` : 'Quiénes',
     });
   });
 
@@ -130,24 +161,53 @@
     (lon - M.minLon) * M.escala,
     (M.maxLat - lat) * M.escala,
   ];
+  const sede = D.mapa.find((u) => u.tipo === 'sede');
+  const [sx, sy] = P(sede.coord);
+  // líneas punteadas desde la sede hacia cada expansión
+  const lines = D.mapa
+    .filter((u) => u.tipo !== 'sede')
+    .map((u, i) => {
+      const [x, y] = P(u.coord);
+      const mx = (sx + x) / 2;
+      const my = Math.min(sy, y) - Math.abs(x - sx) * 0.18 - 14;
+      const d = `M${sx},${sy} Q${mx},${my} ${x},${y}`;
+      return `
+        <mask id="m${i}"><path class="draw" d="${d}" pathLength="1" style="animation-delay:${0.25 + i * 0.12}s"></path></mask>
+        <path class="map__link" d="${d}" mask="url(#m${i})"></path>`;
+    })
+    .join('');
+  // pin tipo gota: la punta queda en la coordenada
+  const drop = (x, y) =>
+    `M${x},${y} C${x - 3},${y - 10} ${x - 13},${y - 16} ${x - 13},${y - 28} A13,13 0 1 1 ${x + 13},${y - 28} C${x + 13},${y - 16} ${x + 3},${y - 10} ${x},${y} Z`;
   const pins = D.mapa
     .map((u, i) => {
       const [x, y] = P(u.coord);
-      const tx = u.lado === 'izq' ? x - 16 : x + 16;
+      const tx = u.lado === 'izq' ? x - 20 : x + 20;
       const anchor = u.lado === 'izq' ? 'end' : 'start';
       return `
-      <g class="pin" data-i="${i}" tabindex="0" role="button" aria-label="${u.nombre}, ${u.lugar}">
-        <circle class="pin__halo" cx="${x}" cy="${y}" r="20"></circle>
-        <circle class="pin__dot" cx="${x}" cy="${y}" r="9"></circle>
-        <text x="${tx}" y="${y + 6}" text-anchor="${anchor}">${u.nombre}</text>
+      <g class="pin pin--${u.tipo}" data-i="${i}" tabindex="0" role="button" aria-label="${u.nombre}, ${u.lugar}" style="animation-delay:${i * 0.1}s">
+        ${u.meta ? `<circle class="pin__goal" cx="${x}" cy="${y - 28}" r="26"></circle>` : ''}
+        <path class="pin__body" d="${drop(x, y)}"></path>
+        <circle class="pin__eye" cx="${x}" cy="${y - 28}" r="5"></circle>
+        <text x="${tx}" y="${y - 22}" text-anchor="${anchor}">${u.nombre}</text>
       </g>`;
     })
     .join('');
   $('mapSvg').innerHTML = `
-    <svg viewBox="0 0 ${M.ancho} ${M.alto}" role="img" aria-label="Mapa de El Salvador con las universidades de AIESEC en ESEN">
+    <svg viewBox="-20 -40 ${M.ancho + 40} ${M.alto + 60}" role="img" aria-label="Mapa de El Salvador con las universidades de AIESEC en ESEN">
+      <defs>
+        <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="10" class="map__hatch"></line>
+        </pattern>
+        ${lines.match(/<mask[\s\S]*?<\/mask>/g).join('')}
+      </defs>
+      <text class="map__country" x="10" y="40">Guatemala</text>
+      <text class="map__country" x="${M.ancho * 0.66}" y="40">Honduras</text>
+      <text class="map__sea" x="${M.ancho * 0.36}" y="${M.alto + 10}">Océano Pacífico</text>
       <path class="map__land" d="${M.contorno}"></path>
+      <path class="map__land map__land--hatch" d="${M.contorno}"></path>
       ${M.departamentos.map((d) => `<path class="map__dep" d="${d[1]}"><title>${d[0]}</title></path>`).join('')}
-      <text class="map__sea" x="${M.ancho * 0.42}" y="${M.alto - 18}">Océano Pacífico</text>
+      ${lines.replace(/<mask[\s\S]*?<\/mask>/g, '')}
       ${pins}
     </svg>`;
   function showPin(i) {
@@ -155,12 +215,15 @@
     $('mapSvg')
       .querySelectorAll('.pin')
       .forEach((p) => p.classList.toggle('on', +p.dataset.i === i));
-    $('mapPanel').innerHTML = `
+    const panel = $('mapPanel');
+    panel.className = `map__panel map__panel--${u.tipo}`;
+    panel.innerHTML = `
       <p class="kicker">${u.lugar}</p>
       <h3>${u.nombre}</h3>
       <p class="map__long">${u.largo}</p>
       <span class="map__status">${u.estado}</span>
-      <p>${u.texto}</p>`;
+      <p>${u.texto}</p>
+      <p class="map__motto">Turning rocks into gold</p>`;
   }
   const svg = $('mapSvg');
   svg.addEventListener('click', (e) => {

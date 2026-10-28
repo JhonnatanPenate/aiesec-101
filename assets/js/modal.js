@@ -2,6 +2,7 @@
 // Uso: Modal.open({ kicker, title, sub, body, example })
 //   - body: texto o arreglo de párrafos
 //   - example: texto opcional que aparece en un recuadro "Ejemplo"
+//   - people: lista opcional [[nombre, rol]] con peopleTitle
 (function () {
   'use strict';
   const esc = (t) =>
@@ -16,6 +17,13 @@
           "'": '&#39;',
         })[c],
     );
+
+  const initials = (n) =>
+    n
+      .split(' ')
+      .slice(0, 2)
+      .map((w) => w[0])
+      .join('');
 
   let current = null;
   let lastFocus = null;
@@ -51,6 +59,19 @@
         ${data.sub ? `<p class="modal__sub">${esc(data.sub)}</p>` : ''}
         <div class="modal__body">${paras.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
         ${data.example ? `<div class="modal__example"><b>Ejemplo</b>${esc(data.example)}</div>` : ''}
+        ${
+          data.people && data.people.length
+            ? `<div class="modal__people">
+                <b>${esc(data.peopleTitle || 'Quiénes')} · ${data.people.length}</b>
+                <ul>${data.people
+                  .map(
+                    (p) =>
+                      `<li><span class="avatar">${esc(initials(p[0]))}</span><span><strong>${esc(p[0])}</strong>${p[1] ? `<small>${esc(p[1])}</small>` : ''}</span></li>`,
+                  )
+                  .join('')}</ul>
+              </div>`
+            : ''
+        }
       </div>`;
     el.addEventListener('click', (e) => {
       if (e.target.closest('[data-close]')) close();

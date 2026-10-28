@@ -206,6 +206,9 @@
   font-size: 14px;
   opacity: 0.8;
 }
+.org__lcp b {
+  font-size: 1.5rem;
+}
 .org__stem {
   width: 3px;
   height: 26px;
@@ -267,6 +270,29 @@
 .org__node small {
   font-size: 14px;
   font-weight: 600;
+}
+.org__node--0 small {
+  font-weight: 500;
+  opacity: 0.9;
+}
+.org__node em {
+  font-style: normal;
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.org__count {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.org__total {
+  font-size: 1.05rem;
+}
+.org__total b {
+  font-size: 1.6rem;
+  color: var(--terra);
 }
 .org__node--1 {
   background: var(--orange);
@@ -421,23 +447,33 @@
     grid-template-columns: 1fr;
   }
 }
-.map__svg {
-  background: var(--bg);
+.map__wrap {
+  background: var(--soft);
   border-radius: 22px;
-  padding: 16px;
+  padding: 18px 18px 16px;
+  display: grid;
+  gap: 12px;
   min-width: 0;
 }
 .map__svg svg {
   display: block;
   width: 100%;
   height: auto;
-  overflow: visible;
 }
 .map__land {
   fill: var(--white);
   stroke: var(--ink);
   stroke-width: 2.5;
   stroke-linejoin: round;
+}
+.map__land--hatch {
+  fill: url(#hatch);
+  stroke: none;
+}
+.map__hatch {
+  stroke: var(--orange);
+  stroke-width: 1.2;
+  stroke-opacity: 0.35;
 }
 .map__dep {
   fill: none;
@@ -447,60 +483,154 @@
   stroke-linejoin: round;
   pointer-events: none;
 }
+.map__country,
 .map__sea {
-  font: italic 500 18px var(--font);
+  font: italic 500 20px var(--font);
   fill: var(--muted);
+}
+.map__link {
+  fill: none;
+  stroke: var(--terra);
+  stroke-width: 2.5;
+  stroke-dasharray: 2 7;
+  stroke-linecap: round;
+}
+.draw {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 10;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 700ms var(--ease) forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 .pin {
   cursor: pointer;
   outline: none;
+  animation: drop 420ms var(--ease) both;
 }
-.pin__halo {
-  fill: var(--orange);
-  opacity: 0;
-  transition: opacity var(--fast) var(--ease);
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
 }
-.pin__dot {
+.pin__body {
   fill: var(--terra);
   stroke: var(--white);
-  stroke-width: 3;
+  stroke-width: 2.5;
+  transition: transform var(--fast) var(--ease);
 }
-.pin text {
-  font: 700 18px var(--font);
-  fill: var(--ink);
-  paint-order: stroke;
-  stroke: var(--white);
-  stroke-width: 5px;
-}
-.pin:hover .pin__halo,
-.pin:focus-visible .pin__halo {
-  opacity: 0.35;
-}
-.pin.on .pin__halo {
-  opacity: 0.5;
-}
-.pin.on .pin__dot {
+.pin--sede .pin__body {
   fill: var(--charcoal);
 }
-.map__panel {
+.pin__eye {
+  fill: var(--white);
+}
+.pin__goal {
+  fill: transparent;
+  stroke: var(--terra);
+  stroke-width: 2;
+  stroke-dasharray: 4 5;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spin 14s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.pin text {
+  font: 700 20px var(--font);
+  fill: var(--ink);
+  paint-order: stroke;
+  stroke: var(--soft);
+  stroke-width: 6px;
+}
+.pin:hover .pin__body,
+.pin:focus-visible .pin__body {
+  stroke: var(--orange);
+}
+.pin.on .pin__body {
+  stroke: var(--orange);
+  stroke-width: 4;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pin,
+  .pin__goal,
+  .draw {
+    animation: none;
+  }
+  .draw {
+    stroke-dashoffset: 0;
+  }
+}
+.map__legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.map__legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lg {
+  width: 14px;
+  height: 14px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+.lg--sede {
   background: var(--charcoal);
-  color: var(--white);
+}
+.lg--exp {
+  background: var(--terra);
+}
+.lg--meta {
+  border-radius: 50%;
+  transform: none;
+  border: 2px dashed var(--terra);
+}
+.map__panel {
   border-radius: 22px;
   padding: 28px;
   display: grid;
   gap: 8px;
   align-content: start;
-  min-height: 240px;
+  min-height: 260px;
+  color: var(--white);
+  transition: background 220ms var(--ease);
+}
+.map__panel--sede {
+  background: var(--charcoal);
+}
+.map__panel--expansion {
+  background: var(--terra);
 }
 .map__panel .kicker {
   color: var(--orange);
+}
+.map__panel--expansion .kicker {
+  color: var(--white);
+  opacity: 0.8;
 }
 .map__panel h3 {
   font-size: 2.4rem;
   font-weight: 800;
 }
 .map__long {
-  color: #d6d1c8;
+  opacity: 0.8;
   font-size: 16px;
 }
 .map__status {
@@ -509,5 +639,15 @@
   font-weight: 700;
   padding: 4px 14px;
   border-radius: 999px;
-  background: var(--terra);
+  background: var(--white);
+  color: var(--ink);
+}
+.map__motto {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
 }

@@ -78,6 +78,7 @@
               forman el EB. Toca cualquier rol para ver qué hace.
             </p>
           </header>
+          <p class="org__total" id="orgTotal"></p>
           <div class="org">
             <button class="org__lcp" type="button" id="orgLcp"></button>
             <div class="org__stem" aria-hidden="true"></div>
@@ -111,7 +112,14 @@
             </p>
           </header>
           <div class="map">
-            <div class="map__svg" id="mapSvg"></div>
+            <div class="map__wrap">
+              <div class="map__svg" id="mapSvg"></div>
+              <ul class="map__legend">
+                <li><i class="lg lg--sede"></i>Sede del comité</li>
+                <li><i class="lg lg--exp"></i>Expansión</li>
+                <li><i class="lg lg--meta"></i>Meta 2027: comité propio</li>
+              </ul>
+            </div>
             <div class="map__panel" id="mapPanel" aria-live="polite"></div>
           </div>
         </div>
@@ -124,6 +132,7 @@
     <script src="assets/js/site.js"></script>
     <script src="assets/js/modal.js"></script>
     <script src="data/estructura.js"></script>
+    <script src="data/equipo.js"></script>
     <script src="data/mapa-sv.js"></script>
     <script src="assets/js/estructura.js"></script>
   </body>

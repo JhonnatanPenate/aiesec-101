@@ -34,6 +34,9 @@
   /* ---------- cards ---------- */
   const norm = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
+  // las cards con mucho texto ocupan dos espacios al voltearse
+  const isLong = (t) => (t.en + ' ' + t.texto).length > 95;
+
   function render() {
     const q = norm($('q').value.trim());
     const items = all.filter(
@@ -45,7 +48,7 @@
       items
         .map(
           (t) => `
-        <button class="flip${allFlipped ? ' is-flipped' : ''}" type="button" aria-pressed="${allFlipped}">
+        <button class="flip${allFlipped ? ' is-flipped' : ''}${allFlipped && isLong(t) ? ' is-wide' : ''}" type="button" aria-pressed="${allFlipped}" data-long="${isLong(t)}">
           <span class="flip__inner">
             <span class="flip__face flip__front">
               <small>${t.cat}</small>
@@ -68,8 +71,21 @@
   $('dict').addEventListener('click', (e) => {
     const b = e.target.closest('.flip');
     if (!b) return;
-    const on = b.classList.toggle('is-flipped');
+    const on = !b.classList.contains('is-flipped');
     b.setAttribute('aria-pressed', on);
+    if (b.dataset.long !== 'true') {
+      b.classList.toggle('is-flipped', on);
+      return;
+    }
+    if (on) {
+      b.classList.add('is-wide');
+      requestAnimationFrame(() => b.classList.add('is-flipped'));
+    } else {
+      b.classList.remove('is-flipped');
+      setTimeout(() => {
+        if (!b.classList.contains('is-flipped')) b.classList.remove('is-wide');
+      }, 380);
+    }
   });
   $('q').addEventListener('input', render);
   $('flipAll').addEventListener('click', (e) => {
