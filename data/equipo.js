@@ -10,7 +10,7 @@ window.EQUIPO = {
     mxp: [
       ['Jhonnatan Peñate', 'LCVP'],
       ['Brayan Chavarría', 'Manager'],
-      ['Cristian Velásquez', 'Manager', '', 'TL'],
+      ['Cristian Velásquez', 'Manager'],
       ['Katherine Rivera', 'Team Member'],
       ['Alisson Guerrero', 'Team Member'],
       ['Melissa Cortez', 'Team Member'],
@@ -32,7 +32,7 @@ window.EQUIPO = {
     ogx: [
       ['Fernando Castillo', 'LCVP'],
       ['Daniel Ramírez', 'Manager'],
-      ['Christian Renderos', 'Manager'],
+      ['Christian Renderos', 'Manager', '', 'TL'],
       ['Paola Ortez', 'Manager'],
       ['Oscar Estrada', 'Team Member'],
       ['Andrés Gómez', 'Team Member'],
