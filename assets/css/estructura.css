@@ -269,10 +269,10 @@
   font-weight: 600;
 }
 .org__node--1 {
-  background: var(--white);
+  background: var(--orange);
 }
 .org__node--2 {
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--soft);
 }
 .org__subs {
   display: flex;
@@ -438,6 +438,14 @@
   stroke: var(--ink);
   stroke-width: 2.5;
   stroke-linejoin: round;
+}
+.map__dep {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 0.8;
+  stroke-opacity: 0.35;
+  stroke-linejoin: round;
+  pointer-events: none;
 }
 .map__sea {
   font: italic 500 18px var(--font);

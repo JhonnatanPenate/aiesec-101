@@ -146,6 +146,7 @@
   $('mapSvg').innerHTML = `
     <svg viewBox="0 0 ${M.ancho} ${M.alto}" role="img" aria-label="Mapa de El Salvador con las universidades de AIESEC en ESEN">
       <path class="map__land" d="${M.contorno}"></path>
+      ${M.departamentos.map((d) => `<path class="map__dep" d="${d[1]}"><title>${d[0]}</title></path>`).join('')}
       <text class="map__sea" x="${M.ancho * 0.42}" y="${M.alto - 18}">Océano Pacífico</text>
       ${pins}
     </svg>`;
