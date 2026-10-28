@@ -429,3 +429,106 @@ input[type='range'] {
   font-weight: 600;
   line-height: 1.4;
 }
+
+/* ---------- ODS ---------- */
+.ods-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.ods-facts div {
+  background: var(--charcoal);
+  color: var(--white);
+  border-radius: 20px;
+  padding: 16px clamp(12px, 3vw, 22px);
+  min-width: 0;
+  display: grid;
+}
+.ods-facts b {
+  font-size: clamp(1.5rem, 5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--gold);
+}
+.ods-facts span {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.82);
+}
+.ods {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+@media (max-width: 900px) {
+  .ods {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .ods {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.ods__tile {
+  font: inherit;
+  text-align: left;
+  border: 0;
+  cursor: pointer;
+  aspect-ratio: 1;
+  max-width: 100%;
+  border-radius: 14px;
+  padding: 12px;
+  background: var(--c);
+  color: #fff;
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  min-width: 0;
+  transition: transform var(--fast) var(--ease);
+}
+.ods__tile:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+.ods__tile b {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1;
+}
+.ods__tile span {
+  font-size: clamp(11px, 1.3vw, 14px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+.ods-ex {
+  display: grid;
+  gap: 10px;
+}
+.ods-ex__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ods-ex__list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 6px;
+  border-radius: 999px;
+  background: var(--bg);
+  font-weight: 600;
+  font-size: 15px;
+}
+.ods-ex__list i {
+  font-style: normal;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--c);
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+}

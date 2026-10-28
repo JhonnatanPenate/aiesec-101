@@ -117,3 +117,36 @@
     });
   });
 })();
+
+// Inicio: mis insignias
+(function () {
+  'use strict';
+  const I = window.Insignias;
+  const box = document.getElementById('badges');
+  if (!I || !box) return;
+  function pintar() {
+    const g = I.ganadas();
+    box.innerHTML = I.lista
+      .map((b) => {
+        const tiene = !!g[b.id];
+        return `
+        <button class="badge-card${tiene ? '' : ' badge-card--locked'}" type="button" data-id="${b.id}" ${tiene ? '' : 'aria-disabled="true"'}>
+          <span class="badge-card__img">${I.svg(b, (g[b.id] || {}).nombre, (g[b.id] || {}).fecha)}</span>
+          <span class="badge-card__txt">
+            <b>${b.titulo}</b>
+            <span>${tiene ? 'Desbloqueada · toca para descargar' : b.pista}</span>
+          </span>
+        </button>`;
+      })
+      .join('');
+  }
+  box.addEventListener('click', (e) => {
+    const c = e.target.closest('.badge-card');
+    if (!c || c.classList.contains('badge-card--locked')) return;
+    I.celebrar(c.dataset.id);
+  });
+  I.alCerrar = pintar;
+  pintar();
+  // por si se completó algo y la insignia aún no se celebró
+  I.revisar();
+})();

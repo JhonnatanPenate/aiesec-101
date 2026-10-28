@@ -180,3 +180,41 @@
   });
   paintCalc();
 })();
+
+// ODS
+(function () {
+  'use strict';
+  const O = window.APRENDE.ods;
+  const $ = (s) => document.getElementById(s);
+  if (!O || !$('odsGrid')) return;
+  $('odsIntro').textContent = O.intro;
+  $('odsFacts').innerHTML = O.datos
+    .map((d) => `<div><b>${d[0]}</b><span>${d[1]}</span></div>`)
+    .join('');
+  $('odsGrid').innerHTML = O.lista
+    .map(
+      (o) => `
+      <button class="ods__tile" type="button" data-n="${o[0]}" style="--c:${o[2]}">
+        <b>${o[0]}</b><span>${o[1]}</span>
+      </button>`,
+    )
+    .join('');
+  $('odsGrid').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-n]');
+    if (!b) return;
+    const o = O.lista[+b.dataset.n - 1];
+    const ej = O.ejemplos.filter((x) => x[1] === o[0]).map((x) => x[0]);
+    window.Modal.open({
+      kicker: `ODS ${o[0]} de 17`,
+      title: o[1],
+      body: o[3],
+      example: ej.length ? `En AIESEC: ${ej.join(', ')}.` : '',
+    });
+  });
+  $('odsEx').innerHTML = O.ejemplos
+    .map(
+      (x) =>
+        `<span><i style="--c:${O.lista[x[1] - 1][2]}">${x[1]}</i>${x[0]}</span>`,
+    )
+    .join('');
+})();

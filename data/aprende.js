@@ -186,3 +186,116 @@ window.APRENDE = {
     areas: ['MKT', 'ICX', 'OGX', 'MXP', 'F&L'],
   },
 };
+
+// Objetivos de Desarrollo Sostenible (Agenda 2030 de la ONU)
+// [número, nombre, color oficial, idea corta]
+window.APRENDE.ods = {
+  intro:
+    'Los Objetivos de Desarrollo Sostenible (ODS) son 17 metas que los países de la ONU acordaron en 2015 para lograr un mundo mejor hacia el 2030. En AIESEC los proyectos de voluntariado y muchas actividades de EwA están conectados con al menos un ODS.',
+  datos: [
+    ['17', 'Objetivos'],
+    ['2015', 'Año en que se aprobaron'],
+    ['2030', 'Meta de la Agenda'],
+  ],
+  lista: [
+    [1, 'Fin de la pobreza', '#e5243b', 'Que nadie viva en pobreza extrema.'],
+    [
+      2,
+      'Hambre cero',
+      '#dda63a',
+      'Alimentación suficiente y nutritiva para todas las personas.',
+    ],
+    [
+      3,
+      'Salud y bienestar',
+      '#4c9f38',
+      'Vidas sanas y bienestar a todas las edades.',
+    ],
+    [
+      4,
+      'Educación de calidad',
+      '#c5192d',
+      'Educación inclusiva y oportunidades de aprendizaje para todos.',
+    ],
+    [
+      5,
+      'Igualdad de género',
+      '#ff3a21',
+      'Mismos derechos y oportunidades para mujeres y niñas.',
+    ],
+    [
+      6,
+      'Agua limpia y saneamiento',
+      '#26bde2',
+      'Acceso a agua potable y saneamiento.',
+    ],
+    [
+      7,
+      'Energía asequible y no contaminante',
+      '#fcc30b',
+      'Energía limpia y al alcance de todos.',
+    ],
+    [
+      8,
+      'Trabajo decente y crecimiento económico',
+      '#a21942',
+      'Empleo digno y economía que crece para todos.',
+    ],
+    [
+      9,
+      'Industria, innovación e infraestructura',
+      '#fd6925',
+      'Infraestructura resiliente e innovación.',
+    ],
+    [
+      10,
+      'Reducción de las desigualdades',
+      '#dd1367',
+      'Menos desigualdad dentro y entre países.',
+    ],
+    [
+      11,
+      'Ciudades y comunidades sostenibles',
+      '#fd9d24',
+      'Ciudades seguras, inclusivas y sostenibles.',
+    ],
+    [
+      12,
+      'Producción y consumo responsables',
+      '#bf8b2e',
+      'Usar los recursos de forma responsable.',
+    ],
+    [
+      13,
+      'Acción por el clima',
+      '#3f7e44',
+      'Actuar contra el cambio climático.',
+    ],
+    [14, 'Vida submarina', '#0a97d9', 'Cuidar los océanos y la vida marina.'],
+    [
+      15,
+      'Vida de ecosistemas terrestres',
+      '#56c02b',
+      'Proteger bosques, suelos y biodiversidad.',
+    ],
+    [
+      16,
+      'Paz, justicia e instituciones sólidas',
+      '#00689d',
+      'Sociedades pacíficas y justas.',
+    ],
+    [
+      17,
+      'Alianzas para lograr los objetivos',
+      '#19486a',
+      'Trabajar juntos para lograr las metas.',
+    ],
+  ],
+  ejemplos: [
+    ['Liberación de tortugas', 14],
+    ['Reforestaciones', 15],
+    ['Limpiezas de playa', 14],
+    ['Apoyo en hospitales', 3],
+    ['Global Teacher', 4],
+  ],
+};

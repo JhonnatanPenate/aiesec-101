@@ -6,6 +6,7 @@ window.SITE = {
   comite: 'AIESEC en ESEN',
   lema: 'Turning rocks into gold',
   creditos: 'Creado por Jhonnatan Peñate, LCVP MXP 26.27',
+  ciclo: '26.2',
   paginas: [
     {
       id: 'inicio',
@@ -24,6 +25,7 @@ window.SITE = {
         'The AIESEC Way',
         'Programas',
         'Plataformas',
+        'Objetivos de Desarrollo Sostenible',
         'SalvaAcademy',
       ],
       modulo: 1,
