@@ -76,7 +76,7 @@
 .card--action:hover {
   transform: translateY(-3px);
   border-color: var(--terra);
-  box-shadow: 0 6px 0 var(--soft);
+  box-shadow: 0 6px 0 var(--orange);
 }
 .card--action .more {
   font-size: 14px;

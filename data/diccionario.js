@@ -26,6 +26,11 @@ window.DICCIONARIO = [
         'Un país dentro de AIESEC. La nuestra es AIESEC en El Salvador.',
       ],
       ['Alumni', 'Alumni', 'Personas que ya fueron miembros de AIESEC.'],
+      [
+        'EwA',
+        'Engaging with AIESEC',
+        'Espacios para que jóvenes conozcan y vivan AIESEC sin ser miembros ni hacer intercambio: foros, charlas, talleres y eventos.',
+      ],
     ],
   },
   {

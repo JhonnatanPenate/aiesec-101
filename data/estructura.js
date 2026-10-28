@@ -91,27 +91,9 @@ window.ESTRUCTURA = {
         id: 'mkt',
         nombre: 'MKT',
         largo: 'Marketing',
-        foco: 'la marca, las redes sociales y la comunicación del comité',
+        foco: 'la marca, las redes sociales y la comunicación del comité. Incluye los equipos de B2C, B2B, Brand y PR',
         ejemplo:
           'Planear el contenido del mes para atraer jóvenes a los programas.',
-        sub: [
-          {
-            nombre: 'PR',
-            largo: 'Public Relations',
-            texto:
-              'Relaciones públicas: universidades, aliados e imagen del comité. En nuestro comité es parte de MKT.',
-            ejemplo:
-              'Coordinar con una universidad un espacio para dar a conocer AIESEC.',
-          },
-          {
-            nombre: 'B2B',
-            largo: 'Business to Business',
-            texto:
-              'Relación con empresas y aliados. En nuestro comité es parte de MKT.',
-            ejemplo:
-              'Presentar a una empresa cómo puede recibir practicantes de Global Talent.',
-          },
-        ],
       },
     ],
   },

@@ -1,59 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-label="Edrik, la mandrágora de Alchemist">
-  <!-- Edrik, mascota de Alchemist ESEN, versión ilustrada tipo sticker -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 320" role="img" aria-label="Edrik, la mandrágora de Alchemist">
+  <!-- Edrik, mascota de Alchemist ESEN. Ilustración tipo sticker, girado un poco a un lado. -->
   <defs>
-    <pattern id="tejido" width="10" height="10" patternUnits="userSpaceOnUse">
-      <circle cx="5" cy="5" r="2.2" fill="#6a3d22" opacity="0.55"/>
+    <!-- borde blanco de sticker alrededor de todo el dibujo -->
+    <filter id="sticker" x="-20%" y="-20%" width="140%" height="140%">
+      <feMorphology in="SourceAlpha" operator="dilate" radius="7" result="grueso"/>
+      <feFlood flood-color="#ffffff"/>
+      <feComposite in2="grueso" operator="in" result="borde"/>
+      <feMerge>
+        <feMergeNode in="borde"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="tejido" width="9" height="9" patternUnits="userSpaceOnUse">
+      <circle cx="4.5" cy="4.5" r="2" fill="#5e3519" opacity="0.5"/>
     </pattern>
-    <g id="cuerpo">
-      <!-- brazos -->
-      <path d="M62 150 C38 162 30 190 40 212" fill="none" stroke-width="20" stroke-linecap="round"/>
-      <path d="M178 150 C202 162 210 190 200 212" fill="none" stroke-width="20" stroke-linecap="round"/>
-      <!-- cuerpo -->
-      <path d="M120 58 C176 58 190 112 186 160 C182 212 156 238 120 238 C84 238 58 212 54 160 C50 112 64 58 120 58 Z"/>
-    </g>
   </defs>
 
-  <!-- contorno blanco de sticker -->
-  <g stroke="#ffffff" fill="#ffffff" stroke-width="16" stroke-linejoin="round">
-    <use href="#cuerpo"/>
-    <path d="M62 150 C38 162 30 190 40 212 M178 150 C202 162 210 190 200 212" fill="none" stroke-width="36" stroke-linecap="round"/>
-    <path d="M120 64 C96 30 70 28 60 40 C82 44 98 54 110 66 Z M120 64 C144 30 170 28 180 40 C158 44 142 54 130 66 Z M120 66 C120 40 120 26 120 18" />
-    <path d="M50 128 C50 70 80 36 120 36 C160 36 190 70 190 128" fill="none" stroke-width="30"/>
-    <rect x="30" y="112" width="34" height="58" rx="14"/>
-    <rect x="176" y="112" width="34" height="58" rx="14"/>
+  <g filter="url(#sticker)">
+    <g transform="rotate(-7 140 160)">
+      <!-- patito amarillo asomándose detrás -->
+      <path d="M48 150 C40 132 56 118 72 126 C80 112 98 116 96 132 C94 146 76 150 60 152 Z" fill="#f2c230"/>
+
+      <!-- raíces (patas de la mandrágora) -->
+      <g fill="none" stroke="#8a5432" stroke-linecap="round">
+        <path d="M104 218 C92 246 74 262 52 268" stroke-width="20"/>
+        <path d="M120 226 C116 256 110 280 98 298" stroke-width="18"/>
+        <path d="M142 228 C146 258 150 282 160 300" stroke-width="18"/>
+        <path d="M164 222 C180 250 198 266 222 270" stroke-width="20"/>
+        <path d="M176 206 C204 214 224 228 238 248" stroke-width="16"/>
+        <path d="M98 202 C74 206 56 218 42 236" stroke-width="16"/>
+      </g>
+      <g fill="none" stroke="url(#tejido)" stroke-linecap="round">
+        <path d="M104 218 C92 246 74 262 52 268" stroke-width="20"/>
+        <path d="M164 222 C180 250 198 266 222 270" stroke-width="20"/>
+      </g>
+
+      <!-- cojín de cuello gris -->
+      <path d="M70 196 C64 166 72 146 84 140 L92 196 C88 214 76 214 70 196 Z" fill="#c9d1d6"/>
+      <path d="M210 196 C216 166 208 146 196 140 L188 196 C192 214 204 214 210 196 Z" fill="#c9d1d6"/>
+
+      <!-- cuerpo -->
+      <path d="M140 58 C198 58 214 118 208 168 C202 214 176 236 140 236 C104 236 78 214 72 168 C66 118 82 58 140 58 Z" fill="#8a5432"/>
+      <path d="M140 58 C198 58 214 118 208 168 C202 214 176 236 140 236 C104 236 78 214 72 168 C66 118 82 58 140 58 Z" fill="url(#tejido)"/>
+
+      <!-- brazos -->
+      <path d="M84 150 C64 160 56 182 62 202" fill="none" stroke="#8a5432" stroke-width="18" stroke-linecap="round"/>
+      <path d="M198 150 C220 160 228 182 222 202" fill="none" stroke="#8a5432" stroke-width="18" stroke-linecap="round"/>
+
+      <!-- hojas -->
+      <path d="M140 62 C116 26 88 24 76 36 C100 40 118 52 130 64 Z" fill="#a3c93a" stroke="#6f9a1f" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M142 62 C166 22 196 22 206 34 C182 40 162 52 150 64 Z" fill="#a3c93a" stroke="#6f9a1f" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M141 64 C139 44 143 30 140 16" fill="none" stroke="#6f9a1f" stroke-width="5" stroke-linecap="round"/>
+
+      <!-- audífonos -->
+      <path d="M70 132 C68 74 100 38 142 38 C184 38 214 74 212 132" fill="none" stroke="#2c2c2c" stroke-width="12" stroke-linecap="round"/>
+      <rect x="50" y="114" width="34" height="60" rx="15" fill="#2c2c2c"/>
+      <rect x="198" y="114" width="34" height="60" rx="15" fill="#2c2c2c"/>
+      <rect x="59" y="125" width="10" height="38" rx="5" fill="#4c4d4c"/>
+      <rect x="213" y="125" width="10" height="38" rx="5" fill="#4c4d4c"/>
+
+      <!-- ojos (un poco hacia la derecha: mira a un lado) -->
+      <ellipse cx="126" cy="128" rx="15" ry="13" fill="#2c2c2c" stroke="#ffffff" stroke-width="5"/>
+      <ellipse cx="170" cy="128" rx="15" ry="13" fill="#2c2c2c" stroke="#ffffff" stroke-width="5"/>
+      <circle cx="132" cy="123" r="3.5" fill="#ffffff"/>
+      <circle cx="176" cy="123" r="3.5" fill="#ffffff"/>
+      <ellipse cx="110" cy="152" rx="9" ry="5" fill="#c3522c" opacity="0.45"/>
+      <ellipse cx="184" cy="152" rx="9" ry="5" fill="#c3522c" opacity="0.45"/>
+      <path d="M138 152 C144 159 152 159 158 152" fill="none" stroke="#2c2c2c" stroke-width="3.5" stroke-linecap="round"/>
+
+      <!-- lanyard -->
+      <path d="M96 178 L146 210 L196 178" fill="none" stroke="#f6f4f0" stroke-width="11" stroke-linejoin="round"/>
+      <path d="M96 178 L146 210 L196 178" fill="none" stroke="#c9d1d6" stroke-width="2" stroke-dasharray="6 6"/>
+      <rect x="133" y="204" width="26" height="22" rx="4" fill="#e3b84a" stroke="#2c2c2c" stroke-width="2"/>
+    </g>
   </g>
-
-  <!-- cuerpo café -->
-  <g fill="#8a5432" stroke="#8a5432">
-    <use href="#cuerpo"/>
-  </g>
-  <path d="M120 58 C176 58 190 112 186 160 C182 212 156 238 120 238 C84 238 58 212 54 160 C50 112 64 58 120 58 Z" fill="url(#tejido)"/>
-
-  <!-- hojas -->
-  <path d="M120 64 C96 30 70 28 60 40 C82 44 98 54 110 66 Z" fill="#9cc93a" stroke="#6f9a1f" stroke-width="2.5" stroke-linejoin="round"/>
-  <path d="M120 64 C144 30 170 28 180 40 C158 44 142 54 130 66 Z" fill="#9cc93a" stroke="#6f9a1f" stroke-width="2.5" stroke-linejoin="round"/>
-  <path d="M120 66 C118 44 122 30 120 18" fill="none" stroke="#6f9a1f" stroke-width="5" stroke-linecap="round"/>
-
-  <!-- audífonos -->
-  <path d="M50 128 C50 70 80 36 120 36 C160 36 190 70 190 128" fill="none" stroke="#2c2c2c" stroke-width="12" stroke-linecap="round"/>
-  <rect x="30" y="112" width="34" height="58" rx="14" fill="#2c2c2c"/>
-  <rect x="176" y="112" width="34" height="58" rx="14" fill="#2c2c2c"/>
-  <rect x="40" y="122" width="10" height="38" rx="5" fill="#4c4d4c"/>
-  <rect x="190" y="122" width="10" height="38" rx="5" fill="#4c4d4c"/>
-
-  <!-- ojos -->
-  <g>
-    <ellipse cx="98" cy="128" rx="15" ry="13" fill="#2c2c2c" stroke="#ffffff" stroke-width="5"/>
-    <ellipse cx="142" cy="128" rx="15" ry="13" fill="#2c2c2c" stroke="#ffffff" stroke-width="5"/>
-    <circle cx="103" cy="123" r="3.5" fill="#ffffff"/>
-    <circle cx="147" cy="123" r="3.5" fill="#ffffff"/>
-  </g>
-  <!-- cachetes y sonrisa -->
-  <ellipse cx="84" cy="152" rx="9" ry="5" fill="#c3522c" opacity="0.45"/>
-  <ellipse cx="156" cy="152" rx="9" ry="5" fill="#c3522c" opacity="0.45"/>
-  <path d="M110 154 C116 160 124 160 130 154" fill="none" stroke="#2c2c2c" stroke-width="3.5" stroke-linecap="round"/>
-
-  <!-- lanyard -->
-  <path d="M78 176 L120 206 L162 176" fill="none" stroke="#f6f4f0" stroke-width="10" stroke-linejoin="round"/>
-  <rect x="108" y="200" width="24" height="20" rx="4" fill="#e3b84a" stroke="#2c2c2c" stroke-width="2"/>
 </svg>

@@ -1,6 +1,7 @@
 // Equipo actual de AIESEC en ESEN (membresía 26.2).
 // Actualiza este archivo cada ciclo. Solo nombre y rol: nada de teléfonos, correos ni IDs.
 // Niveles válidos: 'LCVP', 'Manager', 'Team Member'
+// Tercer campo opcional: el equipo dentro del área (ej. 'B2C', 'PR')
 window.EQUIPO = {
   ciclo: '26.2',
   lcp: 'Kathleen Argueta',
@@ -38,16 +39,12 @@ window.EQUIPO = {
     ],
     mkt: [
       ['Ángel Coreas', 'LCVP'],
-      ['Fernando Martínez', 'Manager'],
-      ['Andrea Hernández', 'Manager'],
-      ['Didiliam Pereira', 'Manager'],
+      ['Andrea Hernández', 'Manager', 'B2C'],
+      ['Tiffany Meléndez', 'Manager', 'B2B'],
+      ['Fernando Martínez', 'Manager', 'TL Brand'],
+      ['Didiliam Pereira', 'Manager', 'PR'],
       ['Krissia Cabrera', 'Team Member'],
       ['Génesis Aparicio', 'Team Member'],
     ],
-  },
-  // equipos dentro de MKT
-  sub: {
-    PR: [['Ángel Coreas', 'LCVP']],
-    B2B: [['Tiffany Meléndez', 'Manager']],
   },
 };

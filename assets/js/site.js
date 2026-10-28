@@ -126,6 +126,13 @@
     },
   });
 
+  /* ---------- en cada módulo: kicker con número y tiempo ---------- */
+  const kick = document.querySelector('.page-head .kicker');
+  const esteModulo = modulos.find((m) => m.id === page);
+  if (kick && esteModulo) {
+    kick.textContent = `Módulo ${esteModulo.modulo} de ${modulos.length} · ~${esteModulo.minutos} min`;
+  }
+
   /* ---------- en cada módulo: banda para pasar al siguiente ---------- */
   const actual = modulos.find((m) => m.id === page);
   const main = document.querySelector('main');

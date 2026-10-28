@@ -51,18 +51,10 @@
   const L = D.local;
   const E = window.EQUIPO;
   const people = (id, n) =>
-    (E.areas[id] || []).filter((p) => p[1] === n).map((p) => [p[0], '']);
-  const total =
-    1 +
-    Object.values(E.areas).reduce((t, a) => t + a.length, 0) +
-    Object.values(E.sub)
-      .flat()
-      .filter(
-        (p) =>
-          !Object.values(E.areas)
-            .flat()
-            .some((q) => q[0] === p[0]),
-      ).length;
+    (E.areas[id] || [])
+      .filter((p) => p[1] === n)
+      .map((p) => [p[0], p[2] || '']);
+  const total = 1 + Object.values(E.areas).reduce((t, a) => t + a.length, 0);
   $('orgTotal').innerHTML =
     `<b>${total}</b> miembros en la membresía ${E.ciclo} · ${L.areas.length} áreas`;
   $('orgLcp').innerHTML =
@@ -99,16 +91,6 @@
           </button>`;
           })
           .join('')}
-        ${
-          a.sub
-            ? `<div class="org__subs">${a.sub
-                .map(
-                  (s, si) =>
-                    `<button class="org__sub" type="button" data-a="${ai}" data-s="${si}">${s.nombre}</button>`,
-                )
-                .join('')}</div>`
-            : ''
-        }
       </div>`;
     })
     .join('');
@@ -116,19 +98,6 @@
     const b = e.target.closest('[data-a]');
     if (!b) return;
     const a = L.areas[+b.dataset.a];
-    if (b.dataset.s) {
-      const s = a.sub[+b.dataset.s];
-      open({
-        kicker: `Dentro de ${a.nombre}`,
-        title: s.nombre,
-        sub: s.largo,
-        body: s.texto,
-        example: s.ejemplo,
-        people: (E.sub[s.nombre] || []).map((p) => [p[0], p[1]]),
-        peopleTitle: 'Quiénes',
-      });
-      return;
-    }
     const n = b.dataset.n;
     const team = E.areas[a.id] || [];
     open({
@@ -140,7 +109,10 @@
         `En ${a.nombre} el trabajo gira en torno a ${a.foco}.`,
       ],
       example: a.ejemplo,
-      people: n === 'LCVP' ? team.map((p) => [p[0], p[1]]) : people(a.id, n),
+      people:
+        n === 'LCVP'
+          ? team.map((p) => [p[0], p[2] ? `${p[1]} · ${p[2]}` : p[1]])
+          : people(a.id, n),
       peopleTitle: n === 'LCVP' ? `Equipo de ${a.nombre}` : 'Quiénes',
     });
   });
