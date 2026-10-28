@@ -41,7 +41,7 @@ window.EQUIPO = {
       ['Ángel Coreas', 'LCVP'],
       ['Andrea Hernández', 'Manager', 'B2C'],
       ['Tiffany Meléndez', 'Manager', 'B2B'],
-      ['Fernando Martínez', 'Manager', 'TL Brand'],
+      ['Fernando Martínez', 'Manager', 'Brand'],
       ['Didiliam Pereira', 'Manager', 'PR'],
       ['Krissia Cabrera', 'Team Member'],
       ['Génesis Aparicio', 'Team Member'],
