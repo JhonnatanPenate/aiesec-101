@@ -29,7 +29,7 @@ window.DICCIONARIO = [
       [
         'EwA',
         'Engaging with AIESEC',
-        'Actividades abiertas a cualquier joven, sin ser miembro ni hacer intercambio. Casi siempre están ligadas a los ODS en nuestra comunidad: limpiezas de playa, reforestaciones, liberación de tortugas y voluntariados en hospitales, entre otras. Son la primera puerta para conocer AIESEC.',
+        'Actividades abiertas a cualquier joven, sin ser miembro ni hacer intercambio. Casi siempre están ligadas a los ODS en nuestra comunidad: limpiezas de playa, reforestaciones y liberación de tortugas, entre otras. Son la primera puerta para conocer AIESEC.',
       ],
     ],
   },

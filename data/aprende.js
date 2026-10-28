@@ -366,7 +366,5 @@ window.APRENDE.ods = {
     ['Liberación de tortugas', 14],
     ['Reforestaciones', 15],
     ['Limpiezas de playa', 14],
-    ['Apoyo en hospitales', 3],
-    ['Global Teacher', 4],
   ],
 };
