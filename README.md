@@ -82,5 +82,5 @@ Rompecabezas deslizante de 4×4 en tres etapas: ordenar los ODS 1 al 15, colocar
 
 - Lógica (sin DOM): `assets/js/ods-juego.js`. Vista: `assets/js/juega.js` y `assets/css/juega.css`.
 - El tablero se mezcla con movimientos legales desde la solución, así que siempre tiene solución.
-- Íconos oficiales: guárdalos como `assets/img/ods/ods-1.png` … `ods-17.png` (cuadrados). Mientras no estén, las fichas muestran el color oficial con el número.
+- Íconos oficiales completos (con número y nombre, versión en español): `assets/img/ods/ods-1.png` … `ods-17.png`, cuadrados. La ONU no permite recortarlos, redondearlos, cambiar colores ni quitarles el texto, y pide enlazar sus lineamientos en la misma página (ya está). Mientras no estén, las fichas muestran el color oficial con el número.
 - Pruebas: `node tests/ods-juego.test.js`.

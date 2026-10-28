@@ -53,7 +53,7 @@
   const people = (id, n) =>
     (E.areas[id] || [])
       .filter((p) => p[1] === n)
-      .map((p) => [p[0], p[2] || '']);
+      .map((p) => [p[0], p[2] ? `${p[1]} · ${p[2]}` : p[1]]);
   const total = 1 + Object.values(E.areas).reduce((t, a) => t + a.length, 0);
   $('orgTotal').innerHTML =
     `<b>${total}</b> miembros en la membresía ${E.ciclo} · ${L.areas.length} áreas`;
@@ -68,6 +68,7 @@
       example: L.lcp.ejemplo,
       people: [[E.lcp, 'LCP']],
       peopleTitle: 'Quién',
+      bento: true,
     }),
   );
   const niveles = Object.keys(L.niveles);
@@ -114,7 +115,7 @@
           ? team.map((p) => [p[0], p[2] ? `${p[1]} · ${p[2]}` : p[1]])
           : people(a.id, n),
       peopleTitle: n === 'LCVP' ? `Equipo de ${a.nombre}` : 'Quiénes',
-      bento: n === 'LCVP',
+      bento: true,
     });
   });
 

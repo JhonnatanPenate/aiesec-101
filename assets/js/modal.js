@@ -63,13 +63,13 @@
           data.bento && data.people && data.people.length
             ? `<div class="team-bento">
                 <b class="team-bento__t">${esc(data.peopleTitle || 'Equipo')} · ${data.people.length}</b>
-                ${['LCVP', 'Manager', 'Team Member']
+                ${['LCP', 'LCVP', 'Manager', 'Team Member']
                   .map((nivel) => {
-                    const gente = data.people.filter((p) =>
-                      p[1].startsWith(nivel),
+                    const gente = data.people.filter(
+                      (p) => p[1] === nivel || p[1].startsWith(nivel + ' '),
                     );
                     if (!gente.length) return '';
-                    return `<div class="team-bento__row team-bento__row--${nivel.split(' ')[0].toLowerCase()}">${gente
+                    return `<div class="team-bento__row team-bento__row--${nivel === 'LCP' ? 'lcvp' : nivel.split(' ')[0].toLowerCase()}">${gente
                       .map(
                         (p) =>
                           `<div class="team-bento__card"><span class="avatar">${esc(initials(p[0]))}</span><strong>${esc(p[0])}</strong><small>${esc(p[1])}</small></div>`,
