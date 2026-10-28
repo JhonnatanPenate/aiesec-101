@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/diccionario.css" />
   </head>
   <body data-page="diccionario">
     <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -43,16 +44,53 @@
         <div class="wrap">
           <header class="section__head">
             <h2>Siglas</h2>
+            <p>
+              Toca una card para voltearla y ver su nombre en inglés y qué
+              significa.
+            </p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div class="dict-tools">
+            <label for="q" class="sr">Buscar</label>
+            <input
+              id="q"
+              type="search"
+              placeholder="Busca una sigla o palabra. Ej: LCVP, EXPA, Approved"
+              autocomplete="off"
+            />
+            <button
+              class="btn btn--dark"
+              type="button"
+              id="flipAll"
+              aria-pressed="false"
+            >
+              Voltear todas
+            </button>
+          </div>
+          <div
+            class="chips"
+            id="cats"
+            role="group"
+            aria-label="Categorías"
+          ></div>
+          <p class="dict-count" id="count" aria-live="polite"></p>
+          <div class="dict" id="dict"></div>
         </div>
       </section>
-      <section class="section" id="quiz">
+      <section class="section section--dark" id="quiz">
         <div class="wrap">
           <header class="section__head">
             <h2>Ponte a prueba</h2>
+            <p>10 preguntas al azar. Elige qué significa cada sigla.</p>
           </header>
-          <div class="placeholder">Contenido en preparación.</div>
+          <div class="quiz" id="quizBox">
+            <div class="quiz__top">
+              <p class="kicker" id="qStep"></p>
+              <div class="quiz__bar" aria-hidden="true">
+                <span id="qBar"></span>
+              </div>
+            </div>
+            <div id="qStage"></div>
+          </div>
         </div>
       </section>
     </main>
@@ -62,5 +100,7 @@
     <script src="data/site.js"></script>
     <script src="assets/js/site.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script src="data/diccionario.js"></script>
+    <script src="assets/js/diccionario.js"></script>
   </body>
 </html>

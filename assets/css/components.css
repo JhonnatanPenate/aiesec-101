@@ -201,3 +201,33 @@
       var(--gutter);
   }
 }
+
+/* ---------- chips de filtro ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  font: 600 15px var(--font);
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 2px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    background var(--fast) var(--ease),
+    border-color var(--fast) var(--ease);
+}
+.chip:hover {
+  border-color: var(--terra);
+}
+.chip[aria-pressed='true'] {
+  background: var(--terra);
+  border-color: var(--terra);
+  color: var(--white);
+}
+.card .kicker {
+  color: var(--terra);
+}
