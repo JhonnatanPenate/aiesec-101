@@ -1,0 +1,243 @@
+{
+  "aprobar": 2,
+  "modulos": {
+    "aprende": [
+      {
+        "q": "¿En qué año se fundó AIESEC?",
+        "ok": "1948",
+        "no1": "1998",
+        "no2": "1965",
+        "no3": "1980",
+        "por": "AIESEC nació en 1948, después de la Segunda Guerra Mundial, para construir paz entre jóvenes de distintos países."
+      },
+      {
+        "q": "¿Qué programa es de prácticas profesionales en otro país?",
+        "ok": "Global Talent",
+        "no1": "Global Volunteer",
+        "no2": "Global Teacher",
+        "no3": "EwA",
+        "por": "Global Talent (GTa) son prácticas profesionales; Global Volunteer es voluntariado y Global Teacher es enseñanza."
+      },
+      {
+        "q": "¿Para qué sirve EXPA?",
+        "ok": "Para administrar miembros, roles, oportunidades e intercambios",
+        "no1": "Para que cualquier joven busque y aplique a un intercambio",
+        "no2": "Para chatear con el comité",
+        "no3": "Para publicar en redes sociales",
+        "por": "EXPA es la plataforma interna de los miembros. La que usan los jóvenes para aplicar es aiesec.org."
+      }
+    ],
+    "diccionario": [
+      {
+        "q": "¿Qué significa LCVP?",
+        "ok": "Local Committee Vice President",
+        "no1": "Local Committee Volunteer Program",
+        "no2": "Leadership Committee Vice President",
+        "no3": "Local Council Vice Partner",
+        "por": "El LCVP lidera un área del comité local y forma parte del EB."
+      },
+      {
+        "q": "¿Qué es un PDP?",
+        "ok": "Tu plan de desarrollo personal",
+        "no1": "La descripción de tu rol",
+        "no2": "Un indicador de resultados",
+        "no3": "La plataforma de intercambios",
+        "por": "PDP es Personal Development Plan: qué quieres aprender y cómo. La descripción del rol es el JD."
+      },
+      {
+        "q": "¿Quién es un EP?",
+        "ok": "La persona que hace un intercambio",
+        "no1": "El presidente del comité",
+        "no2": "Un miembro del equipo de MKT",
+        "no3": "Una empresa aliada",
+        "por": "EP significa Exchange Participant: quien vive un intercambio con AIESEC."
+      }
+    ],
+    "estructura": [
+      {
+        "q": "¿Qué es el MC?",
+        "ok": "La oficina nacional, AIESEC en El Salvador",
+        "no1": "La oficina global de AIESEC",
+        "no2": "Nuestro comité local",
+        "no3": "El equipo que organiza una conferencia",
+        "por": "MC es Member Committee: acompaña a los comités locales del país. La oficina global es AI."
+      },
+      {
+        "q": "¿Quiénes forman el EB de un comité?",
+        "ok": "La LCP y los LCVPs",
+        "no1": "Solo los newbies",
+        "no2": "Los Managers y Team Members",
+        "no3": "El MC y la oficina global",
+        "por": "El Executive Board es el equipo directivo: la presidencia y las vicepresidencias del comité."
+      },
+      {
+        "q": "¿Qué es una expansión?",
+        "ok": "Una universidad donde ya hay miembros, pero aún no es comité propio",
+        "no1": "Un intercambio de más de seis meses",
+        "no2": "Una conferencia nacional",
+        "no3": "El cambio de rol de un miembro",
+        "por": "Por ejemplo, la UGB hoy es expansión de AIESEC en ESEN y la meta es que tenga su propio comité en 2027."
+      }
+    ],
+    "areas": [
+      {
+        "q": "¿Qué área recibe a jóvenes de otros países en El Salvador?",
+        "ok": "ICX",
+        "no1": "OGX",
+        "no2": "MXP",
+        "no3": "F&L",
+        "por": "ICX es Incoming Exchange. OGX hace lo contrario: envía salvadoreños a otros países."
+      },
+      {
+        "q": "Un EP ya está viviendo su intercambio. ¿En qué etapa está?",
+        "ok": "Realized",
+        "no1": "Applied",
+        "no2": "Accepted",
+        "no3": "Signed up",
+        "por": "Realized (RE) significa que ya está en su intercambio. Después vienen Finished y Completed."
+      },
+      {
+        "q": "¿Qué área cuida la experiencia y el desarrollo de los miembros?",
+        "ok": "MXP",
+        "no1": "MKT",
+        "no2": "ICX",
+        "no3": "B2B",
+        "por": "MXP es Membership eXperience Program: onboarding, PDP, O2O y reconocimiento."
+      }
+    ],
+    "liderazgo": [
+      {
+        "q": "¿Qué rol lidera un área completa y forma parte del EB?",
+        "ok": "LCVP",
+        "no1": "Team Member",
+        "no2": "Manager",
+        "no3": "Delegado",
+        "por": "El LCVP lidera un área. El Manager lidera un equipo dentro de esa área."
+      },
+      {
+        "q": "¿Qué es un OC?",
+        "ok": "El equipo que organiza una conferencia",
+        "no1": "La oficina nacional",
+        "no2": "Un tipo de intercambio",
+        "no3": "El plan de desarrollo de un miembro",
+        "por": "OC es Organizing Committee y lo lidera un OCP. Es una gran práctica antes de aplicar a LCVP."
+      },
+      {
+        "q": "En una elección, ¿qué paso viene después de la convocatoria?",
+        "ok": "La aplicación",
+        "no1": "El anuncio",
+        "no2": "La asamblea",
+        "no3": "La transición",
+        "por": "El orden es convocatoria, aplicación, entrevista, asamblea y anuncio."
+      }
+    ],
+    "cultura": [
+      {
+        "q": "¿En qué año ESEN trajo AIESEC a El Salvador?",
+        "ok": "1998",
+        "no1": "1948",
+        "no2": "2010",
+        "no3": "2023",
+        "por": "En 1998 ESEN abrió el primer comité de AIESEC del país."
+      },
+      {
+        "q": "¿Quién es Edrik?",
+        "ok": "La mandrágora, mascota de Alchemist",
+        "no1": "El fundador del comité",
+        "no2": "El nombre de la EB actual",
+        "no3": "Un programa de intercambio",
+        "por": "Edrik es una mandrágora, la planta de la alquimia, y representa nuestras raíces."
+      },
+      {
+        "q": "¿Qué significa La señal (pulgar en la frente)?",
+        "ok": "Atención y silencio",
+        "no1": "Que alguien tiene pareja",
+        "no2": "Que es hora de irse",
+        "no3": "Que alguien tomó un rol nuevo",
+        "por": "Cuando alguien hace La señal, todos la repiten y el grupo hace silencio."
+      }
+    ]
+  },
+  "diccionario_quiz": [
+    {
+      "q": "¿Qué significa LCVP?",
+      "ok": "Local Committee Vice President",
+      "no1": "Local Council Vice Partner",
+      "no2": "Leadership Committee Vice President",
+      "no3": "Local Committee Volunteer Program",
+      "por": "El LCVP lidera un área del comité local y forma parte del EB."
+    },
+    {
+      "q": "¿Qué significa EXPA?",
+      "ok": "Plataforma interna de gestión de AIESEC",
+      "no1": "Exchange Participant Application",
+      "no2": "Expansión de AIESEC",
+      "no3": "Experiencia Profesional AIESEC",
+      "por": "EXPA administra miembros, roles, oportunidades e intercambios."
+    },
+    {
+      "q": "¿Qué significa EP?",
+      "ok": "Exchange Participant",
+      "no1": "Executive President",
+      "no2": "Education Program",
+      "no3": "External Partner",
+      "por": "EP es quien vive una experiencia de intercambio con AIESEC."
+    },
+    {
+      "q": "¿Qué significa PDP?",
+      "ok": "Personal Development Plan",
+      "no1": "Professional Degree Program",
+      "no2": "Project Delivery Process",
+      "no3": "Performance Dashboard Plan",
+      "por": "PDP es tu plan de desarrollo personal en tu rol."
+    },
+    {
+      "q": "¿Qué significa JD?",
+      "ok": "Job Description",
+      "no1": "Junior Director",
+      "no2": "Journey Document",
+      "no3": "Join Date",
+      "por": "El JD es la descripción de tu rol y responsabilidades."
+    },
+    {
+      "q": "¿Qué significa O2O?",
+      "ok": "One to One",
+      "no1": "Online to Offline",
+      "no2": "Order to Opportunity",
+      "no3": "Onboarding to Operations",
+      "por": "O2O es la conversación personal de seguimiento con tu líder."
+    },
+    {
+      "q": "¿Qué significa LDM?",
+      "ok": "Leadership Development Model",
+      "no1": "Local Department Management",
+      "no2": "Learning & Development Module",
+      "no3": "Long Distance Mobility",
+      "por": "El LDM es el modelo de desarrollo de liderazgo de AIESEC."
+    },
+    {
+      "q": "¿Qué significa MXP?",
+      "ok": "Membership eXperience Program",
+      "no1": "Marketing Exchange Platform",
+      "no2": "Member Experience Portal",
+      "no3": "Master Executive Program",
+      "por": "MXP cuida la experiencia y desarrollo de toda la membresía."
+    },
+    {
+      "q": "¿Qué significa RE en el Customer Flow?",
+      "ok": "Realized",
+      "no1": "Registered",
+      "no2": "Received",
+      "no3": "Recruited",
+      "por": "Realized significa que el EP ya comenzó su intercambio en el país destino."
+    },
+    {
+      "q": "¿Qué significa EB?",
+      "ok": "Executive Board",
+      "no1": "Entity Board",
+      "no2": "Education Bureau",
+      "no3": "Exchange Branch",
+      "por": "El EB es el equipo directivo del comité: la LCP y los LCVPs."
+    }
+  ]
+}

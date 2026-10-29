@@ -1,0 +1,98 @@
+{
+  "nombre": "AIESEC 101",
+  "comite": "AIESEC en ESEN",
+  "lema": "Turning rocks into gold",
+  "creditos": "Creado por Jhonnatan Peñate, LCVP MXP 26.27",
+  "ciclo": "26.2",
+  "curso": {
+    "frase": "Tu primer paso como Alquimista",
+    "intro": "Seis módulos cortos para entender AIESEC, cómo nos organizamos y lo que nos hace Alchemist. Ve a tu ritmo: tu avance se guarda en este navegador."
+  },
+  "paginas": [
+    {
+      "id": "inicio",
+      "href": "index.html",
+      "titulo": "Inicio",
+      "resumen": "Tu ruta por el curso.",
+      "secciones": ["Módulos", "Hacia dónde vamos"]
+    },
+    {
+      "id": "aprende",
+      "href": "aprende.html",
+      "titulo": "Aprende",
+      "resumen": "Qué es AIESEC, su historia, sus programas y plataformas.",
+      "secciones": [
+        "Qué significa AIESEC",
+        "The AIESEC Way",
+        "Programas",
+        "Plataformas",
+        "Objetivos de Desarrollo Sostenible",
+        "SalvaAcademy"
+      ],
+      "modulo": 1,
+      "minutos": 7
+    },
+    {
+      "id": "diccionario",
+      "href": "diccionario.html",
+      "titulo": "Diccionario",
+      "resumen": "Siglas y conceptos de AIESEC por categoría.",
+      "secciones": ["Siglas", "Ponte a prueba"],
+      "modulo": 2,
+      "minutos": 6
+    },
+    {
+      "id": "estructura",
+      "href": "estructura.html",
+      "titulo": "Estructura",
+      "resumen": "Cómo se organiza AIESEC, organigramas y mapa.",
+      "secciones": [
+        "De lo global a lo local",
+        "Organigrama nacional",
+        "Organigrama local",
+        "Cómo funciona un comité",
+        "Dónde estamos"
+      ],
+      "modulo": 3,
+      "minutos": 7
+    },
+    {
+      "id": "areas",
+      "href": "areas.html",
+      "titulo": "Áreas",
+      "resumen": "Conceptos base de cada área y el recorrido de un intercambio.",
+      "secciones": ["Recorrido de un intercambio", "Conceptos por área"],
+      "modulo": 4,
+      "minutos": 6
+    },
+    {
+      "id": "liderazgo",
+      "href": "liderazgo.html",
+      "titulo": "Liderazgo",
+      "resumen": "Roles de liderazgo, elecciones y conferencias.",
+      "secciones": [
+        "Roles de liderazgo",
+        "Cómo funciona una elección",
+        "Conferencias y OC"
+      ],
+      "modulo": 5,
+      "minutos": 6
+    },
+    {
+      "id": "cultura",
+      "href": "cultura.html",
+      "titulo": "Cultura",
+      "resumen": "Nuestra historia, Edrik, valores y tradiciones.",
+      "secciones": [
+        "Nuestra historia",
+        "Alchemist y Edrik",
+        "Nuestros valores",
+        "Cómo vivimos AIESEC",
+        "Tradiciones",
+        "Cómo convivimos"
+      ],
+      "modulo": 6,
+      "minutos": 7
+    }
+  ]
+}

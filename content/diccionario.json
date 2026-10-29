@@ -1,0 +1,356 @@
+{
+  "categorias": [
+    "AIESEC general",
+    "Estructura",
+    "Roles",
+    "Áreas",
+    "Programas",
+    "Intercambio",
+    "Desarrollo",
+    "Herramientas y eventos"
+  ],
+  "terminos": [
+    {
+      "sigla": "AIESEC",
+      "nombre_en": "Association Internationale des Étudiants en Sciences Économiques et Commerciales",
+      "definicion": "Nombre de la organización. Nació como siglas en francés; hoy se usa solo como nombre.",
+      "categoria": "AIESEC general"
+    },
+    {
+      "sigla": "AI",
+      "nombre_en": "AIESEC International",
+      "definicion": "La oficina global de AIESEC.",
+      "categoria": "AIESEC general"
+    },
+    {
+      "sigla": "LDM",
+      "nombre_en": "Leadership Development Model",
+      "definicion": "El modelo con los 4 rasgos de liderazgo que AIESEC desarrolla.",
+      "categoria": "AIESEC general"
+    },
+    {
+      "sigla": "SDG",
+      "nombre_en": "Sustainable Development Goals",
+      "definicion": "Los 17 Objetivos de Desarrollo Sostenible (ODS) de la ONU que guían los proyectos de intercambio.",
+      "categoria": "AIESEC general"
+    },
+    {
+      "sigla": "Entity",
+      "nombre_en": "Entity",
+      "definicion": "Un país dentro de AIESEC. La nuestra es AIESEC en El Salvador.",
+      "categoria": "AIESEC general"
+    },
+    {
+      "sigla": "Alumni",
+      "nombre_en": "Alumni",
+      "definicion": "Personas que ya fueron miembros de AIESEC.",
+      "categoria": "AIESEC general"
+    },
+    {
+      "sigla": "EwA",
+      "nombre_en": "Engaging with AIESEC",
+      "definicion": "Actividades abiertas a cualquier joven, sin ser miembro ni hacer intercambio. Casi siempre están ligadas a los ODS en nuestra comunidad: limpiezas de playa, reforestaciones y liberación de tortugas, entre otras. Son la primera puerta para conocer AIESEC.",
+      "categoria": "AIESEC general"
+    },
+    {
+      "sigla": "MC",
+      "nombre_en": "Member Committee",
+      "definicion": "La oficina nacional: AIESEC en El Salvador.",
+      "categoria": "Estructura"
+    },
+    {
+      "sigla": "LC",
+      "nombre_en": "Local Committee",
+      "definicion": "Un comité local, como AIESEC en ESEN.",
+      "categoria": "Estructura"
+    },
+    {
+      "sigla": "EB",
+      "nombre_en": "Executive Board",
+      "definicion": "El equipo directivo de un comité: la presidencia y las vicepresidencias.",
+      "categoria": "Estructura"
+    },
+    {
+      "sigla": "Expansión",
+      "nombre_en": "Expansion",
+      "definicion": "Universidad o zona donde un comité ya tiene miembros, pero que aún no es comité propio.",
+      "categoria": "Estructura"
+    },
+    {
+      "sigla": "MCP",
+      "nombre_en": "Member Committee President",
+      "definicion": "La presidencia nacional.",
+      "categoria": "Roles"
+    },
+    {
+      "sigla": "MCVP",
+      "nombre_en": "Member Committee Vice President",
+      "definicion": "Vicepresidencia nacional de un área.",
+      "categoria": "Roles"
+    },
+    {
+      "sigla": "LCP",
+      "nombre_en": "Local Committee President",
+      "definicion": "La presidencia del comité local.",
+      "categoria": "Roles"
+    },
+    {
+      "sigla": "LCVP",
+      "nombre_en": "Local Committee Vice President",
+      "definicion": "Vicepresidencia de un área en el comité local.",
+      "categoria": "Roles"
+    },
+    {
+      "sigla": "MNGR",
+      "nombre_en": "Manager",
+      "definicion": "Lidera un equipo dentro de un área. También se le dice TL (Team Leader).",
+      "categoria": "Roles"
+    },
+    {
+      "sigla": "TM",
+      "nombre_en": "Team Member",
+      "definicion": "Miembro de un equipo.",
+      "categoria": "Roles"
+    },
+    {
+      "sigla": "OCP",
+      "nombre_en": "Organizing Committee President",
+      "definicion": "Lidera el equipo que organiza una conferencia.",
+      "categoria": "Roles"
+    },
+    {
+      "sigla": "OCVP",
+      "nombre_en": "Organizing Committee Vice President",
+      "definicion": "Lidera un área dentro del equipo de una conferencia.",
+      "categoria": "Roles"
+    },
+    {
+      "sigla": "Faci",
+      "nombre_en": "Facilitator",
+      "definicion": "Persona que da una sesión en una conferencia o formación.",
+      "categoria": "Roles"
+    },
+    {
+      "sigla": "Newbie",
+      "nombre_en": "",
+      "definicion": "Miembro nuevo, en su primer ciclo en AIESEC.",
+      "categoria": "Roles"
+    },
+    {
+      "sigla": "Oldie",
+      "nombre_en": "",
+      "definicion": "Miembro con al menos un ciclo en AIESEC.",
+      "categoria": "Roles"
+    },
+    {
+      "sigla": "MXP",
+      "nombre_en": "Membership eXperience Program",
+      "definicion": "Cuida la experiencia, el desarrollo y el bienestar de los miembros.",
+      "categoria": "Áreas"
+    },
+    {
+      "sigla": "F&L",
+      "nombre_en": "Finance & Legality",
+      "definicion": "Finanzas y legalidad del comité.",
+      "categoria": "Áreas"
+    },
+    {
+      "sigla": "MKT",
+      "nombre_en": "Marketing",
+      "definicion": "Marca, redes sociales y comunicación.",
+      "categoria": "Áreas"
+    },
+    {
+      "sigla": "PR",
+      "nombre_en": "Public Relations",
+      "definicion": "Relaciones públicas y alianzas. En nuestro comité es parte de MKT.",
+      "categoria": "Áreas"
+    },
+    {
+      "sigla": "B2B",
+      "nombre_en": "Business to Business",
+      "definicion": "Relación con empresas. En nuestro comité es parte de MKT.",
+      "categoria": "Áreas"
+    },
+    {
+      "sigla": "BD",
+      "nombre_en": "Business Development",
+      "definicion": "Nombre que se usa a nivel nacional para la relación con empresas.",
+      "categoria": "Áreas"
+    },
+    {
+      "sigla": "OD",
+      "nombre_en": "Organizational Development",
+      "definicion": "Crecimiento y salud de la organización.",
+      "categoria": "Áreas"
+    },
+    {
+      "sigla": "ICX",
+      "nombre_en": "Incoming Exchange",
+      "definicion": "Recibe a jóvenes de otros países en El Salvador.",
+      "categoria": "Áreas"
+    },
+    {
+      "sigla": "OGX",
+      "nombre_en": "Outgoing Exchange",
+      "definicion": "Envía a jóvenes salvadoreños a otros países.",
+      "categoria": "Áreas"
+    },
+    {
+      "sigla": "GV",
+      "nombre_en": "Global Volunteer",
+      "definicion": "Voluntariado internacional en proyectos sociales.",
+      "categoria": "Programas"
+    },
+    {
+      "sigla": "GTa",
+      "nombre_en": "Global Talent",
+      "definicion": "Prácticas profesionales internacionales.",
+      "categoria": "Programas"
+    },
+    {
+      "sigla": "GTe",
+      "nombre_en": "Global Teacher",
+      "definicion": "Experiencia de enseñanza internacional.",
+      "categoria": "Programas"
+    },
+    {
+      "sigla": "iGV · iGTa · iGTe",
+      "nombre_en": "incoming",
+      "definicion": "El programa recibiendo jóvenes de otros países en El Salvador. Lo trabaja ICX.",
+      "categoria": "Programas"
+    },
+    {
+      "sigla": "oGV · oGTa · oGTe",
+      "nombre_en": "outgoing",
+      "definicion": "El programa enviando jóvenes salvadoreños a otro país. Lo trabaja OGX.",
+      "categoria": "Programas"
+    },
+    {
+      "sigla": "EP",
+      "nombre_en": "Exchange Participant",
+      "definicion": "La persona que hace un intercambio.",
+      "categoria": "Programas"
+    },
+    {
+      "sigla": "Opp",
+      "nombre_en": "Opportunity",
+      "definicion": "Una oportunidad de intercambio publicada en la plataforma.",
+      "categoria": "Programas"
+    },
+    {
+      "sigla": "SU",
+      "nombre_en": "Signed up",
+      "definicion": "La persona se registró en aiesec.org.",
+      "categoria": "Intercambio"
+    },
+    {
+      "sigla": "APL",
+      "nombre_en": "Applied",
+      "definicion": "Aplicó a una oportunidad.",
+      "categoria": "Intercambio"
+    },
+    {
+      "sigla": "ACC",
+      "nombre_en": "Accepted",
+      "definicion": "La oportunidad la aceptó.",
+      "categoria": "Intercambio"
+    },
+    {
+      "sigla": "APD",
+      "nombre_en": "Approved",
+      "definicion": "Su intercambio quedó aprobado.",
+      "categoria": "Intercambio"
+    },
+    {
+      "sigla": "RE",
+      "nombre_en": "Realized",
+      "definicion": "Ya está viviendo su intercambio.",
+      "categoria": "Intercambio"
+    },
+    {
+      "sigla": "FIN",
+      "nombre_en": "Finished",
+      "definicion": "Terminó su intercambio.",
+      "categoria": "Intercambio"
+    },
+    {
+      "sigla": "CO",
+      "nombre_en": "Completed",
+      "definicion": "Cerró todo el proceso, incluida su evaluación.",
+      "categoria": "Intercambio"
+    },
+    {
+      "sigla": "JD",
+      "nombre_en": "Job Description",
+      "definicion": "La descripción de un rol: qué hace y qué se espera.",
+      "categoria": "Desarrollo"
+    },
+    {
+      "sigla": "KPI",
+      "nombre_en": "Key Performance Indicator",
+      "definicion": "Indicador con el que se mide un resultado.",
+      "categoria": "Desarrollo"
+    },
+    {
+      "sigla": "MoS",
+      "nombre_en": "Measures of Success",
+      "definicion": "Lo que se espera que logres en tu rol para considerar que cumpliste.",
+      "categoria": "Desarrollo"
+    },
+    {
+      "sigla": "PDP",
+      "nombre_en": "Personal Development Plan",
+      "definicion": "Tu plan de qué quieres aprender y cómo lograrlo.",
+      "categoria": "Desarrollo"
+    },
+    {
+      "sigla": "O2O",
+      "nombre_en": "One to One",
+      "definicion": "Conversación uno a uno con tu líder.",
+      "categoria": "Desarrollo"
+    },
+    {
+      "sigla": "NEC",
+      "nombre_en": "National Education Cycle",
+      "definicion": "El ciclo de educación nacional. En El Salvador es SalvaAcademy.",
+      "categoria": "Desarrollo"
+    },
+    {
+      "sigla": "Onboarding",
+      "nombre_en": "Onboarding",
+      "definicion": "El proceso de bienvenida cuando entras a AIESEC o a un rol nuevo.",
+      "categoria": "Desarrollo"
+    },
+    {
+      "sigla": "EXPA",
+      "nombre_en": "",
+      "definicion": "La plataforma interna de AIESEC: miembros, roles, oportunidades y seguimiento de intercambios.",
+      "categoria": "Herramientas y eventos"
+    },
+    {
+      "sigla": "ID EXPA",
+      "nombre_en": "",
+      "definicion": "El número que identifica a cada miembro dentro de EXPA.",
+      "categoria": "Herramientas y eventos"
+    },
+    {
+      "sigla": "OC",
+      "nombre_en": "Organizing Committee",
+      "definicion": "El equipo que organiza una conferencia.",
+      "categoria": "Herramientas y eventos"
+    },
+    {
+      "sigla": "Delegado",
+      "nombre_en": "Delegate",
+      "definicion": "Persona que asiste a una conferencia.",
+      "categoria": "Herramientas y eventos"
+    },
+    {
+      "sigla": "DDL",
+      "nombre_en": "Deadline",
+      "definicion": "Fecha límite.",
+      "categoria": "Herramientas y eventos"
+    }
+  ]
+}

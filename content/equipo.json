@@ -1,0 +1,46 @@
+{
+  "ciclo": "26.2",
+  "lcp": "Kathleen Argueta",
+  "areas": {
+    "mxp": [
+      { "nombre": "Jhonnatan Peñate", "nivel": "LCVP" },
+      { "nombre": "Brayan Chavarría", "nivel": "Manager" },
+      { "nombre": "Cristian Velásquez", "nivel": "Manager" },
+      { "nombre": "Katherine Rivera", "nivel": "Team Member" },
+      { "nombre": "Alisson Guerrero", "nivel": "Team Member" },
+      { "nombre": "Melissa Cortez", "nivel": "Team Member" }
+    ],
+    "fl": [
+      { "nombre": "Lorena Gil", "nivel": "LCVP" },
+      { "nombre": "Esteban Romero", "nivel": "Manager" },
+      { "nombre": "María José Turcios", "nivel": "Manager" },
+      { "nombre": "Regina Orellana", "nivel": "Team Member" }
+    ],
+    "icx": [
+      { "nombre": "Brandom Sánchez", "nivel": "LCVP" },
+      { "nombre": "Cristian Cuadra", "nivel": "Manager" },
+      { "nombre": "Alisson Murga", "nivel": "Manager" },
+      { "nombre": "Laura Alegría", "nivel": "Manager" },
+      { "nombre": "Walter Ramírez", "nivel": "Manager" },
+      { "nombre": "Samira Hernández", "nivel": "Team Member" }
+    ],
+    "ogx": [
+      { "nombre": "Fernando Castillo", "nivel": "LCVP" },
+      { "nombre": "Daniel Ramírez", "nivel": "Manager" },
+      { "nombre": "Christian Renderos", "nivel": "Manager", "subrol": "", "titulo": "TL" },
+      { "nombre": "Paola Ortez", "nivel": "Manager" },
+      { "nombre": "Oscar Estrada", "nivel": "Team Member" },
+      { "nombre": "Andrés Gómez", "nivel": "Team Member" },
+      { "nombre": "Luis Amaya", "nivel": "Team Member" }
+    ],
+    "mkt": [
+      { "nombre": "Ángel Coreas", "nivel": "LCVP" },
+      { "nombre": "Andrea Hernández", "nivel": "Manager", "subrol": "B2C" },
+      { "nombre": "Tiffany Meléndez", "nivel": "Manager", "subrol": "B2B" },
+      { "nombre": "Fernando Martínez", "nivel": "Manager", "subrol": "Brand", "titulo": "TL Brand" },
+      { "nombre": "Didiliam Pereira", "nivel": "Manager", "subrol": "PR" },
+      { "nombre": "Krissia Cabrera", "nivel": "Team Member" },
+      { "nombre": "Génesis Aparicio", "nivel": "Team Member" }
+    ]
+  }
+}
