@@ -365,3 +365,83 @@
 .juego__legal a {
   color: var(--terra);
 }
+
+/* ---------- celular: tablero en la primera pantalla y ODS 16 junto al tablero ---------- */
+@media (max-width: 900px) {
+  body[data-page='juega'] .page-head {
+    padding-block: 20px 12px;
+  }
+  body[data-page='juega'] .page-head .wrap {
+    gap: 6px;
+  }
+  body[data-page='juega'] .page-head h1 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+  /* en celular las instrucciones ya están en «Cómo jugar» */
+  body[data-page='juega'] .page-head p,
+  body[data-page='juega'] .page-head .kicker {
+    display: none;
+  }
+  body[data-page='juega'] .section {
+    padding-block: 12px 40px;
+  }
+  .juego__main {
+    padding: 12px;
+    gap: 10px;
+    border-radius: 20px;
+  }
+  .juego__stats {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .juego__stats > div {
+    padding: 6px 12px;
+    min-width: 0;
+    flex: 1;
+  }
+  .juego__stats b {
+    font-size: 1.15rem;
+  }
+  .juego__stats .btn {
+    padding: 10px 14px;
+    min-height: 44px;
+  }
+  .board {
+    width: min(100%, 560px, calc(100dvh - 250px));
+    min-width: min(100%, 240px);
+  }
+  .juego__msg {
+    min-height: 0;
+  }
+  .juego__msg:empty {
+    display: none;
+  }
+  /* las tarjetas laterales se ordenan como hermanas del tablero */
+  .juego__side {
+    display: contents;
+  }
+  .section .wrap.juego {
+    gap: 12px;
+  }
+  .juego__main {
+    order: 1;
+  }
+  .jcard--16 {
+    order: 2;
+  }
+  .jcard--17 {
+    order: 3;
+  }
+  .juego__side > .jcard:first-child {
+    order: 4;
+  }
+  .juego__legal {
+    order: 5;
+  }
+  .jcard {
+    padding: 16px 18px;
+  }
+  .piece--16 {
+    width: 80px;
+  }
+}
