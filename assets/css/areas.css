@@ -85,6 +85,10 @@
   .journey {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  /* la última etapa (CO) queda centrada en vez de sola a la izquierda */
+  .journey > li:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
 }
 .journey__panel {
   display: grid;
