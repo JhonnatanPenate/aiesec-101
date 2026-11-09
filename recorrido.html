@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Ordena el recorrido · AIESEC 101</title>
+    <meta
+      name="description"
+      content="Ordena las etapas de un intercambio y del recorrido de un miembro en AIESEC."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/juega.css" />
+    <link rel="stylesheet" href="assets/css/siglas.css" />
+    <link rel="stylesheet" href="assets/css/recorrido.css" />
+  </head>
+  <body data-page="recorrido">
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <div data-site-header></div>
+
+    <main id="contenido">
+      <section class="page-head">
+        <div class="wrap">
+          <p class="kicker">Juego · Recorridos</p>
+          <h1>Ordena el recorrido</h1>
+          <p>
+            Las etapas están revueltas. Tócalas en orden, de la primera a la
+            última, y revisa si quedaron bien.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--white">
+        <div class="wrap juego">
+          <div class="juego__main">
+            <div class="modos" role="tablist" aria-label="Recorrido" id="recModos"></div>
+            <div class="juego__stats">
+              <div><small>Colocadas</small><b id="recCol">0/7</b></div>
+              <div><small>Intentos</small><b id="recInt">0</b></div>
+              <button class="btn btn--ghost" type="button" id="recNueva">Revolver</button>
+            </div>
+            <ol class="rec-fila" id="recFila" aria-label="Tu orden"></ol>
+            <div class="rec-mesa" id="recMesa" aria-label="Etapas por colocar"></div>
+            <div class="rec-acc">
+              <button class="btn" type="button" id="recRevisar" disabled>Revisar</button>
+              <button class="btn btn--ghost" type="button" id="recCorregir" hidden>Corregir lo que está mal</button>
+            </div>
+            <p class="juego__msg" id="recMsg" aria-live="polite"></p>
+            <ol class="rec-repaso" id="recRepaso" hidden></ol>
+          </div>
+
+          <aside class="juego__side">
+            <div class="jcard">
+              <h2>Cómo jugar</h2>
+              <ol class="jsteps">
+                <li><b>Elige el recorrido</b> El de un intercambio (SU → CO) o el de un miembro.</li>
+                <li><b>Toca en orden</b> Cada etapa que tocas pasa a tu fila. Si te equivocas, tócala en la fila y regresa.</li>
+                <li><b>Revisa</b> Las que van bien se vuelven oro. Corrige y vuelve a intentar.</li>
+              </ol>
+            </div>
+            <div class="jcard">
+              <p class="kicker">Repasa antes</p>
+              <h2>Recorrido de un intercambio</h2>
+              <p>Cada etapa explicada con ejemplos en Áreas.</p>
+              <a class="btn btn--ghost" href="areas.html">Ver Áreas</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+    <script src="data/site.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="data/recorrido-juego.js"></script>
+    <script src="assets/js/recorrido-juego.js"></script>
+    <script src="assets/js/recorrido.js"></script>
+  </body>
+</html>

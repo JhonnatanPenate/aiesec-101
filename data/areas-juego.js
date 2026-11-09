@@ -17,7 +17,7 @@ window.AREAS_JUEGO = {
     ['Un miembro lleva tres semanas sin responder en el grupo', 'mxp', 'Su líder le escribe primero, pero el seguimiento de la membresía es de MXP.'],
     ['Alguien de la oficina nacional (MC) pide cuántos miembros activos tenemos', 'mxp', 'Los datos de la membresía los lleva MXP.'],
     ['Un miembro quiere cambiarse de área', 'mxp', 'Los cambios de rol y de área los acompaña MXP.'],
-    ['Lanzar la convocatoria para que entren nuevos miembros', 'mxp', 'El reclutamiento lo lidera MXP; MKT apoya con el arte.'],
+    ['Dar seguimiento a quienes aplicaron para ser miembros', 'mxp', 'En el reclutamiento, MKT y PR dan a conocer la convocatoria; el seguimiento más humano es de MXP.'],
     ['Revisar que cada miembro tenga su JD', 'mxp', 'Los JD y su seguimiento son parte de MXP.'],
     // F&L
     ['Armar el presupuesto de una actividad', 'fl', 'F&L planea cuánto dinero entra y sale.'],
@@ -37,6 +37,7 @@ window.AREAS_JUEGO = {
     ['Planear una campaña para que más jóvenes se registren en aiesec.org', 'mkt', 'MKT mueve el embudo de atracción.'],
     ['Un medio de comunicación quiere entrevistar a alguien de AIESEC', 'mkt', 'La imagen pública (PR) es parte de MKT.'],
     ['Medir cuántas personas vieron y compartieron un post', 'mkt', 'Las métricas de contenido son de MKT.'],
+    ['Que más estudiantes de la U conozcan la convocatoria para ser miembros', 'mkt', 'En el reclutamiento, MKT y PR hacen el awareness; después MXP da el seguimiento.'],
     // OGX
     ['Llamar a alguien que se registró en aiesec.org para irse de voluntariado', 'ogx', 'Contactar a quien quiere salir es lo primero que hace OGX.'],
     ['Preparar a un EP salvadoreño antes de que viaje', 'ogx', 'La preparación antes de salir es de OGX.'],
