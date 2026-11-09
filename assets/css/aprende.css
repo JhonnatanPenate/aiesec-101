@@ -299,13 +299,15 @@ input[type='range'] {
 }
 
 /* ---------- bento ---------- */
+/* letras al centro arriba; visión ancha + misión; datos y la historia abajo */
 .bento {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-areas:
-    'acr acr acr vis'
-    'f1 f2 sto sto'
-    'f3 f4 sto sto';
+    'acr acr acr acr acr acr acr acr acr acr acr acr'
+    'vis vis vis vis vis vis vis vis mis mis mis mis'
+    'f1 f1 f1 f2 f2 f2 sto sto sto sto sto sto'
+    'f3 f3 f3 f4 f4 f4 sto sto sto sto sto sto';
   gap: 14px;
 }
 .tile {
@@ -319,11 +321,42 @@ input[type='range'] {
 }
 .tile--acr {
   grid-area: acr;
-  gap: 16px;
+  gap: 18px;
+  justify-items: center;
+  text-align: center;
+  padding: clamp(24px, 4vw, 40px);
+}
+.tile--acr .acronym {
+  justify-content: center;
+  width: 100%;
+}
+.tile--acr .acronym button {
+  max-width: 108px;
+}
+.tile--acr .acronym__out {
+  justify-content: center;
+  width: 100%;
+}
+.tile--acr .acronym__out span {
+  justify-items: center;
+}
+.tile--acr #acronymNota {
+  max-width: 62ch;
 }
 .tile--vision {
   grid-area: vis;
-  align-content: end;
+  align-content: center;
+}
+.tile--vision .vision__en {
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+}
+.tile--mision {
+  grid-area: mis;
+  align-content: center;
+  background: var(--sand);
+}
+.tile--mision .kicker {
+  color: var(--terra);
 }
 .tile--story {
   grid-area: sto;
@@ -381,6 +414,7 @@ input[type='range'] {
     grid-template-areas:
       'acr acr'
       'vis vis'
+      'mis mis'
       'f1 f2'
       'f3 f4'
       'sto sto';
@@ -392,6 +426,7 @@ input[type='range'] {
     grid-template-areas:
       'acr'
       'vis'
+      'mis'
       'f1'
       'f2'
       'f3'
@@ -405,6 +440,11 @@ input[type='range'] {
   }
   .tile--acr {
     gap: 14px;
+    padding: 18px 14px;
+    align-content: start;
+  }
+  .tile--acr .acronym {
+    gap: 5px;
   }
 }
 
