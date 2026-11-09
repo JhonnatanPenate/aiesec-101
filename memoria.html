@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Memoria Alchemist · AIESEC 101</title>
+    <meta
+      name="description"
+      content="Encuentra las parejas de stickers de Alchemist y conoce lo que significa cada uno."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/juega.css" />
+    <link rel="stylesheet" href="assets/css/memoria.css" />
+  </head>
+  <body data-page="memoria">
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <div data-site-header></div>
+
+    <main id="contenido">
+      <section class="page-head">
+        <div class="wrap">
+          <p class="kicker">Juego · Memoria</p>
+          <h1>Memoria Alchemist</h1>
+          <p>
+            Voltea dos cartas a la vez y encuentra las 8 parejas. Cada sticker
+            es parte de lo que somos.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--white">
+        <div class="wrap juego">
+          <div class="juego__main">
+            <div class="juego__stats">
+              <div><small>Tiempo</small><b id="memTiempo">00:00</b></div>
+              <div><small>Movimientos</small><b id="memMovs">0</b></div>
+              <div><small>Parejas</small><b id="memPares">0/8</b></div>
+              <button class="btn btn--ghost" type="button" id="memNueva">Barajar</button>
+            </div>
+            <div class="mem" id="memTablero" role="group" aria-label="Tablero de memoria de 4 por 4"></div>
+            <p class="juego__msg" id="memMsg" aria-live="polite"></p>
+          </div>
+
+          <aside class="juego__side">
+            <div class="jcard">
+              <h2>Cómo jugar</h2>
+              <ol class="jsteps">
+                <li><b>Voltea dos cartas</b> Si son iguales, se quedan en oro.</li>
+                <li><b>Si no son iguales</b> Se vuelven a tapar. Recuerda dónde estaban.</li>
+                <li><b>Encuentra las 8</b> con los menos movimientos posibles.</li>
+              </ol>
+            </div>
+            <div class="jcard" id="memLeyenda">
+              <p class="kicker">Lo que vas encontrando</p>
+              <ul class="mem-ley" id="memLista"></ul>
+            </div>
+            <div class="jcard">
+              <p class="kicker">Más juegos</p>
+              <h2>Juego de siglas</h2>
+              <p>Match y ¿Real o no? con las siglas de AIESEC.</p>
+              <a class="btn btn--ghost" href="siglas.html">Jugar</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+    <script src="data/site.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/iconos.js"></script>
+    <script src="data/memoria.js"></script>
+    <script src="assets/js/memoria-juego.js"></script>
+    <script src="assets/js/memoria.js"></script>
+  </body>
+</html>

@@ -78,10 +78,10 @@
   border-color: var(--terra);
 }
 .mt__btn.is-ok {
-  background: #3f7e44;
-  border-color: #3f7e44;
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--charcoal);
   cursor: default;
-  opacity: 0.9;
 }
 .mt__btn.nope {
   animation: nope 260ms var(--ease);
@@ -124,7 +124,7 @@
   font-weight: 800;
 }
 .rn__res.is-ok {
-  color: #56c02b;
+  color: var(--gold);
 }
 .rn__res.is-bad {
   color: #ff6b5e;
