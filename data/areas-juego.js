@@ -1,0 +1,38 @@
+// Tareas del juego «¿Qué área lo hace?». Basadas en los conceptos de la página Áreas.
+// [tarea, id del área, por qué]
+window.AREAS_JUEGO = {
+  areas: [
+    ['mxp', 'MXP'],
+    ['fl', 'F&L'],
+    ['mkt', 'MKT'],
+    ['ogx', 'OGX'],
+    ['icx', 'ICX'],
+  ],
+  tareas: [
+    ['Darles la bienvenida a los newbies que acaban de entrar', 'mxp', 'El onboarding es parte del ciclo del miembro.'],
+    ['Acompañar el plan de desarrollo (PDP) de un miembro', 'mxp', 'MXP cuida el desarrollo de cada miembro.'],
+    ['Reconocer a alguien que hizo un gran trabajo este mes', 'mxp', 'El reconocimiento es parte de la experiencia del miembro.'],
+    ['Tener un O2O para saber cómo está una persona del comité', 'mxp', 'Los O2O acompañan el bienestar de cada miembro.'],
+    ['Organizar el ciclo de educación local (LEC)', 'mxp', 'La educación de la membresía es parte de MXP.'],
+    ['Armar el presupuesto de una actividad', 'fl', 'F&L planea cuánto dinero entra y sale.'],
+    ['Rendir cuentas de cuánto se gastó en un evento', 'fl', 'La transparencia con los recursos es de F&L.'],
+    ['Revisar que un convenio esté en regla', 'fl', 'La legalidad del comité es de F&L.'],
+    ['Guardar en orden los documentos legales del comité', 'fl', 'F&L cuida que todo esté en regla y ordenado.'],
+    ['Pensar cómo hacer que el comité sea sostenible a futuro', 'fl', 'La sostenibilidad del comité es de F&L.'],
+    ['Diseñar el arte de una publicación para Instagram', 'mkt', 'El contenido es parte de MKT.'],
+    ['Planear una campaña para que más jóvenes se registren', 'mkt', 'MKT mueve el embudo de atracción.'],
+    ['Cuidar que el logo y los colores de AIESEC se usen bien', 'mkt', 'La marca la cuida MKT.'],
+    ['Presentarle una propuesta de alianza a una empresa', 'mkt', 'B2B es parte de MKT en nuestro comité.'],
+    ['Mantener la relación con las universidades', 'mkt', 'PR es parte de MKT en nuestro comité.'],
+    ['Asesorar a un estudiante que quiere irse de voluntariado', 'ogx', 'OGX asesora a quienes quieren vivir un intercambio afuera.'],
+    ['Preparar a un EP salvadoreño antes de que viaje', 'ogx', 'La preparación antes de salir es de OGX.'],
+    ['Dar seguimiento a un EP salvadoreño que ya está afuera', 'ogx', 'OGX acompaña al EP durante su intercambio.'],
+    ['Hablar con el comité del país que va a recibir a nuestro EP', 'ogx', 'OGX coordina con el comité que recibe.'],
+    ['Acompañar el regreso de un EP salvadoreño', 'ogx', 'El regreso también es parte del recorrido de OGX.'],
+    ['Recibir en El Salvador a una joven que viene de otro país', 'icx', 'ICX recibe a jóvenes de otros países.'],
+    ['Buscar una organización local que abra una oportunidad de voluntariado', 'icx', 'Los aliados que reciben EPs los trabaja ICX.'],
+    ['Publicar una oportunidad en El Salvador para jóvenes de otros países', 'icx', 'Las Opp locales son de ICX.'],
+    ['Acompañar a un EP extranjero durante su experiencia aquí', 'icx', 'La experiencia del EP que llega la cuida ICX.'],
+    ['Conseguir hospedaje para un EP que viene a El Salvador', 'icx', 'Global Host es parte de ICX.'],
+  ],
+};
