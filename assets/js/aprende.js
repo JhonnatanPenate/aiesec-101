@@ -28,10 +28,14 @@
       .join('');
     $('acronymOut').innerHTML = full;
   }
-  acr.addEventListener('click', (e) => {
+  // con el mouse basta pasar por encima; en celular se toca
+  const pick = (e) => {
     const b = e.target.closest('button');
-    if (b) showLetter(+b.dataset.i);
-  });
+    if (b && b.getAttribute('aria-pressed') !== 'true') showLetter(+b.dataset.i);
+  };
+  acr.addEventListener('mouseover', pick);
+  acr.addEventListener('focusin', pick);
+  acr.addEventListener('click', pick);
   showLetter(0);
   $('acronymNota').textContent = D.nombre.nota;
   const facts = (list) =>

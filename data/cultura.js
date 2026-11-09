@@ -85,12 +85,12 @@ window.CULTURA = {
 
   tradiciones: [
     {
-      nombre: 'El bautizo',
-      corto: 'Bienvenida con agua',
+      nombre: 'El baldazo',
+      corto: 'Bienvenida con un bucket de agua',
       texto:
         'Cuando entras como newbie o tomas un rol nuevo, te mojan. Es la forma de darte la bienvenida a tu nueva etapa en el comité.',
       ejemplo:
-        'Después del evento de bienvenida, los newbies reciben su bautizo.',
+        'Después del evento de bienvenida, los newbies reciben su baldazo.',
     },
     {
       nombre: 'El semáforo',

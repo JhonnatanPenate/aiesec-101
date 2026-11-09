@@ -31,6 +31,7 @@
   box-shadow: 0 4px 0 var(--ink);
   transition:
     transform var(--fast) var(--ease),
+    box-shadow var(--fast) var(--ease),
     background var(--fast) var(--ease);
 }
 .acronym button:hover {
@@ -40,7 +41,9 @@
   background: var(--terra);
   border-color: var(--terra);
   color: var(--white);
-  box-shadow: 0 4px 0 var(--terra-dark);
+  /* tecla presionada: baja y pierde la sombra */
+  transform: translateY(4px);
+  box-shadow: 0 0 0 var(--terra-dark);
 }
 .acronym__out {
   display: flex;
