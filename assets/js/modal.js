@@ -18,13 +18,6 @@
         })[c],
     );
 
-  const initials = (n) =>
-    n
-      .split(' ')
-      .slice(0, 2)
-      .map((w) => w[0])
-      .join('');
-
   let current = null;
   let lastFocus = null;
 
@@ -72,7 +65,7 @@
                     return `<div class="team-bento__row team-bento__row--${nivel === 'LCP' ? 'lcvp' : nivel.split(' ')[0].toLowerCase()}">${gente
                       .map(
                         (p) =>
-                          `<div class="team-bento__card"><span class="avatar">${esc(initials(p[0]))}</span><strong>${esc(p[0])}</strong><small>${esc(p[1])}</small></div>`,
+                          `<div class="team-bento__card"><strong>${esc(p[0])}</strong><small>${esc(p[1])}</small></div>`,
                       )
                       .join('')}</div>`;
                   })
@@ -87,7 +80,7 @@
                 <ul>${data.people
                   .map(
                     (p) =>
-                      `<li><span class="avatar">${esc(initials(p[0]))}</span><span><strong>${esc(p[0])}</strong>${p[1] ? `<small>${esc(p[1])}</small>` : ''}</span></li>`,
+                      `<li><span><strong>${esc(p[0])}</strong>${p[1] ? `<small>${esc(p[1])}</small>` : ''}</span></li>`,
                   )
                   .join('')}</ul>
               </div>`
