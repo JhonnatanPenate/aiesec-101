@@ -11,15 +11,15 @@ window.APRENDE = {
     ],
     nota: 'Hoy ya no se usa el nombre completo. AIESEC es solo AIESEC, porque la organización está abierta a jóvenes de cualquier carrera.',
     datos: [
-      ['1948', 'Año de fundación, el 2 de julio'],
-      ['3', 'Países fundadores: Suecia, Checoslovaquia y Bélgica'],
-      ['90+', 'Países y territorios con presencia'],
+      ['1948', 'Año de fundación, después de la Segunda Guerra Mundial'],
+      ['7', 'Países de los jóvenes que la fundaron'],
+      ['100+', 'Países y territorios con presencia'],
       ['Montreal', 'Sede global actual, en Canadá'],
     ],
     historia:
       'AIESEC nació después de la Segunda Guerra Mundial. Estudiantes de distintos países se unieron con una idea: si los jóvenes conviven y trabajan con personas de otras culturas, el mundo tiene más posibilidades de vivir en paz.',
     vision: 'Peace and fulfilment of humankind’s potential',
-    visionEs: 'Paz y plenitud del potencial de la humanidad.',
+    visionEs: 'Paz y realización del potencial de la humanidad.',
     mision:
       'Desarrollar el liderazgo joven con experiencias prácticas en entornos desafiantes.',
   },
@@ -27,6 +27,7 @@ window.APRENDE = {
   valores: [
     {
       en: 'Activating Leadership',
+      oficial: 'Lideras con el ejemplo e inspiras a otros.',
       icono: 'bandera',
       es: 'Activar el liderazgo',
       texto:
@@ -36,6 +37,7 @@ window.APRENDE = {
     },
     {
       en: 'Demonstrating Integrity',
+      oficial: 'Eliges lo correcto sobre lo fácil.',
       icono: 'diamante',
       es: 'Demostrar integridad',
       texto:
@@ -45,6 +47,7 @@ window.APRENDE = {
     },
     {
       en: 'Enjoying Participation',
+      oficial: 'Eres tú y le pones energía a todo.',
       icono: 'mano',
       es: 'Disfrutar participar',
       texto:
@@ -54,6 +57,7 @@ window.APRENDE = {
     },
     {
       en: 'Living Diversity',
+      oficial: 'Ves las diferencias como una fortaleza.',
       icono: 'apreton',
       es: 'Vivir la diversidad',
       texto:
@@ -63,6 +67,7 @@ window.APRENDE = {
     },
     {
       en: 'Striving for Excellence',
+      oficial: 'Buscas retos para seguir creciendo.',
       icono: 'trofeo',
       es: 'Buscar la excelencia',
       texto:
@@ -72,6 +77,7 @@ window.APRENDE = {
     },
     {
       en: 'Acting Sustainably',
+      oficial: 'Decides pensando en las próximas generaciones.',
       icono: 'sostenible',
       es: 'Actuar de forma sostenible',
       texto:
@@ -125,7 +131,7 @@ window.APRENDE = {
       id: 'gv',
       nombre: 'Global Volunteer',
       corto: 'GV',
-      duracion: '4 a 8 semanas',
+      duracion: 'Unas 6 a 8 semanas (varía por proyecto)',
       que: 'Voluntariado en proyectos sociales ligados a los Objetivos de Desarrollo Sostenible.',
       in: 'Jóvenes de otros países vienen a El Salvador a hacer voluntariado en proyectos locales.',
       out: 'Jóvenes salvadoreños viajan a otro país a hacer voluntariado.',
@@ -149,7 +155,7 @@ window.APRENDE = {
       id: 'gte',
       nombre: 'Global Teacher',
       corto: 'GTe',
-      duracion: '6 a 78 semanas',
+      duracion: 'Cada oportunidad indica su duración',
       que: 'Experiencias de enseñanza en escuelas e instituciones educativas.',
       in: 'Jóvenes de otros países vienen a enseñar a instituciones de El Salvador.',
       out: 'Jóvenes salvadoreños viajan a enseñar a otro país.',
@@ -267,6 +273,13 @@ window.APRENDE.ods = {
     ['17', 'Objetivos'],
     ['2015', 'Año en que se aprobaron'],
     ['2030', 'Meta de la Agenda'],
+  ],
+  // AIESEC y la ONU (aiesec.org)
+  onu: [
+    ['ECOSOC', 'AIESEC tiene estatus consultivo ante el Consejo Económico y Social de la ONU y está reconocida por la UNESCO.'],
+    ['2015', 'Jóvenes de AIESEC de 126 países se reunieron en la sede de la ONU para impulsar la participación juvenil en los ODS.'],
+    ['Youth for Global Goals', 'Nuestra iniciativa para que más jóvenes conozcan los ODS, entiendan cómo aportar y pasen a la acción.'],
+    ['YouthSpeak', 'El espacio donde la juventud da su opinión, con encuesta y foros, y la convierte en acción.'],
   ],
   lista: [
     [1, 'Fin de la pobreza', '#e5243b', 'Que nadie viva en pobreza extrema.'],

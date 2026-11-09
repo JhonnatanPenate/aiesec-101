@@ -994,3 +994,37 @@ input[type='range'] {
 .hex[aria-pressed='true'] .hex__icon {
   color: var(--charcoal);
 }
+
+/* frase oficial corta del valor */
+.hexdetail__of {
+  font-style: italic;
+  color: var(--terra);
+  margin: 2px 0 6px;
+}
+/* AIESEC y la ONU, dentro de la sección de ODS */
+.ods-onu {
+  margin: 0 0 28px;
+}
+.ods-onu h3 {
+  margin: 0 0 12px;
+}
+.ods-onu__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.ods-onu__list div {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: grid;
+  gap: 4px;
+}
+.ods-onu__list b {
+  color: var(--terra);
+}
+.ods-onu__list span {
+  font-size: 14px;
+  line-height: 1.45;
+}

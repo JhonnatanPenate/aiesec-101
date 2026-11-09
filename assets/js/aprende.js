@@ -90,6 +90,7 @@
           <p class="kicker">${kicker}</p>
           <h4>${v.en}</h4>
           <p class="hexdetail__es">${v.es}</p>
+          ${v.oficial ? `<p class="hexdetail__of">«${v.oficial}»</p>` : ''}
           <p>${v.texto}</p>
           <div class="hexdetail__ex"><b>Ejemplo</b>${v.ejemplo}</div>
         </div>`;
@@ -105,7 +106,7 @@
     });
   }
   hexes('valores', D.valores, 'Valor de AIESEC', true);
-  hexes('rasgos', D.rasgos, 'Rasgo de liderazgo', false);
+  hexes('rasgos', D.rasgos, 'Rasgo de liderazgo · modelo de formación de AIESEC', false);
 
   /* ---------- Leadership Development Experience ---------- */
   const L = D.lde;
@@ -274,6 +275,11 @@
   $('odsFacts').innerHTML = O.datos
     .map((d) => `<div><b>${d[0]}</b><span>${d[1]}</span></div>`)
     .join('');
+  if (O.onu && $('odsOnu'))
+    $('odsOnu').innerHTML =
+      '<h3>AIESEC y la ONU</h3><div class="ods-onu__list">' +
+      O.onu.map((d) => `<div><b>${d[0]}</b><span>${d[1]}</span></div>`).join('') +
+      '</div>';
   $('odsGrid').innerHTML = O.lista
     .map((o) => {
       const ej = O.ejemplos.filter((x) => x[1] === o[0]).map((x) => x[0]);

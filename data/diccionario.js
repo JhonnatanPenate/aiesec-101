@@ -31,6 +31,9 @@ window.DICCIONARIO = [
         'Engaging with AIESEC',
         'Actividades abiertas a cualquier joven, sin ser miembro ni hacer intercambio. Casi siempre están ligadas a los ODS en nuestra comunidad: limpiezas de playa, reforestaciones y liberación de tortugas, entre otras. Son la primera puerta para conocer AIESEC.',
       ],
+      ['YouthSpeak', 'YouthSpeak', 'Encuesta y foros donde la juventud da su opinión y la convierte en acción.'],
+      ['Y4GG', 'Youth for Global Goals', 'Iniciativa de AIESEC para que más jóvenes conozcan los ODS y pasen a la acción.'],
+      ['ECOSOC', 'Economic and Social Council', 'Consejo Económico y Social de la ONU. AIESEC tiene estatus consultivo ante él.'],
     ],
   },
   {
@@ -88,6 +91,7 @@ window.DICCIONARIO = [
       ],
       ['Newbie', '', 'Miembro nuevo, en su primer ciclo en AIESEC.'],
       ['Oldie', '', 'Miembro con al menos un ciclo en AIESEC.'],
+      ['Buddy', 'Buddy', 'Miembro con experiencia que acompaña a un newbie en sus primeras semanas.'],
     ],
   },
   {
@@ -170,6 +174,9 @@ window.DICCIONARIO = [
       ['RE', 'Realized', 'Ya está viviendo su intercambio.'],
       ['FIN', 'Finished', 'Terminó su intercambio.'],
       ['CO', 'Completed', 'Cerró todo el proceso, incluida su evaluación.'],
+      ['S&D', 'Supply & Demand', 'Oferta y demanda: cuántas oportunidades hay y cuántas personas las buscan.'],
+      ['CR', 'Conversion Rate', 'Porcentaje de personas que pasan de una etapa a la siguiente (por ejemplo, de SU a APL).'],
+      ['LC2LC', 'LC to LC', 'Alianza entre dos comités locales para enviar y recibir intercambios.'],
     ],
   },
   {
@@ -206,6 +213,9 @@ window.DICCIONARIO = [
         'Onboarding',
         'El proceso de bienvenida cuando entras a AIESEC o a un rol nuevo.',
       ],
+      ['LEC', 'Local Education Cycle', 'Ciclo de educación local. En ESEN es AIESEC 101.'],
+      ['MX', 'Membership Experience', 'La experiencia de ser miembro: lo que vives, aprendes y logras en AIESEC.'],
+      ['R&R', 'Rewards & Recognition', 'Sistema para reconocer y premiar a los miembros.'],
     ],
   },
   {
@@ -224,6 +234,7 @@ window.DICCIONARIO = [
       ['OC', 'Organizing Committee', 'El equipo que organiza una conferencia.'],
       ['Delegado', 'Delegate', 'Persona que asiste a una conferencia.'],
       ['DDL', 'Deadline', 'Fecha límite.'],
+      ['SOP', 'Standard Operating Procedure', 'Guía paso a paso de cómo se hace un proceso.'],
     ],
   },
 ];
