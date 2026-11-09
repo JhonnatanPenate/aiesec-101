@@ -16,14 +16,13 @@ window.EQUIPO = {
       ['Melissa Cortez', 'Team Member'],
     ],
     fl: [
-      ['Lorena Gil', 'LCVP'],
+      ['Alejandra Gil', 'LCVP'],
       ['Esteban Romero', 'Manager'],
       ['María José Turcios', 'Manager'],
       ['Regina Orellana', 'Team Member'],
     ],
     icx: [
       ['Brandom Sánchez', 'LCVP'],
-      ['Cristian Cuadra', 'Manager'],
       ['Alisson Murga', 'Manager'],
       ['Laura Alegría', 'Manager'],
       ['Walter Ramírez', 'Manager'],
