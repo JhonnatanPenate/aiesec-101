@@ -459,3 +459,6 @@
     display: none;
   }
 }
+.play-cta + .play-cta {
+  margin-top: 12px;
+}

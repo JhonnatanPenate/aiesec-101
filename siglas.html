@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Juego de siglas · AIESEC 101</title>
+    <meta
+      name="description"
+      content="Une cada sigla de AIESEC con su significado o adivina si es real o inventada."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="assets/img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/juega.css" />
+    <link rel="stylesheet" href="assets/css/siglas.css" />
+  </head>
+  <body data-page="siglas">
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <div data-site-header></div>
+
+    <main id="contenido">
+      <section class="page-head">
+        <div class="wrap">
+          <p class="kicker">Juego · Siglas</p>
+          <h1>Juego de siglas</h1>
+          <p>
+            En AIESEC hablamos con siglas. Úneles su significado contra el
+            tiempo o adivina cuáles son reales y cuáles inventamos.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--white">
+        <div class="wrap juego">
+          <div class="juego__main">
+            <div class="modos" role="tablist" aria-label="Modo de juego">
+              <button type="button" role="tab" aria-selected="true" data-modo="match">
+                <b>Match</b><span>Une sigla y significado</span>
+              </button>
+              <button type="button" role="tab" aria-selected="false" data-modo="real">
+                <b>¿Real o no?</b><span>¿Existe o la inventamos?</span>
+              </button>
+            </div>
+
+            <div id="vMatch">
+              <div class="juego__stats">
+                <div><small>Tiempo</small><b id="mTiempo">00:00</b></div>
+                <div><small>Errores</small><b id="mErrores">0</b></div>
+                <div><small>Pares</small><b id="mPares">0/6</b></div>
+                <button class="btn btn--ghost" type="button" id="mNueva">Otra ronda</button>
+              </div>
+              <div class="mt" id="mTablero">
+                <div class="mt__col" id="mIzq" aria-label="Siglas"></div>
+                <div class="mt__col" id="mDer" aria-label="Significados"></div>
+              </div>
+              <p class="juego__msg" id="mMsg" aria-live="polite"></p>
+            </div>
+
+            <div id="vReal" hidden>
+              <div class="juego__stats">
+                <div><small>Pregunta</small><b id="rNum">1/10</b></div>
+                <div><small>Aciertos</small><b id="rPuntos">0</b></div>
+                <button class="btn btn--ghost" type="button" id="rNueva">Empezar de nuevo</button>
+              </div>
+              <div class="rn" id="rCarta">
+                <p class="rn__sigla" id="rSigla"></p>
+                <div class="rn__btns">
+                  <button class="btn" type="button" data-resp="1">Es real</button>
+                  <button class="btn btn--ghost" type="button" data-resp="0">La inventaron</button>
+                </div>
+                <div class="rn__out" id="rOut" aria-live="polite"></div>
+                <button class="btn" type="button" id="rSig" hidden>Siguiente</button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="juego__side">
+            <div class="jcard">
+              <h2>Cómo jugar</h2>
+              <ol class="jsteps">
+                <li><b>Match</b> Toca una sigla y luego su significado. Si aciertas, se quedan en verde. Termina los 6 pares en el menor tiempo.</li>
+                <li><b>¿Real o no?</b> Sale una sigla: decide si existe en AIESEC o si la inventamos. Al responder ves qué significa.</li>
+                <li><b>¿Te trabaste?</b> Todas las siglas reales están en el <a href="diccionario.html">Diccionario</a>.</li>
+              </ol>
+            </div>
+            <div class="jcard">
+              <p class="kicker">Más juegos</p>
+              <h2>Juega con los ODS</h2>
+              <p>Ordena los 17 Objetivos de Desarrollo Sostenible en un rompecabezas.</p>
+              <a class="btn btn--ghost" href="juega.html">Jugar</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+    <script src="data/site.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="data/diccionario.js"></script>
+    <script src="data/siglas-juego.js"></script>
+    <script src="assets/js/siglas-juego.js"></script>
+    <script src="assets/js/siglas.js"></script>
+  </body>
+</html>
